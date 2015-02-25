@@ -64,7 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="EnrollmentDataSet.cs">
       <DependentUpon>EnrollmentDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -110,6 +109,7 @@
     <Compile Include="FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormSchedule.resx">
       <DependentUpon>FormSchedule.cs</DependentUpon>
@@ -192,12 +192,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Enrollment.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\STI 6.jpg" />
-    <None Include="Resources\STI 5.jpg" />
-    <None Include="Resources\STI 4.jpg" />
-    <None Include="Resources\STI 3.jpg" />
-    <None Include="Resources\STI 2.jpg" />
-    <None Include="Resources\STI 1.jpg" />
+    <None Include="STI 4.jpg" />
+    <None Include="STI 3.jpg" />
+    <None Include="STI 2.jpg" />
+    <None Include="STI 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -217,12 +217,12 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.logoSTI = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.labelProgramMajor = new System.Windows.Forms.Label();
+            this.logoSTI = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelStudNum = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -2515,25 +2515,6 @@
             this.panelHeader.Size = new System.Drawing.Size(1236, 101);
             this.panelHeader.TabIndex = 8;
             // 
-            // logoSTI
-            // 
-            this.logoSTI.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoSTI.BackgroundImage")));
-            this.logoSTI.Location = new System.Drawing.Point(0, 0);
-            this.logoSTI.Name = "logoSTI";
-            this.logoSTI.Size = new System.Drawing.Size(167, 100);
-            this.logoSTI.TabIndex = 7;
-            this.logoSTI.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
             // labelProgramMajor
             // 
             this.labelProgramMajor.AutoSize = true;
@@ -2543,6 +2524,15 @@
             this.labelProgramMajor.Size = new System.Drawing.Size(129, 16);
             this.labelProgramMajor.TabIndex = 12;
             this.labelProgramMajor.Text = "General Department";
+            // 
+            // logoSTI
+            // 
+            this.logoSTI.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoSTI.BackgroundImage")));
+            this.logoSTI.Location = new System.Drawing.Point(0, 0);
+            this.logoSTI.Name = "logoSTI";
+            this.logoSTI.Size = new System.Drawing.Size(167, 100);
+            this.logoSTI.TabIndex = 7;
+            this.logoSTI.TabStop = false;
             // 
             // labelName
             // 
@@ -2565,6 +2555,16 @@
             this.labelStudNum.Size = new System.Drawing.Size(129, 20);
             this.labelStudNum.TabIndex = 11;
             this.labelStudNum.Text = "047 - 2011 - 0171";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // accountsTableAdapter
+            // 
+            this.accountsTableAdapter.ClearBeforeFill = true;
             // 
             // FormFaculty
             // 
