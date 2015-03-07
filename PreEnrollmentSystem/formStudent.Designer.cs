@@ -263,7 +263,6 @@
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
             this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
-            this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
@@ -3039,14 +3038,12 @@
             this.tableAdapterManager.AccountsTableAdapter = null;
             this.tableAdapterManager.AnnouncementsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Course_ScheduleTableAdapter = null;
             this.tableAdapterManager.CoursesTableAdapter = null;
             this.tableAdapterManager.Enrollment_ReportTableAdapter = null;
             this.tableAdapterManager.FacultyTableAdapter = null;
             this.tableAdapterManager.ProgramsTableAdapter = null;
             this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.Student_ScheduleTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = this.studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -3060,7 +3057,6 @@
             // 
             // studentScheduleViewTableAdapter
             // 
-            this.studentScheduleViewTableAdapter.ClearBeforeFill = true;
             // 
             // announcementsTableAdapter
             // 
@@ -3133,7 +3129,6 @@
             this.panelSchedule.ResumeLayout(false);
             this.panelSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3301,7 +3296,6 @@
         private EnrollmentDataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewSchedule;
         private System.Windows.Forms.BindingSource studentScheduleViewBindingSource;
-        private EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter studentScheduleViewTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedayDataGridViewTextBoxColumn;

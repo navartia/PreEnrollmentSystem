@@ -268,7 +268,6 @@
             this.studentsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentsTableAdapter();
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
-            this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -3021,14 +3020,12 @@
             this.tableAdapterManager.AccountsTableAdapter = null;
             this.tableAdapterManager.AnnouncementsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Course_ScheduleTableAdapter = null;
             this.tableAdapterManager.CoursesTableAdapter = null;
             this.tableAdapterManager.Enrollment_ReportTableAdapter = null;
             this.tableAdapterManager.FacultyTableAdapter = null;
             this.tableAdapterManager.ProgramsTableAdapter = null;
             this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.Student_ScheduleTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = this.studentsTableAdapter;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -3036,9 +3033,6 @@
             // 
             this.accountsTableAdapter.ClearBeforeFill = true;
             // 
-            // studentScheduleViewTableAdapter
-            // 
-            this.studentScheduleViewTableAdapter.ClearBeforeFill = true;
             // 
             // announcementsTableAdapter
             // 
@@ -3341,7 +3335,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource studentScheduleViewBindingSource;
-        private EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter studentScheduleViewTableAdapter;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;

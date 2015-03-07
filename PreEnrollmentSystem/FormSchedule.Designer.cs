@@ -40,7 +40,6 @@
             this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
             this.courseScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.CourseScheduleViewTableAdapter();
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
-            this.student_ScheduleTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.Student_ScheduleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseScheduleViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
@@ -118,29 +117,20 @@
             this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
             this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // courseScheduleViewTableAdapter
-            // 
-            this.courseScheduleViewTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AccountsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.Course_ScheduleTableAdapter = null;
             this.tableAdapterManager.CoursesTableAdapter = null;
             this.tableAdapterManager.Enrollment_ReportTableAdapter = null;
             this.tableAdapterManager.FacultyTableAdapter = null;
             this.tableAdapterManager.ProgramsTableAdapter = null;
             this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.Student_ScheduleTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // student_ScheduleTableAdapter
-            // 
-            this.student_ScheduleTableAdapter.ClearBeforeFill = true;
             // 
             // FormSchedule
             // 
@@ -153,7 +143,6 @@
             this.Name = "FormSchedule";
             this.Text = "Add Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseScheduleViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.ResumeLayout(false);
 
@@ -172,6 +161,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursetimeDataGridViewTextBoxColumn;
-        private EnrollmentDataSetTableAdapters.Student_ScheduleTableAdapter student_ScheduleTableAdapter;
     }
 }

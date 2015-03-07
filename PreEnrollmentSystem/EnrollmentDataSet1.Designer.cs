@@ -48,8 +48,6 @@ namespace PreEnrollmentSystem {
         
         private ScheduleDataTable tableSchedule;
         
-        private global::System.Data.DataRelation relationCourses_Schedule;
-        
         private global::System.Data.DataRelation relationRooms_Schedule;
         
         private global::System.Data.DataRelation relationTimeslots_Schedule;
@@ -60,13 +58,15 @@ namespace PreEnrollmentSystem {
         
         private global::System.Data.DataRelation relationFK_Students_ToTable;
         
-        private global::System.Data.DataRelation relationStudents_Enrollment;
-        
         private global::System.Data.DataRelation relationSchedule_Enrollment;
         
         private global::System.Data.DataRelation relationSections_Courses;
         
         private global::System.Data.DataRelation relationFK_Sections_ToTable;
+        
+        private global::System.Data.DataRelation relationCourses_Schedule;
+        
+        private global::System.Data.DataRelation relationStudents_Enrollment;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -478,16 +478,16 @@ namespace PreEnrollmentSystem {
                     this.tableSchedule.InitVars();
                 }
             }
-            this.relationCourses_Schedule = this.Relations["Courses_Schedule"];
             this.relationRooms_Schedule = this.Relations["Rooms_Schedule"];
             this.relationTimeslots_Schedule = this.Relations["Timeslots_Schedule"];
             this.relationFaculty_Schedule = this.Relations["Faculty_Schedule"];
             this.relationFK_Faculty_ToTable = this.Relations["FK_Faculty_ToTable"];
             this.relationFK_Students_ToTable = this.Relations["FK_Students_ToTable"];
-            this.relationStudents_Enrollment = this.Relations["Students_Enrollment"];
             this.relationSchedule_Enrollment = this.Relations["Schedule_Enrollment"];
             this.relationSections_Courses = this.Relations["Sections_Courses"];
             this.relationFK_Sections_ToTable = this.Relations["FK_Sections_ToTable"];
+            this.relationCourses_Schedule = this.Relations["Courses_Schedule"];
+            this.relationStudents_Enrollment = this.Relations["Students_Enrollment"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -522,10 +522,6 @@ namespace PreEnrollmentSystem {
             base.Tables.Add(this.tableEnrollment);
             this.tableSchedule = new ScheduleDataTable();
             base.Tables.Add(this.tableSchedule);
-            this.relationCourses_Schedule = new global::System.Data.DataRelation("Courses_Schedule", new global::System.Data.DataColumn[] {
-                        this.tableCourses.course_codeColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSchedule.course_codeColumn}, false);
-            this.Relations.Add(this.relationCourses_Schedule);
             this.relationRooms_Schedule = new global::System.Data.DataRelation("Rooms_Schedule", new global::System.Data.DataColumn[] {
                         this.tableRooms.room_numColumn}, new global::System.Data.DataColumn[] {
                         this.tableSchedule.room_numColumn}, false);
@@ -546,10 +542,6 @@ namespace PreEnrollmentSystem {
                         this.tableAccounts.usernameColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudents.usernameColumn}, false);
             this.Relations.Add(this.relationFK_Students_ToTable);
-            this.relationStudents_Enrollment = new global::System.Data.DataRelation("Students_Enrollment", new global::System.Data.DataColumn[] {
-                        this.tableStudents.student_numColumn}, new global::System.Data.DataColumn[] {
-                        this.tableEnrollment.student_numColumn}, false);
-            this.Relations.Add(this.relationStudents_Enrollment);
             this.relationSchedule_Enrollment = new global::System.Data.DataRelation("Schedule_Enrollment", new global::System.Data.DataColumn[] {
                         this.tableSchedule.schedule_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableEnrollment.schedule_IDColumn}, false);
@@ -562,6 +554,14 @@ namespace PreEnrollmentSystem {
                         this.tablePrograms.program_codeColumn}, new global::System.Data.DataColumn[] {
                         this.tableSections.program_codeColumn}, false);
             this.Relations.Add(this.relationFK_Sections_ToTable);
+            this.relationCourses_Schedule = new global::System.Data.DataRelation("Courses_Schedule", new global::System.Data.DataColumn[] {
+                        this.tableCourses.course_codeColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSchedule.course_codeColumn}, false);
+            this.Relations.Add(this.relationCourses_Schedule);
+            this.relationStudents_Enrollment = new global::System.Data.DataRelation("Students_Enrollment", new global::System.Data.DataColumn[] {
+                        this.tableStudents.student_numColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEnrollment.student_numColumn}, false);
+            this.Relations.Add(this.relationStudents_Enrollment);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4373,14 +4373,6 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EnrollmentRow FindByenrollment_IDstudent_num(int enrollment_ID, string student_num) {
-                return ((EnrollmentRow)(this.Rows.Find(new object[] {
-                            enrollment_ID,
-                            student_num})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 EnrollmentDataTable cln = ((EnrollmentDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4414,9 +4406,9 @@ namespace PreEnrollmentSystem {
                 this.columnschedule_ID = new global::System.Data.DataColumn("schedule_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnschedule_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnenrollment_ID,
-                                this.columnstudent_num}, true));
+                                this.columnenrollment_ID}, false));
                 this.columnenrollment_ID.AllowDBNull = false;
+                this.columnenrollment_ID.Unique = true;
                 this.columnstudent_num.AllowDBNull = false;
                 this.columnstudent_num.MaxLength = 50;
                 this.columnschedule_ID.AllowDBNull = false;
@@ -6195,23 +6187,23 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public StudentsRow StudentsRow {
-                get {
-                    return ((StudentsRow)(this.GetParentRow(this.Table.ParentRelations["Students_Enrollment"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Students_Enrollment"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ScheduleRow ScheduleRow {
                 get {
                     return ((ScheduleRow)(this.GetParentRow(this.Table.ParentRelations["Schedule_Enrollment"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Schedule_Enrollment"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public StudentsRow StudentsRow {
+                get {
+                    return ((StudentsRow)(this.GetParentRow(this.Table.ParentRelations["Students_Enrollment"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Students_Enrollment"]);
                 }
             }
             
@@ -6299,17 +6291,6 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CoursesRow CoursesRow {
-                get {
-                    return ((CoursesRow)(this.GetParentRow(this.Table.ParentRelations["Courses_Schedule"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Courses_Schedule"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RoomsRow RoomsRow {
                 get {
                     return ((RoomsRow)(this.GetParentRow(this.Table.ParentRelations["Rooms_Schedule"])));
@@ -6338,6 +6319,17 @@ namespace PreEnrollmentSystem {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Faculty_Schedule"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CoursesRow CoursesRow {
+                get {
+                    return ((CoursesRow)(this.GetParentRow(this.Table.ParentRelations["Courses_Schedule"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Courses_Schedule"]);
                 }
             }
             
