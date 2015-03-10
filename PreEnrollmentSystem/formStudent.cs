@@ -71,7 +71,7 @@ namespace PreEnrollmentSystem
         
             // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
             student_num = student_information[0]["student_num"].ToString();
-            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+           // this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -137,7 +137,7 @@ namespace PreEnrollmentSystem
             fs.loadData(textBoxSearchSched.Text, student_num);
             fs.ShowDialog();
 
-            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            //this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
     }
 }

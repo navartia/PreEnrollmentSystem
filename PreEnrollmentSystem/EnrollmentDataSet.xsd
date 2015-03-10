@@ -906,6 +906,41 @@ FROM            Schedule CROSS JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CourseScheduleViewTableAdapter" GeneratorDataComponentClassName="CourseScheduleViewTableAdapter" Name="CourseScheduleView" UserDataComponentName="CourseScheduleViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.CourseScheduleView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        schedule_ID, course_description, section_code, timeslot_day, timeslot_time, faculty_firstname, faculty_middlename, faculty_lastname
+FROM            CourseScheduleView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="schedule_ID" DataSetColumn="schedule_ID" />
+              <Mapping SourceColumn="course_description" DataSetColumn="course_description" />
+              <Mapping SourceColumn="section_code" DataSetColumn="section_code" />
+              <Mapping SourceColumn="timeslot_day" DataSetColumn="timeslot_day" />
+              <Mapping SourceColumn="timeslot_time" DataSetColumn="timeslot_time" />
+              <Mapping SourceColumn="faculty_firstname" DataSetColumn="faculty_firstname" />
+              <Mapping SourceColumn="faculty_middlename" DataSetColumn="faculty_middlename" />
+              <Mapping SourceColumn="faculty_lastname" DataSetColumn="faculty_lastname" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStudentNum" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStudentNum" GeneratorSourceName="FillByStudentNum" GetMethodModifier="Public" GetMethodName="GetDataByStudentNum" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStudentNum" UserSourceName="FillByStudentNum">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Students.student_num
+FROM            CourseScheduleView CROSS JOIN
+                         Students</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1434,6 +1469,62 @@ FROM            Schedule CROSS JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CourseScheduleView" msprop:Generator_TableClassName="CourseScheduleViewDataTable" msprop:Generator_TableVarName="tableCourseScheduleView" msprop:Generator_TablePropName="CourseScheduleView" msprop:Generator_RowDeletingName="CourseScheduleViewRowDeleting" msprop:Generator_RowChangingName="CourseScheduleViewRowChanging" msprop:Generator_RowEvHandlerName="CourseScheduleViewRowChangeEventHandler" msprop:Generator_RowDeletedName="CourseScheduleViewRowDeleted" msprop:Generator_UserTableName="CourseScheduleView" msprop:Generator_RowChangedName="CourseScheduleViewRowChanged" msprop:Generator_RowEvArgName="CourseScheduleViewRowChangeEvent" msprop:Generator_RowClassName="CourseScheduleViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="schedule_ID" msprop:Generator_ColumnVarNameInTable="columnschedule_ID" msprop:Generator_ColumnPropNameInRow="schedule_ID" msprop:Generator_ColumnPropNameInTable="schedule_IDColumn" msprop:Generator_UserColumnName="schedule_ID" type="xs:int" />
+              <xs:element name="course_description" msprop:Generator_ColumnVarNameInTable="columncourse_description" msprop:Generator_ColumnPropNameInRow="course_description" msprop:Generator_ColumnPropNameInTable="course_descriptionColumn" msprop:Generator_UserColumnName="course_description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="section_code" msprop:Generator_ColumnVarNameInTable="columnsection_code" msprop:Generator_ColumnPropNameInRow="section_code" msprop:Generator_ColumnPropNameInTable="section_codeColumn" msprop:Generator_UserColumnName="section_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="timeslot_day" msprop:Generator_ColumnVarNameInTable="columntimeslot_day" msprop:Generator_ColumnPropNameInRow="timeslot_day" msprop:Generator_ColumnPropNameInTable="timeslot_dayColumn" msprop:Generator_UserColumnName="timeslot_day">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="timeslot_time" msprop:Generator_ColumnVarNameInTable="columntimeslot_time" msprop:Generator_ColumnPropNameInRow="timeslot_time" msprop:Generator_ColumnPropNameInTable="timeslot_timeColumn" msprop:Generator_UserColumnName="timeslot_time">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faculty_firstname" msprop:Generator_ColumnVarNameInTable="columnfaculty_firstname" msprop:Generator_ColumnPropNameInRow="faculty_firstname" msprop:Generator_ColumnPropNameInTable="faculty_firstnameColumn" msprop:Generator_UserColumnName="faculty_firstname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faculty_middlename" msprop:Generator_ColumnVarNameInTable="columnfaculty_middlename" msprop:Generator_ColumnPropNameInRow="faculty_middlename" msprop:Generator_ColumnPropNameInTable="faculty_middlenameColumn" msprop:Generator_UserColumnName="faculty_middlename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="faculty_lastname" msprop:Generator_ColumnVarNameInTable="columnfaculty_lastname" msprop:Generator_ColumnPropNameInRow="faculty_lastname" msprop:Generator_ColumnPropNameInTable="faculty_lastnameColumn" msprop:Generator_UserColumnName="faculty_lastname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

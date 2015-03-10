@@ -287,15 +287,14 @@
             this.tableAdapterManager.AccountsTableAdapter = this.accountsTableAdapter;
             this.tableAdapterManager.AnnouncementsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Course_ScheduleTableAdapter = null;
             this.tableAdapterManager.CoursesTableAdapter = null;
             this.tableAdapterManager.Enrollment_ReportTableAdapter = null;
             this.tableAdapterManager.FacultyTableAdapter = null;
             this.tableAdapterManager.ProgramsTableAdapter = null;
             this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.Student_ScheduleTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = null;
+            this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // FormLogin
