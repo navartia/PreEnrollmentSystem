@@ -14,6 +14,7 @@ namespace PreEnrollmentSystem
         EnrollmentDataSet.StudentsDataTable student_information;
         private String student_num, a_header1, a_header2, a_header3, a_details1, a_details2, a_details3;
         static FormStudent frms = new FormStudent();
+        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
 
         public FormStudent()
         {
@@ -71,7 +72,7 @@ namespace PreEnrollmentSystem
         
             // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
             student_num = student_information[0]["student_num"].ToString();
-           // this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -137,7 +138,7 @@ namespace PreEnrollmentSystem
             fs.loadData(textBoxSearchSched.Text, student_num);
             fs.ShowDialog();
 
-            //this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
     }
 }

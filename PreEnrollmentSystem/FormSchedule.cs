@@ -12,7 +12,7 @@ namespace PreEnrollmentSystem
     public partial class FormSchedule : Form
     {
         String student_num;
-
+        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter eTA= new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter();
         public FormSchedule()
         {
             InitializeComponent();
@@ -23,14 +23,14 @@ namespace PreEnrollmentSystem
                 int row = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString());
                 String course_code = dataGridView1[0, row].Value.ToString();
 
-                //this.student_ScheduleTableAdapter.Insert(student_num, course_code, "false");
+                eTA.Insert1(false,student_num);
                 this.Dispose();
         }
 
         public void loadData(String courseName, String student_num)
         {
             this.student_num = student_num;
-            //this.courseScheduleViewTableAdapter.FillByCourseName(this.enrollmentDataSet.CourseScheduleView, courseName);
+            this.courseScheduleViewTableAdapter.FillByCourseName(this.enrollmentDataSet.CourseScheduleView, courseName);
         }
     }
 }

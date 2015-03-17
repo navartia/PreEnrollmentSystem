@@ -358,6 +358,47 @@
         YII=
 </value>
   </data>
+  <metadata name="timeslotdayDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="timeslottimeDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 17</value>
+  </metadata>
+  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAKXSURBVEhLrVU5bxNBFN5d37e9li3Lp/C9vup0pKBK5wK6tCkRPyOpiKI01Cg/IXR0GFPRpSRd
+        gkCKIFEKnBjE9zlvnHXs4LXFkz69mXn32zez2mNkGIZeKBSy3W73da/XOwXGwB8B16eUFYvFrMvl0sXM
+        GcG5VqvVNuDgK6Ac/xau1hNQp16vbyCIWDugbDabhvG5OHOCc1SbFvN/E1vT6XR2YaQyJB+BD8DfgxMD
+        YIQ9nVNnDOy63e7lrQqHwzqUT2zGN2jBZjAYNNhrIhAIGNVqdRPyG+oITqLR6PIAUDKgfAmo8j8jqCHi
+        KTEgZTa9n/F4fE5vjhgAWV+JESsY+v3+ucy8Xq8O+ZA6giunAXQ4ZQXs6y3w8bEAlInOLfQvEWB5i3w+
+        n44pauZyuZbgCXvOD2gHghqUKT3aLEpkhph9o9HoI6MjZPQOfAJZH4MfkwvUudI5ajab/VgstjiITM8B
+        oEpWLZqu7WcP97b1wcJpKpfLHDsqnGEs+5lMxkqn000noC5uPis/YxCM8FNxOyW91WrtMQvLsnZWfltA
+        vKBo7w594KLu4WjGh95utw8pLJVKW3I2Q/ywqVQqhIwT+OgLE8BzsSVtOsR2tQDI7hnkP4Bf0H3FaRPR
+        lBiAPlYOwOxhxCmaXCqsvy+a+bUrYH9htG8LMIhEIv8vAD865C8hV+/OWwSYexbWblEikfBgMr6JMTMc
+        4U9miXhKa1fg8Xg00zQjyWTSFMTxmor0npYFYI/HuDDPub87Xon0SqXyQqrc5/7uWAiOt0X4AZmY7HEo
+        FHIE6ubzeZO2rAAjvS1u7wkt8CLAJyoA11h/AZ9Are1nD/dYX4PTdogWesXtLOFNYRZvoHwBqIlxigva
+        4tk2xR1I0/4ComtLJ7dbk+QAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3
+        nkvuuOwwyII0Jp7kBJi5892Zw/4Y/1Lluq7wPE9YliV4aBo5jiOSJDksy/KxqqoXXK+Wy6XH078TwbMs
+        Owb0A/A1vMH9J3zLJeMl4YASfKP4jcvGSdm5CqeTrLh0uHSxNM0RXdbFvu+LKIrcMAxntm33vv2eWMhr
+        wO8Wi4VtxHF8gIcH3skK19MgCExmtdQXC8Zp5wS36gUYvKdBmqQiLrjWNdkzli2chIl3uFksd7HTpAdO
+        z3UsiHoLJ2HitVG4s4ibzAZkvgsnYeEJJr8japrG4Zs8z6lGC+caPZw0n88FAGcopiYtALvVnK2PRRU3
+        OccC7Uk0lu+pe+eqZBNaSAAF2PRwuJRyEh2cvF8sXfohLrrv/rQMkXzxzbhGx9IlapKm6RHgT/BzURQX
+        +K2aBi4lhKi/wWTTNKf9C/wjMowvcqoYB84/XpcAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="buttonClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -402,41 +443,6 @@
 </value>
   </data>
   <data name="buttonCreateAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3
-        nkvuuOwwyII0Jp7kBJi5892Zw/4Y/1Lluq7wPE9YliV4aBo5jiOSJDksy/KxqqoXXK+Wy6XH078TwbMs
-        Owb0A/A1vMH9J3zLJeMl4YASfKP4jcvGSdm5CqeTrLh0uHSxNM0RXdbFvu+LKIrcMAxntm33vv2eWMhr
-        wO8Wi4VtxHF8gIcH3skK19MgCExmtdQXC8Zp5wS36gUYvKdBmqQiLrjWNdkzli2chIl3uFksd7HTpAdO
-        z3UsiHoLJ2HitVG4s4ibzAZkvgsnYeEJJr8japrG4Zs8z6lGC+caPZw0n88FAGcopiYtALvVnK2PRRU3
-        OccC7Uk0lu+pe+eqZBNaSAAF2PRwuJRyEh2cvF8sXfohLrrv/rQMkXzxzbhGx9IlapKm6RHgT/BzURQX
-        +K2aBi4lhKi/wWTTNKf9C/wjMowvcqoYB84/XpcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>104, 17</value>
-  </metadata>
-  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAKXSURBVEhLrVU5bxNBFN5d37e9li3Lp/C9vup0pKBK5wK6tCkRPyOpiKI01Cg/IXR0GFPRpSRd
-        gkCKIFEKnBjE9zlvnHXs4LXFkz69mXn32zez2mNkGIZeKBSy3W73da/XOwXGwB8B16eUFYvFrMvl0sXM
-        GcG5VqvVNuDgK6Ac/xau1hNQp16vbyCIWDugbDabhvG5OHOCc1SbFvN/E1vT6XR2YaQyJB+BD8DfgxMD
-        YIQ9nVNnDOy63e7lrQqHwzqUT2zGN2jBZjAYNNhrIhAIGNVqdRPyG+oITqLR6PIAUDKgfAmo8j8jqCHi
-        KTEgZTa9n/F4fE5vjhgAWV+JESsY+v3+ucy8Xq8O+ZA6giunAXQ4ZQXs6y3w8bEAlInOLfQvEWB5i3w+
-        n44pauZyuZbgCXvOD2gHghqUKT3aLEpkhph9o9HoI6MjZPQOfAJZH4MfkwvUudI5ajab/VgstjiITM8B
-        oEpWLZqu7WcP97b1wcJpKpfLHDsqnGEs+5lMxkqn000noC5uPis/YxCM8FNxOyW91WrtMQvLsnZWfltA
-        vKBo7w594KLu4WjGh95utw8pLJVKW3I2Q/ywqVQqhIwT+OgLE8BzsSVtOsR2tQDI7hnkP4Bf0H3FaRPR
-        lBiAPlYOwOxhxCmaXCqsvy+a+bUrYH9htG8LMIhEIv8vAD865C8hV+/OWwSYexbWblEikfBgMr6JMTMc
-        4U9miXhKa1fg8Xg00zQjyWTSFMTxmor0npYFYI/HuDDPub87Xon0SqXyQqrc5/7uWAiOt0X4AZmY7HEo
-        FHIE6ubzeZO2rAAjvS1u7wkt8CLAJyoA11h/AZ9Are1nD/dYX4PTdogWesXtLOFNYRZvoHwBqIlxigva
-        4tk2xR1I0/4ComtLJ7dbk+QAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="button12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3

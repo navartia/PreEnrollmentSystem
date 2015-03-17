@@ -52,7 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 35);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Add Schecdule";
+            this.button1.Text = "Add Schedule";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -117,10 +117,14 @@
             this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
             this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // courseScheduleViewTableAdapter
+            // 
+            this.courseScheduleViewTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AccountsTableAdapter = null;
+            this.tableAdapterManager.AnnouncementsTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.CoursesTableAdapter = null;
@@ -130,6 +134,7 @@
             this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = null;
+            this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // FormSchedule
@@ -143,6 +148,7 @@
             this.Name = "FormSchedule";
             this.Text = "Add Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseScheduleViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.ResumeLayout(false);
 

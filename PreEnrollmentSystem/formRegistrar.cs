@@ -12,6 +12,7 @@ namespace PreEnrollmentSystem
     public partial class FormRegistrar : Form
     {
         private int ctr;
+        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
         public FormRegistrar()
         {
             InitializeComponent();
@@ -160,7 +161,7 @@ namespace PreEnrollmentSystem
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             String student_num = textBox7.Text;
-            //this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
 
         private void button12_Click(object sender, EventArgs e)

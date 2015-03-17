@@ -75,24 +75,28 @@ namespace PreEnrollmentSystem
             // TODO: This line of code loads data into the 'enrollmentDataSet.Accounts' table. You can move, or remove it, as needed.
             this.accountsTableAdapter.Fill(this.enrollmentDataSet.Accounts);
 
-            toDisplay = new Image[4];
+            toDisplay = new Image[6];
 
             toDisplay[0] = PreEnrollmentSystem.Properties.Resources.STI_1;
             toDisplay[1] = PreEnrollmentSystem.Properties.Resources.STI_2;
             toDisplay[2] = PreEnrollmentSystem.Properties.Resources.STI_3;
             toDisplay[3] = PreEnrollmentSystem.Properties.Resources.STI_4;
+            toDisplay[4] = PreEnrollmentSystem.Properties.Resources.STI_5;
+            toDisplay[5] = PreEnrollmentSystem.Properties.Resources.STI_6;
 
             pictureBox2.Image = toDisplay[0];
             timer1.Enabled = true;
 
             this.accountsTableAdapter.Fill(this.enrollmentDataSet.Accounts);
+            textBoxUsername.Text = "";
+            textBoxPassword.Text = "";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             i++;
 
-            if (i == 4)
+            if (i == 6)
             {
                 i = 0;
             }
@@ -106,7 +110,7 @@ namespace PreEnrollmentSystem
 
             if (i == 0)
             {
-                i = 4;
+                i = 6;
             }
             i--;
 
@@ -122,7 +126,7 @@ namespace PreEnrollmentSystem
 
             i++;
 
-            if (i >= 4)
+            if (i > 5)
             {
                 i = 0;
             }
