@@ -11,7 +11,7 @@ namespace PreEnrollmentSystem
 {
     public partial class FormRegistrar : Form
     {
-        private int ctr;
+        public int ctr;
         PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
         public FormRegistrar()
         {

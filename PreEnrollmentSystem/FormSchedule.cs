@@ -21,7 +21,7 @@ namespace PreEnrollmentSystem
         private void button1_Click(object sender, EventArgs e)
         {
                 int row = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString());
-                String course_code = dataGridView1[0, row].Value.ToString();
+                String course_code = dataGridView1[1, row].Value.ToString();
 
                 eTA.Insert1(false,student_num);
                 this.Dispose();

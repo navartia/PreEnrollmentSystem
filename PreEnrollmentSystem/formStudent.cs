@@ -12,6 +12,7 @@ namespace PreEnrollmentSystem
     public partial class FormStudent : Form
     {
         EnrollmentDataSet.StudentsDataTable student_information;
+        EnrollmentDataSet.AnnouncementsDataTable announcements;
         private String student_num, a_header1, a_header2, a_header3, a_details1, a_details2, a_details3;
         static FormStudent frms = new FormStudent();
         PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
@@ -60,6 +61,9 @@ namespace PreEnrollmentSystem
             comboBox2.Text = ("1st Term");
             comboBox2.Items.Add("1st Term");
             comboBox2.Items.Add("2nd Term");
+            panelHome.BringToFront();
+
+            updateAnnouncements();
         }
 
         public void loadData(String username)
@@ -121,7 +125,9 @@ namespace PreEnrollmentSystem
 
         private void updateAnnouncements()
         {
-            this.announcementsTableAdapter.GetData();
+            FormRegistrar fr = new FormRegistrar();
+            int tempctr = fr.ctr;
+            this.announcementsTableAdapter.GetDataByAnnouncementNum(fr.ctr);
 
             announcementTitle1.Text = a_header1;
             announcementTitle2.Text = a_header2;

@@ -5326,9 +5326,11 @@ namespace PreEnrollmentSystem {
             
             private global::System.Data.DataColumn columnfaculty_firstname;
             
-            private global::System.Data.DataColumn columnfaculty_middlename;
-            
             private global::System.Data.DataColumn columnfaculty_lastname;
+            
+            private global::System.Data.DataColumn columnroom_num;
+            
+            private global::System.Data.DataColumn columncourse_code;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -5413,17 +5415,25 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn faculty_middlenameColumn {
+            public global::System.Data.DataColumn faculty_lastnameColumn {
                 get {
-                    return this.columnfaculty_middlename;
+                    return this.columnfaculty_lastname;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn faculty_lastnameColumn {
+            public global::System.Data.DataColumn room_numColumn {
                 get {
-                    return this.columnfaculty_lastname;
+                    return this.columnroom_num;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn course_codeColumn {
+                get {
+                    return this.columncourse_code;
                 }
             }
             
@@ -5464,7 +5474,7 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public StudentScheduleViewRow AddStudentScheduleViewRow(string student_num, string course_description, string section_code, string timeslot_day, string timeslot_time, string faculty_firstname, string faculty_middlename, string faculty_lastname) {
+            public StudentScheduleViewRow AddStudentScheduleViewRow(string student_num, string course_description, string section_code, string timeslot_day, string timeslot_time, string faculty_firstname, string faculty_lastname, string room_num, string course_code) {
                 StudentScheduleViewRow rowStudentScheduleViewRow = ((StudentScheduleViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         student_num,
@@ -5473,8 +5483,9 @@ namespace PreEnrollmentSystem {
                         timeslot_day,
                         timeslot_time,
                         faculty_firstname,
-                        faculty_middlename,
-                        faculty_lastname};
+                        faculty_lastname,
+                        room_num,
+                        course_code};
                 rowStudentScheduleViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentScheduleViewRow);
                 return rowStudentScheduleViewRow;
@@ -5503,8 +5514,9 @@ namespace PreEnrollmentSystem {
                 this.columntimeslot_day = base.Columns["timeslot_day"];
                 this.columntimeslot_time = base.Columns["timeslot_time"];
                 this.columnfaculty_firstname = base.Columns["faculty_firstname"];
-                this.columnfaculty_middlename = base.Columns["faculty_middlename"];
                 this.columnfaculty_lastname = base.Columns["faculty_lastname"];
+                this.columnroom_num = base.Columns["room_num"];
+                this.columncourse_code = base.Columns["course_code"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5522,10 +5534,12 @@ namespace PreEnrollmentSystem {
                 base.Columns.Add(this.columntimeslot_time);
                 this.columnfaculty_firstname = new global::System.Data.DataColumn("faculty_firstname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfaculty_firstname);
-                this.columnfaculty_middlename = new global::System.Data.DataColumn("faculty_middlename", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfaculty_middlename);
                 this.columnfaculty_lastname = new global::System.Data.DataColumn("faculty_lastname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfaculty_lastname);
+                this.columnroom_num = new global::System.Data.DataColumn("room_num", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnroom_num);
+                this.columncourse_code = new global::System.Data.DataColumn("course_code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncourse_code);
                 this.columnstudent_num.AllowDBNull = false;
                 this.columnstudent_num.MaxLength = 50;
                 this.columncourse_description.AllowDBNull = false;
@@ -5538,9 +5552,12 @@ namespace PreEnrollmentSystem {
                 this.columntimeslot_time.MaxLength = 50;
                 this.columnfaculty_firstname.AllowDBNull = false;
                 this.columnfaculty_firstname.MaxLength = 30;
-                this.columnfaculty_middlename.MaxLength = 30;
                 this.columnfaculty_lastname.AllowDBNull = false;
                 this.columnfaculty_lastname.MaxLength = 30;
+                this.columnroom_num.AllowDBNull = false;
+                this.columnroom_num.MaxLength = 50;
+                this.columncourse_code.AllowDBNull = false;
+                this.columncourse_code.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7344,23 +7361,6 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string faculty_middlename {
-                get {
-                    try {
-                        return ((string)(this[this.tableStudentScheduleView.faculty_middlenameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'faculty_middlename\' in table \'StudentScheduleView\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableStudentScheduleView.faculty_middlenameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string faculty_lastname {
                 get {
                     return ((string)(this[this.tableStudentScheduleView.faculty_lastnameColumn]));
@@ -7372,14 +7372,24 @@ namespace PreEnrollmentSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfaculty_middlenameNull() {
-                return this.IsNull(this.tableStudentScheduleView.faculty_middlenameColumn);
+            public string room_num {
+                get {
+                    return ((string)(this[this.tableStudentScheduleView.room_numColumn]));
+                }
+                set {
+                    this[this.tableStudentScheduleView.room_numColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfaculty_middlenameNull() {
-                this[this.tableStudentScheduleView.faculty_middlenameColumn] = global::System.Convert.DBNull;
+            public string course_code {
+                get {
+                    return ((string)(this[this.tableStudentScheduleView.course_codeColumn]));
+                }
+                set {
+                    this[this.tableStudentScheduleView.course_codeColumn] = value;
+                }
             }
         }
         
@@ -12592,7 +12602,7 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        announcement_title, announcement_details, announcement_num\r\nFROM   " +
@@ -12600,12 +12610,18 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"INSERT INTO [Announcements] ([announcement_title], [announcement_details], [announcement_num]) VALUES (@announcement_title, @announcement_details, @announcement_num);
-SELECT announcement_title, announcement_details, announcement_num FROM Announcements WHERE (announcement_num = @announcement_num)";
+            this._commandCollection[1].CommandText = "SELECT        announcement_title, announcement_details, announcement_num\r\nFROM   " +
+                "         Announcements\r\nWHERE (announcement_num = @announcement_num)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"INSERT INTO [Announcements] ([announcement_title], [announcement_details], [announcement_num]) VALUES (@announcement_title, @announcement_details, @announcement_num);
+SELECT announcement_title, announcement_details, announcement_num FROM Announcements WHERE (announcement_num = @announcement_num)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12627,6 +12643,32 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual EnrollmentDataSet.AnnouncementsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            EnrollmentDataSet.AnnouncementsDataTable dataTable = new EnrollmentDataSet.AnnouncementsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByAnnouncementNum(EnrollmentDataSet.AnnouncementsDataTable dataTable, int announcement_num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(announcement_num));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual EnrollmentDataSet.AnnouncementsDataTable GetDataByAnnouncementNum(int announcement_num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(announcement_num));
             EnrollmentDataSet.AnnouncementsDataTable dataTable = new EnrollmentDataSet.AnnouncementsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -12666,7 +12708,7 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertAnnouncements(string announcement_title, string announcement_details, int announcement_num) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((announcement_title == null)) {
                 throw new global::System.ArgumentNullException("announcement_title");
             }
@@ -13591,8 +13633,8 @@ FROM            Schedule CROSS JOIN
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT course_description FROM CourseScheduleView WHERE (course_description = @co" +
-                "urse_description)";
+            this._commandCollection[1].CommandText = "SELECT        *\r\nFROM           CourseScheduleView\r\nWHERE        (course_descript" +
+                "ion = @course_description)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@course_description", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "course_description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -13785,8 +13827,9 @@ FROM            Schedule CROSS JOIN
             tableMapping.ColumnMappings.Add("timeslot_day", "timeslot_day");
             tableMapping.ColumnMappings.Add("timeslot_time", "timeslot_time");
             tableMapping.ColumnMappings.Add("faculty_firstname", "faculty_firstname");
-            tableMapping.ColumnMappings.Add("faculty_middlename", "faculty_middlename");
             tableMapping.ColumnMappings.Add("faculty_lastname", "faculty_lastname");
+            tableMapping.ColumnMappings.Add("room_num", "room_num");
+            tableMapping.ColumnMappings.Add("course_code", "course_code");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -13794,7 +13837,7 @@ FROM            Schedule CROSS JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PreEnrollmentSystem.Properties.Settings.Default.EnrollmentConnectionString;
+            this._connection.ConnectionString = global::PreEnrollmentSystem.Properties.Settings.Default.StudentConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13803,15 +13846,11 @@ FROM            Schedule CROSS JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        student_num, course_description, section_code, timeslot_day, timesl" +
-                "ot_time, faculty_firstname, faculty_middlename, faculty_lastname\r\nFROM          " +
-                "  StudentScheduleView";
+            this._commandCollection[0].CommandText = "SELECT        StudentScheduleView.*\r\nFROM            StudentScheduleView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::PreEnrollmentSystem.Properties.Settings.Default.StudentConnectionString);
-            this._commandCollection[1].CommandText = "SELECT course_description, faculty_firstname, faculty_lastname, faculty_middlenam" +
-                "e, section_code, student_num, timeslot_day, timeslot_time FROM StudentScheduleVi" +
-                "ew WHERE (student_num = @student_num)";
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT * \r\nFROM StudentScheduleView \r\nWHERE (student_num = @student_num)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_num", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "student_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

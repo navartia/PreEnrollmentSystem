@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.course_sched_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursedayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
             this.courseScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.CourseScheduleViewTableAdapter();
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
+            this.course_sched_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslot_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslot_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseScheduleViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
@@ -66,46 +66,13 @@
             this.course_sched_id,
             this.coursedescriptionDataGridViewTextBoxColumn,
             this.sectioncodeDataGridViewTextBoxColumn,
-            this.coursedayDataGridViewTextBoxColumn,
-            this.coursetimeDataGridViewTextBoxColumn});
+            this.timeslot_day,
+            this.timeslot_time});
             this.dataGridView1.DataSource = this.courseScheduleViewBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(860, 227);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // course_sched_id
-            // 
-            this.course_sched_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.course_sched_id.DataPropertyName = "course_sched_id";
-            this.course_sched_id.HeaderText = "Schedule ID";
-            this.course_sched_id.Name = "course_sched_id";
-            this.course_sched_id.Width = 91;
-            // 
-            // coursedescriptionDataGridViewTextBoxColumn
-            // 
-            this.coursedescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
-            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
-            // 
-            // sectioncodeDataGridViewTextBoxColumn
-            // 
-            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section";
-            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
-            // 
-            // coursedayDataGridViewTextBoxColumn
-            // 
-            this.coursedayDataGridViewTextBoxColumn.DataPropertyName = "course_day";
-            this.coursedayDataGridViewTextBoxColumn.HeaderText = "Day";
-            this.coursedayDataGridViewTextBoxColumn.Name = "coursedayDataGridViewTextBoxColumn";
-            // 
-            // coursetimeDataGridViewTextBoxColumn
-            // 
-            this.coursetimeDataGridViewTextBoxColumn.DataPropertyName = "course_time";
-            this.coursetimeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.coursetimeDataGridViewTextBoxColumn.Name = "coursetimeDataGridViewTextBoxColumn";
             // 
             // courseScheduleViewBindingSource
             // 
@@ -137,6 +104,39 @@
             this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // course_sched_id
+            // 
+            this.course_sched_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.course_sched_id.DataPropertyName = "course_sched_id";
+            this.course_sched_id.HeaderText = "Schedule ID";
+            this.course_sched_id.Name = "course_sched_id";
+            this.course_sched_id.Width = 91;
+            // 
+            // coursedescriptionDataGridViewTextBoxColumn
+            // 
+            this.coursedescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
+            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
+            // 
+            // sectioncodeDataGridViewTextBoxColumn
+            // 
+            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section";
+            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
+            // 
+            // timeslot_day
+            // 
+            this.timeslot_day.DataPropertyName = "timeslot_day";
+            this.timeslot_day.HeaderText = "Day";
+            this.timeslot_day.Name = "timeslot_day";
+            // 
+            // timeslot_time
+            // 
+            this.timeslot_time.DataPropertyName = "timeslot_time";
+            this.timeslot_time.HeaderText = "Time";
+            this.timeslot_time.Name = "timeslot_time";
+            // 
             // FormSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,10 +162,12 @@
         private EnrollmentDataSetTableAdapters.CourseScheduleViewTableAdapter courseScheduleViewTableAdapter;
         private EnrollmentDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource courseScheduleViewBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coursedayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coursetimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn course_sched_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coursedayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coursetimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeslot_day;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeslot_time;
     }
 }
