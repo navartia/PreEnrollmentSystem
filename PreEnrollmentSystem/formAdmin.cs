@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace PreEnrollmentSystem
 {
     public partial class FormAdmin : Form
@@ -183,6 +187,12 @@ namespace PreEnrollmentSystem
                 row.Cells[6].Value = afternoon;
                 row.Cells[7].Value = evening;
             }
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Test.pdf", FileMode.Create));
+            doc.Open();
+            Paragraph paragraph = new Paragraph("This is a test paragraph for the PDF File! :)");
+            doc.Add(paragraph);
+            doc.Close();
         }
 
         private void generateSectionTable()

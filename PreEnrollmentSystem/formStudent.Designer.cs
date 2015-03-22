@@ -64,7 +64,6 @@
             this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultymiddlenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultylastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSearchSched = new System.Windows.Forms.Button();
@@ -262,6 +261,7 @@
             this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
+            this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
@@ -725,7 +725,6 @@
             this.coursedescriptionDataGridViewTextBoxColumn,
             this.sectioncodeDataGridViewTextBoxColumn,
             this.facultyfirstnameDataGridViewTextBoxColumn,
-            this.facultymiddlenameDataGridViewTextBoxColumn,
             this.facultylastnameDataGridViewTextBoxColumn});
             this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
             this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
@@ -753,14 +752,6 @@
             this.facultyfirstnameDataGridViewTextBoxColumn.HeaderText = "Faculty Firstname";
             this.facultyfirstnameDataGridViewTextBoxColumn.Name = "facultyfirstnameDataGridViewTextBoxColumn";
             this.facultyfirstnameDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // facultymiddlenameDataGridViewTextBoxColumn
-            // 
-            this.facultymiddlenameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.facultymiddlenameDataGridViewTextBoxColumn.DataPropertyName = "faculty_middlename";
-            this.facultymiddlenameDataGridViewTextBoxColumn.HeaderText = "Faculty Middlename";
-            this.facultymiddlenameDataGridViewTextBoxColumn.Name = "facultymiddlenameDataGridViewTextBoxColumn";
-            this.facultymiddlenameDataGridViewTextBoxColumn.Width = 115;
             // 
             // facultylastnameDataGridViewTextBoxColumn
             // 
@@ -1121,7 +1112,7 @@
             this.label131.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label131.Location = new System.Drawing.Point(5, 2);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(130, 16);
+            this.label131.Size = new System.Drawing.Size(127, 16);
             this.label131.TabIndex = 1;
             this.label131.Text = "Running Average";
             // 
@@ -1134,7 +1125,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
@@ -1173,7 +1164,7 @@
             this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.Location = new System.Drawing.Point(5, 78);
             this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(113, 32);
+            this.label127.Size = new System.Drawing.Size(109, 32);
             this.label127.TabIndex = 5;
             this.label127.Text = "Quarterly Weighted Ave.";
             // 
@@ -1181,7 +1172,7 @@
             // 
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label126.Location = new System.Drawing.Point(153, 78);
+            this.label126.Location = new System.Drawing.Point(148, 78);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(53, 13);
             this.label126.TabIndex = 4;
@@ -1191,9 +1182,9 @@
             // 
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label125.Location = new System.Drawing.Point(300, 78);
+            this.label125.Location = new System.Drawing.Point(291, 78);
             this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(97, 32);
+            this.label125.Size = new System.Drawing.Size(94, 32);
             this.label125.TabIndex = 3;
             this.label125.Text = "Eligiblity for Enrollment";
             // 
@@ -1202,7 +1193,7 @@
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label124.Location = new System.Drawing.Point(467, 78);
+            this.label124.Location = new System.Drawing.Point(458, 78);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(24, 13);
             this.label124.TabIndex = 2;
@@ -1214,7 +1205,7 @@
             this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.Location = new System.Drawing.Point(5, 2);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(131, 16);
+            this.label123.Size = new System.Drawing.Size(127, 16);
             this.label123.TabIndex = 1;
             this.label123.Text = "Units Considered";
             // 
@@ -1222,7 +1213,7 @@
             // 
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label128.Location = new System.Drawing.Point(153, 2);
+            this.label128.Location = new System.Drawing.Point(148, 2);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(21, 13);
             this.label128.TabIndex = 6;
@@ -1232,9 +1223,9 @@
             // 
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label129.Location = new System.Drawing.Point(300, 2);
+            this.label129.Location = new System.Drawing.Point(291, 2);
             this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(127, 16);
+            this.label129.Size = new System.Drawing.Size(124, 16);
             this.label129.TabIndex = 7;
             this.label129.Text = "Academic Status";
             // 
@@ -1243,7 +1234,7 @@
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label130.Location = new System.Drawing.Point(467, 2);
+            this.label130.Location = new System.Drawing.Point(458, 2);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(111, 13);
             this.label130.TabIndex = 8;
@@ -1259,7 +1250,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
             this.tableLayoutPanel1.Controls.Add(this.label137, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label135, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label134, 0, 6);
@@ -1551,7 +1542,7 @@
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.Location = new System.Drawing.Point(560, 2);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(52, 16);
+            this.label97.Size = new System.Drawing.Size(51, 16);
             this.label97.TabIndex = 4;
             this.label97.Text = "Status";
             // 
@@ -1561,7 +1552,7 @@
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.Location = new System.Drawing.Point(435, 2);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(44, 16);
+            this.label96.Size = new System.Drawing.Size(43, 16);
             this.label96.TabIndex = 3;
             this.label96.Text = "Units";
             // 
@@ -1571,7 +1562,7 @@
             this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.Location = new System.Drawing.Point(309, 2);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(52, 16);
+            this.label95.Size = new System.Drawing.Size(51, 16);
             this.label95.TabIndex = 2;
             this.label95.Text = "Grade";
             // 
@@ -1581,7 +1572,7 @@
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.Location = new System.Drawing.Point(157, 2);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(61, 16);
+            this.label94.Size = new System.Drawing.Size(60, 16);
             this.label94.TabIndex = 1;
             this.label94.Text = "Section";
             // 
@@ -1591,7 +1582,7 @@
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.Location = new System.Drawing.Point(5, 2);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(59, 16);
+            this.label93.Size = new System.Drawing.Size(57, 16);
             this.label93.TabIndex = 0;
             this.label93.Text = "Course";
             // 
@@ -1656,7 +1647,7 @@
             this.label92.ForeColor = System.Drawing.SystemColors.Control;
             this.label92.Location = new System.Drawing.Point(393, 41);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(49, 16);
+            this.label92.Size = new System.Drawing.Size(48, 16);
             this.label92.TabIndex = 3;
             this.label92.Text = "Term:";
             // 
@@ -1676,7 +1667,7 @@
             this.label91.ForeColor = System.Drawing.SystemColors.Control;
             this.label91.Location = new System.Drawing.Point(31, 41);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(101, 16);
+            this.label91.Size = new System.Drawing.Size(97, 16);
             this.label91.TabIndex = 1;
             this.label91.Text = "School Year:";
             // 
@@ -3044,6 +3035,10 @@
             // 
             this.announcementsTableAdapter.ClearBeforeFill = true;
             // 
+            // studentScheduleViewTableAdapter
+            // 
+            this.studentScheduleViewTableAdapter.ClearBeforeFill = true;
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3053,7 +3048,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormStudent";
-            this.Text = "7";
+            this.Text = "FormStudent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).EndInit();
@@ -3281,10 +3276,7 @@
         private System.Windows.Forms.BindingSource studentScheduleViewBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coursedayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coursetimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultyfirstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultymiddlenameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultylastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panelEditInfo;
         private System.Windows.Forms.Label label8;
@@ -3352,5 +3344,6 @@
         private System.Windows.Forms.Label announcementDetails1;
         private System.Windows.Forms.Label announcementTitle3;
         private EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter announcementsTableAdapter;
+        private EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter studentScheduleViewTableAdapter;
     }
 }

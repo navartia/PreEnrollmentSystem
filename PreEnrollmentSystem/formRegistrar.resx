@@ -370,21 +370,20 @@
   <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>104, 17</value>
   </metadata>
-  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonPrintSchedule.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAKXSURBVEhLrVU5bxNBFN5d37e9li3Lp/C9vup0pKBK5wK6tCkRPyOpiKI01Cg/IXR0GFPRpSRd
-        gkCKIFEKnBjE9zlvnHXs4LXFkz69mXn32zez2mNkGIZeKBSy3W73da/XOwXGwB8B16eUFYvFrMvl0sXM
-        GcG5VqvVNuDgK6Ac/xau1hNQp16vbyCIWDugbDabhvG5OHOCc1SbFvN/E1vT6XR2YaQyJB+BD8DfgxMD
-        YIQ9nVNnDOy63e7lrQqHwzqUT2zGN2jBZjAYNNhrIhAIGNVqdRPyG+oITqLR6PIAUDKgfAmo8j8jqCHi
-        KTEgZTa9n/F4fE5vjhgAWV+JESsY+v3+ucy8Xq8O+ZA6giunAXQ4ZQXs6y3w8bEAlInOLfQvEWB5i3w+
-        n44pauZyuZbgCXvOD2gHghqUKT3aLEpkhph9o9HoI6MjZPQOfAJZH4MfkwvUudI5ajab/VgstjiITM8B
-        oEpWLZqu7WcP97b1wcJpKpfLHDsqnGEs+5lMxkqn000noC5uPis/YxCM8FNxOyW91WrtMQvLsnZWfltA
-        vKBo7w594KLu4WjGh95utw8pLJVKW3I2Q/ywqVQqhIwT+OgLE8BzsSVtOsR2tQDI7hnkP4Bf0H3FaRPR
-        lBiAPlYOwOxhxCmaXCqsvy+a+bUrYH9htG8LMIhEIv8vAD865C8hV+/OWwSYexbWblEikfBgMr6JMTMc
-        4U9miXhKa1fg8Xg00zQjyWTSFMTxmor0npYFYI/HuDDPub87Xon0SqXyQqrc5/7uWAiOt0X4AZmY7HEo
-        FHIE6ubzeZO2rAAjvS1u7wkt8CLAJyoA11h/AZ9Are1nD/dYX4PTdogWesXtLOFNYRZvoHwBqIlxigva
-        4tk2xR1I0/4ComtLJ7dbk+QAAAAASUVORK5CYII=
+        YQUAAAJ2SURBVEhLlVY7bttAEOWSoiyK+lB/qZAgQYVo/ZKjpPEFUuYAgdtUKQLfwo1hGwmQzmdIbxhO
+        UthFGsNwZ9iSjbxH7UqURNKrAR52d3Zm3swsl6ShxLIs0e/3308mk4vpdPoIvAIvEmoe1hH/xuPxZ8/z
+        hAwTL91udx8O9yCYAXeY/8EYQM3DOuAv1i8Y58BRqVSKJ7FtW8DoGA5zZPStWq3a2WzWdBwnFvV63SIB
+        EFSVSIJgJLiE4azZbHpSnSjFYtGE/ZzBFWJJmC02r0lQqVT2pDpRQCBgz1aqKl4RI2jX1pmQAAY7EaRS
+        KYF2fpEESxJgPhqNPpmmKS0hmxUIIQyO6HMrCmiDRb98Pm/6vv8Rvifw/Y7xJ6vA/JfruqsqNgnK5XIa
+        8yvo+ETNMGfpyxGZn/PcpLuBhAQyFvDbw/4z7K5zudyqhM0WIUMS/GbAKCDIjzCBEvSeftEEcFprEbJx
+        0I5OFBAoJV3XhASxFYQJpDoQlr8hcmdbtAnwhBjtdtvH7f6gg06n4+OyJhNQqQgAB/MHgD1fXqQY0Oah
+        Vqs52mdQKBS4PgdugFvob8Ojglzf8KlCcFO7AuoymYzgswyYb0Dg3RQcjHYFUk2R5xovtFmY7nDIzH4w
+        GBwMh8OvOsBtPkAMod0iwMX8CdA95CfcD1e7RcwGmR1CdwqcQX8WHhXk+hQvt0METK4AG1tnINv8pkjz
+        xDPguz344LRaLa0PTpQ0Gg2PMRiLFUn14t0O5uUnE/20mUHEIxkJ2uKi2fRFHL6Bj9Pp9IqAguu+60d/
+        bY35HUb63vd6vX0ZdiX8bcHGOxiGf1t2AX0u+OvDjiyiGsZ/rFN1cwBoOLQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="button12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -471,6 +470,9 @@
   </metadata>
   <metadata name="announcementsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>506, 56</value>
+  </metadata>
+  <metadata name="studentScheduleViewTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>264, 56</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>85</value>

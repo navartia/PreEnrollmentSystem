@@ -270,9 +270,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelEnrollment);
             this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Panel2.Controls.Add(this.panelEditInfo);
-            this.splitContainer1.Panel2.Controls.Add(this.panelEnrollment);
             this.splitContainer1.Size = new System.Drawing.Size(1064, 488);
             this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 12;

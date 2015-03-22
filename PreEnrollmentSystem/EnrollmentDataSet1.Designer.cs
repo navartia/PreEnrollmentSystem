@@ -12616,12 +12616,11 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"INSERT INTO [Announcements] ([announcement_title], [announcement_details], [announcement_num]) VALUES (@announcement_title, @announcement_details, @announcement_num);
-SELECT announcement_title, announcement_details, announcement_num FROM Announcements WHERE (announcement_num = @announcement_num)";
+            this._commandCollection[2].CommandText = "INSERT INTO Announcements\r\n                         (announcement_title, announce" +
+                "ment_details)\r\nVALUES        (@announcement_title,@announcement_details)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12707,7 +12706,7 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertAnnouncements(string announcement_title, string announcement_details, int announcement_num) {
+        public virtual int InsertAnnouncements(string announcement_title, string announcement_details) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((announcement_title == null)) {
                 throw new global::System.ArgumentNullException("announcement_title");
@@ -12721,7 +12720,6 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
             else {
                 command.Parameters[1].Value = ((string)(announcement_details));
             }
-            command.Parameters[2].Value = ((int)(announcement_num));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

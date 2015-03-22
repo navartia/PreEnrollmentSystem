@@ -13,9 +13,8 @@ namespace PreEnrollmentSystem
     {
         EnrollmentDataSet.StudentsDataTable student_information;
         EnrollmentDataSet.AnnouncementsDataTable announcements;
-        private String student_num, a_header1, a_header2, a_header3, a_details1, a_details2, a_details3;
+        private String student_num;
         static FormStudent frms = new FormStudent();
-        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
 
         public FormStudent()
         {
@@ -76,17 +75,12 @@ namespace PreEnrollmentSystem
         
             // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
             student_num = student_information[0]["student_num"].ToString();
-            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panelSettings.BringToFront();
-        }
-
-        private void createScheduleTable()
-        {
-            //DataTable 
         }
 
         private void buttonUpdatePassword_Click(object sender, EventArgs e)
@@ -126,16 +120,26 @@ namespace PreEnrollmentSystem
         private void updateAnnouncements()
         {
             FormRegistrar fr = new FormRegistrar();
-            int tempctr = fr.ctr;
-            this.announcementsTableAdapter.GetDataByAnnouncementNum(fr.ctr);
-
-            announcementTitle1.Text = a_header1;
-            announcementTitle2.Text = a_header2;
-            announcementTitle3.Text = a_header3;
-
-            announcementDetails1.Text = a_details1;
-            announcementDetails2.Text = a_details2;
-            announcementDetails3.Text = a_details3;
+            int ctr = 0;
+            for(int b = announcements.Rows.Count; b < announcements.Rows.Count-3; b--)
+            {
+                if (b == 1)
+                {
+                    announcementTitle1.Text = announcements[b-2]["announcements_title"].ToString();
+                    announcementDetails1.Text = announcements[b-2]["announcement_details"].ToString();
+                    ctr++;
+                }
+                if (b == 2)
+                {
+                    announcementTitle2.Text = announcements[b-1]["announcements_title"].ToString();
+                    announcementDetails2.Text = announcements[b-1]["announcement_details"].ToString();
+                }
+                if (b == 3)
+                {
+                    announcementTitle3.Text = announcements[b]["announcements_title"].ToString();
+                    announcementDetails3.Text = announcements[b]["announcement_details"].ToString();
+                }
+            }
         }
 
         private void buttonSearchSched_Click(object sender, EventArgs e)
@@ -144,7 +148,7 @@ namespace PreEnrollmentSystem
             fs.loadData(textBoxSearchSched.Text, student_num);
             fs.ShowDialog();
 
-            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
     }
 }

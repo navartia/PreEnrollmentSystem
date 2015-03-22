@@ -52,6 +52,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,7 +72,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(794, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(894, 80);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -93,13 +94,13 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(481, 35);
+            this.panel5.Location = new System.Drawing.Point(581, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(313, 306);
+            this.panel5.Size = new System.Drawing.Size(313, 351);
             this.panel5.TabIndex = 10;
             // 
             // panel2
@@ -126,6 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.textBoxPassword);
             this.panel1.Controls.Add(this.textBoxUsername);
             this.panel1.Controls.Add(this.buttonLogin);
@@ -175,7 +177,7 @@
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.buttonLogin.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogin.Image")));
             this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLogin.Location = new System.Drawing.Point(96, 144);
+            this.buttonLogin.Location = new System.Drawing.Point(16, 147);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(104, 48);
             this.buttonLogin.TabIndex = 2;
@@ -216,7 +218,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(481, 306);
+            this.panel4.Size = new System.Drawing.Size(581, 351);
             this.panel4.TabIndex = 1;
             // 
             // pictureBox2
@@ -225,7 +227,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(481, 281);
+            this.pictureBox2.Size = new System.Drawing.Size(581, 326);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -237,9 +239,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 281);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 326);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(481, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(581, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -275,7 +277,7 @@
             this.panel3.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel3.Location = new System.Drawing.Point(0, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(794, 341);
+            this.panel3.Size = new System.Drawing.Size(894, 386);
             this.panel3.TabIndex = 9;
             // 
             // accountsTableAdapter
@@ -297,13 +299,31 @@
             this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExit.Location = new System.Drawing.Point(197, 147);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(104, 48);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(794, 421);
+            this.ClientSize = new System.Drawing.Size(894, 466);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -354,6 +374,7 @@
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private EnrollmentDataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private EnrollmentDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 

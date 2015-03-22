@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace PreEnrollmentSystem
 {
     public partial class FormRegistrar : Form
     {
-        public int ctr;
-        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter ssView = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
         public FormRegistrar()
         {
             InitializeComponent();
@@ -20,8 +22,11 @@ namespace PreEnrollmentSystem
 
         private void FormRegistrar_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
+            //this.studentScheduleViewTableAdapter.Fill(this.enrollmentDataSet.StudentScheduleView);
             // TODO: This line of code loads data into the 'enrollmentDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.enrollmentDataSet.Students);
+            
             panelHome.BringToFront();
 
             comboBoxStudentStatus.Items.Add("Regular");
@@ -161,7 +166,7 @@ namespace PreEnrollmentSystem
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             String student_num = textBox7.Text;
-            ssView.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -182,28 +187,56 @@ namespace PreEnrollmentSystem
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            int newctr = 0;
             if (textBoxHeader1.Text != "" && textBoxDetails1.Text != "")
             { 
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader1.Text, textBoxDetails1.Text, ctr);
-                newctr++;
+                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader1.Text, textBoxDetails1.Text);
             }
 
             if (textBoxHeader2.Text != "" && textBoxDetails2.Text != "")
             {
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader2.Text, textBoxDetails2.Text, ctr);
-                newctr++;
+                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader2.Text, textBoxDetails2.Text);
             }
 
             if (textBoxHeader3.Text != "" && textBoxDetails3.Text != "")
             {
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader3.Text, textBoxDetails3.Text, ctr);
-                newctr++;
+                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader3.Text, textBoxDetails3.Text);
+            }
+            MessageBox.Show("Announcements Posted Successfully!");
+        }
+
+        private void buttonPrintSchedule_Click(object sender, EventArgs e)
+        {
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Test.pdf", FileMode.Create));
+            doc.Open();
+
+            Paragraph paragraph = new Paragraph("Data Grid View Contents");
+
+            PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            {
+                table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
             }
 
-            ctr = ctr + newctr;
+            table.HeaderRows = 1;
 
-            MessageBox.Show("Announcements Posted Successfully!");
+            for (int b = 0; b < 10; b++)
+            {
+                for (int c = 0 ; c < dataGridView1.Columns.Count; c++)
+                {
+                    if (dataGridView1[c,b].Value != null)
+                    {
+                        table.AddCell(new Phrase(dataGridView1[c, b].Value.ToString()));
+                    }
+                }
+            }
+
+            doc.Add(paragraph);
+            doc.Add(table);
+            doc.Close();
+
+            MessageBox.Show("PDF successfully created!");
         }
     }
 }
