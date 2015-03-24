@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
@@ -52,7 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
-            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,6 +137,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 243);
             this.panel1.TabIndex = 7;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExit.Location = new System.Drawing.Point(197, 147);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(104, 48);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // textBoxPassword
             // 
@@ -298,24 +316,6 @@
             this.tableAdapterManager.StudentsTableAdapter = null;
             this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonExit.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(197, 147);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(104, 48);
-            this.buttonExit.TabIndex = 9;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FormLogin
             // 

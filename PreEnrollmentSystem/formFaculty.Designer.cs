@@ -39,6 +39,7 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelScheduleList = new System.Windows.Forms.Panel();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -195,13 +196,13 @@
             this.labelStudNum = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelScheduleList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.panelHome.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelSettings.SuspendLayout();
@@ -228,7 +229,6 @@
             this.panelClassListView.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -411,6 +411,16 @@
             this.panelScheduleList.Name = "panelScheduleList";
             this.panelScheduleList.Size = new System.Drawing.Size(1072, 516);
             this.panelScheduleList.TabIndex = 0;
+            // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.AllowUserToAddRows = false;
+            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(26, 62);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(1019, 368);
+            this.dataGridViewSchedule.TabIndex = 6;
             // 
             // comboBox3
             // 
@@ -2183,16 +2193,6 @@
             // 
             this.accountsTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.AllowUserToAddRows = false;
-            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(26, 62);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(1019, 368);
-            this.dataGridViewSchedule.TabIndex = 6;
-            // 
             // FormFaculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2211,6 +2211,7 @@
             this.panel1.ResumeLayout(false);
             this.panelScheduleList.ResumeLayout(false);
             this.panelScheduleList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2252,7 +2253,6 @@
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.ResumeLayout(false);
 
         }

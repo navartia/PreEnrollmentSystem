@@ -32,5 +32,10 @@ namespace PreEnrollmentSystem
             this.student_num = student_num;
             this.courseScheduleViewTableAdapter.FillByCourseName(this.enrollmentDataSet.CourseScheduleView, courseName);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

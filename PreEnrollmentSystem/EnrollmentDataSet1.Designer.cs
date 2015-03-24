@@ -12564,39 +12564,39 @@ WHERE (username = @username)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Announcements] WHERE (([announcement_title] = @Original_announcement" +
-                "_title) AND ([announcement_details] = @Original_announcement_details) AND ([anno" +
-                "uncement_num] = @Original_announcement_num))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Announcements] WHERE (([announcement_num] = @Original_announcement_n" +
+                "um) AND ([announcement_title] = @Original_announcement_title) AND ([announcement" +
+                "_details] = @Original_announcement_details))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_details", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Announcements] ([announcement_title], [announcement_details], [announcement_num]) VALUES (@announcement_title, @announcement_details, @announcement_num);
-SELECT announcement_title, announcement_details, announcement_num FROM Announcements WHERE (announcement_num = @announcement_num)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Announcements] ([announcement_num], [announcement_title], [announcement_details]) VALUES (@announcement_num, @announcement_title, @announcement_details);
+SELECT announcement_num, announcement_title, announcement_details FROM Announcements WHERE (announcement_num = @announcement_num)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Announcements] SET [announcement_title] = @announcement_title, [announcement_details] = @announcement_details, [announcement_num] = @announcement_num WHERE (([announcement_title] = @Original_announcement_title) AND ([announcement_details] = @Original_announcement_details) AND ([announcement_num] = @Original_announcement_num));
-SELECT announcement_title, announcement_details, announcement_num FROM Announcements WHERE (announcement_num = @announcement_num)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Announcements] SET [announcement_num] = @announcement_num, [announcement_title] = @announcement_title, [announcement_details] = @announcement_details WHERE (([announcement_num] = @Original_announcement_num) AND ([announcement_title] = @Original_announcement_title) AND ([announcement_details] = @Original_announcement_details));
+SELECT announcement_num, announcement_title, announcement_details FROM Announcements WHERE (announcement_num = @announcement_num)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_details", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_announcement_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PreEnrollmentSystem.Properties.Settings.Default.EnrollmentConnectionString;
+            this._connection.ConnectionString = global::PreEnrollmentSystem.Properties.Settings.Default.StudentConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12605,20 +12605,25 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        announcement_title, announcement_details, announcement_num\r\nFROM   " +
+            this._commandCollection[0].CommandText = "SELECT        announcement_num, announcement_title, announcement_details\r\nFROM   " +
                 "         Announcements";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        announcement_title, announcement_details, announcement_num\r\nFROM   " +
-                "         Announcements\r\nWHERE (announcement_num = @announcement_num)";
+            this._commandCollection[1].Connection = new global::System.Data.SqlClient.SqlConnection(global::PreEnrollmentSystem.Properties.Settings.Default.EnrollmentConnectionString);
+            this._commandCollection[1].CommandText = "SELECT announcement_details, announcement_num, announcement_title FROM Announceme" +
+                "nts WHERE (announcement_num = @announcement_num)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Announcements\r\n                         (announcement_title, announce" +
-                "ment_details)\r\nVALUES        (@announcement_title,@announcement_details)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Announcements
+                         (announcement_num, announcement_title, announcement_details)
+VALUES        (@announcement_num, @announcement_title,@announcement_details); 
+SELECT *  FROM Announcements 
+WHERE (announcement_num = @announcement_num)
+";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_title", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcement_details", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "announcement_details", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -12706,19 +12711,20 @@ SELECT announcement_title, announcement_details, announcement_num FROM Announcem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertAnnouncements(string announcement_title, string announcement_details) {
+        public virtual int InsertAnnouncements(int announcement_num, string announcement_title, string announcement_details) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(announcement_num));
             if ((announcement_title == null)) {
-                throw new global::System.ArgumentNullException("announcement_title");
+                command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(announcement_title));
+                command.Parameters[1].Value = ((string)(announcement_title));
             }
             if ((announcement_details == null)) {
-                throw new global::System.ArgumentNullException("announcement_details");
+                command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(announcement_details));
+                command.Parameters[2].Value = ((string)(announcement_details));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

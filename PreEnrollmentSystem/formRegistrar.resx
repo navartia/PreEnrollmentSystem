@@ -358,46 +358,6 @@
         YII=
 </value>
   </data>
-  <metadata name="timeslotdayDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="timeslottimeDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>104, 17</value>
-  </metadata>
-  <data name="buttonPrintSchedule.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAJ2SURBVEhLlVY7bttAEOWSoiyK+lB/qZAgQYVo/ZKjpPEFUuYAgdtUKQLfwo1hGwmQzmdIbxhO
-        UthFGsNwZ9iSjbxH7UqURNKrAR52d3Zm3swsl6ShxLIs0e/3308mk4vpdPoIvAIvEmoe1hH/xuPxZ8/z
-        hAwTL91udx8O9yCYAXeY/8EYQM3DOuAv1i8Y58BRqVSKJ7FtW8DoGA5zZPStWq3a2WzWdBwnFvV63SIB
-        EFSVSIJgJLiE4azZbHpSnSjFYtGE/ZzBFWJJmC02r0lQqVT2pDpRQCBgz1aqKl4RI2jX1pmQAAY7EaRS
-        KYF2fpEESxJgPhqNPpmmKS0hmxUIIQyO6HMrCmiDRb98Pm/6vv8Rvifw/Y7xJ6vA/JfruqsqNgnK5XIa
-        8yvo+ETNMGfpyxGZn/PcpLuBhAQyFvDbw/4z7K5zudyqhM0WIUMS/GbAKCDIjzCBEvSeftEEcFprEbJx
-        0I5OFBAoJV3XhASxFYQJpDoQlr8hcmdbtAnwhBjtdtvH7f6gg06n4+OyJhNQqQgAB/MHgD1fXqQY0Oah
-        Vqs52mdQKBS4PgdugFvob8Ojglzf8KlCcFO7AuoymYzgswyYb0Dg3RQcjHYFUk2R5xovtFmY7nDIzH4w
-        GBwMh8OvOsBtPkAMod0iwMX8CdA95CfcD1e7RcwGmR1CdwqcQX8WHhXk+hQvt0METK4AG1tnINv8pkjz
-        xDPguz344LRaLa0PTpQ0Gg2PMRiLFUn14t0O5uUnE/20mUHEIxkJ2uKi2fRFHL6Bj9Pp9IqAguu+60d/
-        bY35HUb63vd6vX0ZdiX8bcHGOxiGf1t2AX0u+OvDjiyiGsZ/rFN1cwBoOLQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="button12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3
-        nkvuuOwwyII0Jp7kBJi5892Zw/4Y/1Lluq7wPE9YliV4aBo5jiOSJDksy/KxqqoXXK+Wy6XH078TwbMs
-        Owb0A/A1vMH9J3zLJeMl4YASfKP4jcvGSdm5CqeTrLh0uHSxNM0RXdbFvu+LKIrcMAxntm33vv2eWMhr
-        wO8Wi4VtxHF8gIcH3skK19MgCExmtdQXC8Zp5wS36gUYvKdBmqQiLrjWNdkzli2chIl3uFksd7HTpAdO
-        z3UsiHoLJ2HitVG4s4ibzAZkvgsnYeEJJr8japrG4Zs8z6lGC+caPZw0n88FAGcopiYtALvVnK2PRRU3
-        OccC7Uk0lu+pe+eqZBNaSAAF2PRwuJRyEh2cvF8sXfohLrrv/rQMkXzxzbhGx9IlapKm6RHgT/BzURQX
-        +K2aBi4lhKi/wWTTNKf9C/wjMowvcqoYB84/XpcAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="buttonClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -442,6 +402,46 @@
 </value>
   </data>
   <data name="buttonCreateAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3
+        nkvuuOwwyII0Jp7kBJi5892Zw/4Y/1Lluq7wPE9YliV4aBo5jiOSJDksy/KxqqoXXK+Wy6XH078TwbMs
+        Owb0A/A1vMH9J3zLJeMl4YASfKP4jcvGSdm5CqeTrLh0uHSxNM0RXdbFvu+LKIrcMAxntm33vv2eWMhr
+        wO8Wi4VtxHF8gIcH3skK19MgCExmtdQXC8Zp5wS36gUYvKdBmqQiLrjWNdkzli2chIl3uFksd7HTpAdO
+        z3UsiHoLJ2HitVG4s4ibzAZkvgsnYeEJJr8japrG4Zs8z6lGC+caPZw0n88FAGcopiYtALvVnK2PRRU3
+        OccC7Uk0lu+pe+eqZBNaSAAF2PRwuJRyEh2cvF8sXfohLrrv/rQMkXzxzbhGx9IlapKm6RHgT/BzURQX
+        +K2aBi4lhKi/wWTTNKf9C/wjMowvcqoYB84/XpcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="timeslotdayDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="timeslottimeDataGridViewTextBoxColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 17</value>
+  </metadata>
+  <data name="buttonPrintSchedule.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJ2SURBVEhLlVY7bttAEOWSoiyK+lB/qZAgQYVo/ZKjpPEFUuYAgdtUKQLfwo1hGwmQzmdIbxhO
+        UthFGsNwZ9iSjbxH7UqURNKrAR52d3Zm3swsl6ShxLIs0e/3308mk4vpdPoIvAIvEmoe1hH/xuPxZ8/z
+        hAwTL91udx8O9yCYAXeY/8EYQM3DOuAv1i8Y58BRqVSKJ7FtW8DoGA5zZPStWq3a2WzWdBwnFvV63SIB
+        EFSVSIJgJLiE4azZbHpSnSjFYtGE/ZzBFWJJmC02r0lQqVT2pDpRQCBgz1aqKl4RI2jX1pmQAAY7EaRS
+        KYF2fpEESxJgPhqNPpmmKS0hmxUIIQyO6HMrCmiDRb98Pm/6vv8Rvifw/Y7xJ6vA/JfruqsqNgnK5XIa
+        8yvo+ETNMGfpyxGZn/PcpLuBhAQyFvDbw/4z7K5zudyqhM0WIUMS/GbAKCDIjzCBEvSeftEEcFprEbJx
+        0I5OFBAoJV3XhASxFYQJpDoQlr8hcmdbtAnwhBjtdtvH7f6gg06n4+OyJhNQqQgAB/MHgD1fXqQY0Oah
+        Vqs52mdQKBS4PgdugFvob8Ojglzf8KlCcFO7AuoymYzgswyYb0Dg3RQcjHYFUk2R5xovtFmY7nDIzH4w
+        GBwMh8OvOsBtPkAMod0iwMX8CdA95CfcD1e7RcwGmR1CdwqcQX8WHhXk+hQvt0METK4AG1tnINv8pkjz
+        xDPguz344LRaLa0PTpQ0Gg2PMRiLFUn14t0O5uUnE/20mUHEIxkJ2uKi2fRFHL6Bj9Pp9IqAguu+60d/
+        bY35HUb63vd6vX0ZdiX8bcHGOxiGf1t2AX0u+OvDjiyiGsZ/rFN1cwBoOLQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAF3SURBVEhL7ZW9ToRAFIUZNhBYQgNLsoWh5v9JfAoL4zuoiaWFrZY+gC9gpb2diS/gA2xpY3Q3

@@ -15,6 +15,8 @@ namespace PreEnrollmentSystem
 {
     public partial class FormRegistrar : Form
     {
+        EnrollmentDataSet.AnnouncementsDataTable announcements = new EnrollmentDataSet.AnnouncementsDataTable();
+        int ctr;
         public FormRegistrar()
         {
             InitializeComponent();
@@ -23,7 +25,9 @@ namespace PreEnrollmentSystem
         private void FormRegistrar_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
+
             //this.studentScheduleViewTableAdapter.Fill(this.enrollmentDataSet.StudentScheduleView);
+
             // TODO: This line of code loads data into the 'enrollmentDataSet.Students' table. You can move, or remove it, as needed.
             this.studentsTableAdapter.Fill(this.enrollmentDataSet.Students);
             
@@ -187,20 +191,24 @@ namespace PreEnrollmentSystem
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxHeader1.Text != "" && textBoxDetails1.Text != "")
+
+                ctr = (int)announcements[(int)this.announcementsTableAdapter.CountRows()]["announcement_num"];
+                MessageBox.Show(ctr.ToString());
+
+            /*if (textBoxHeader1.Text != "" && textBoxDetails1.Text != "")
             { 
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader1.Text, textBoxDetails1.Text);
+                this.announcementsTableAdapter.InsertAnnouncements(ctr+1, textBoxHeader1.Text, textBoxDetails1.Text);
             }
 
             if (textBoxHeader2.Text != "" && textBoxDetails2.Text != "")
             {
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader2.Text, textBoxDetails2.Text);
+                this.announcementsTableAdapter.InsertAnnouncements(ctr+2, textBoxHeader2.Text, textBoxDetails2.Text);
             }
 
             if (textBoxHeader3.Text != "" && textBoxDetails3.Text != "")
             {
-                this.announcementsTableAdapter.InsertAnnouncements(textBoxHeader3.Text, textBoxDetails3.Text);
-            }
+                this.announcementsTableAdapter.InsertAnnouncements(ctr+3, textBoxHeader3.Text, textBoxDetails3.Text);
+            }*/
             MessageBox.Show("Announcements Posted Successfully!");
         }
 

@@ -720,6 +720,7 @@
             this.dataGridViewSchedule.AllowUserToAddRows = false;
             this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridViewSchedule.AutoGenerateColumns = false;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.coursedescriptionDataGridViewTextBoxColumn,
@@ -727,6 +728,7 @@
             this.facultyfirstnameDataGridViewTextBoxColumn,
             this.facultylastnameDataGridViewTextBoxColumn});
             this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
+            this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
             this.dataGridViewSchedule.Name = "dataGridViewSchedule";
             this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
@@ -1125,7 +1127,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 345F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
@@ -1172,7 +1174,7 @@
             // 
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label126.Location = new System.Drawing.Point(148, 78);
+            this.label126.Location = new System.Drawing.Point(147, 78);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(53, 13);
             this.label126.TabIndex = 4;
@@ -1182,7 +1184,7 @@
             // 
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label125.Location = new System.Drawing.Point(291, 78);
+            this.label125.Location = new System.Drawing.Point(288, 78);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(94, 32);
             this.label125.TabIndex = 3;
@@ -1193,7 +1195,7 @@
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label124.Location = new System.Drawing.Point(458, 78);
+            this.label124.Location = new System.Drawing.Point(455, 78);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(24, 13);
             this.label124.TabIndex = 2;
@@ -1213,7 +1215,7 @@
             // 
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label128.Location = new System.Drawing.Point(148, 2);
+            this.label128.Location = new System.Drawing.Point(147, 2);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(21, 13);
             this.label128.TabIndex = 6;
@@ -1223,7 +1225,7 @@
             // 
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label129.Location = new System.Drawing.Point(291, 2);
+            this.label129.Location = new System.Drawing.Point(288, 2);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(124, 16);
             this.label129.TabIndex = 7;
@@ -1234,7 +1236,7 @@
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label130.Location = new System.Drawing.Point(458, 2);
+            this.label130.Location = new System.Drawing.Point(455, 2);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(111, 13);
             this.label130.TabIndex = 8;
@@ -1250,7 +1252,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
             this.tableLayoutPanel1.Controls.Add(this.label137, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label135, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label134, 0, 6);
@@ -3048,7 +3050,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormStudent";
-            this.Text = "FormStudent";
+            this.Text = "formStudent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).EndInit();

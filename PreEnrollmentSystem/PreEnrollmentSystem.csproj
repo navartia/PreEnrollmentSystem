@@ -201,6 +201,33 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Enrollment.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\P_20140923_101147.jpg" />
+    <Content Include="Resources\P_20140923_101153.jpg" />
+    <Content Include="Resources\P_20140923_101424.jpg" />
+    <Content Include="Resources\P_20140923_101434.jpg" />
+    <Content Include="Resources\P_20140923_101457.jpg" />
+    <Content Include="Resources\P_20140923_101617.jpg" />
+    <Content Include="Resources\P_20140923_101642.jpg" />
+    <Content Include="Resources\P_20140923_101712.jpg" />
+    <Content Include="Resources\P_20140923_101727.jpg" />
+    <Content Include="Resources\P_20140923_101832.jpg" />
+    <Content Include="Resources\P_20140923_101914.jpg" />
+    <Content Include="Resources\P_20140923_102026.jpg" />
+    <Content Include="Resources\P_20140923_102102.jpg" />
+    <Content Include="Resources\P_20140923_102431.jpg" />
+    <Content Include="Resources\P_20140923_102458.jpg" />
+    <Content Include="Resources\P_20140923_102522.jpg" />
+    <Content Include="Resources\P_20140923_102559.jpg" />
+    <Content Include="Resources\P_20140923_102842.jpg" />
+    <Content Include="Resources\P_20140923_102925.jpg" />
+    <Content Include="Resources\P_20140923_103022.jpg" />
+    <Content Include="Resources\P_20140923_103120.jpg" />
+    <Content Include="Resources\P_20140923_104050.jpg" />
+    <Content Include="Resources\P_20140923_104106.jpg" />
+    <Content Include="Resources\P_20140923_104120.jpg" />
+    <Content Include="Resources\P_20140923_104933.jpg" />
+    <Content Include="Resources\P_20140923_105014.jpg" />
+    <Content Include="Resources\P_20140923_105032.jpg" />
     <None Include="Resources\STI 6.jpg" />
     <None Include="Resources\STI 5.jpg" />
     <None Include="Resources\STI 4.jpg" />

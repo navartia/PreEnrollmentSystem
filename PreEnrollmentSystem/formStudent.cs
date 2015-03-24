@@ -12,7 +12,7 @@ namespace PreEnrollmentSystem
     public partial class FormStudent : Form
     {
         EnrollmentDataSet.StudentsDataTable student_information;
-        EnrollmentDataSet.AnnouncementsDataTable announcements;
+        EnrollmentDataSet.AnnouncementsDataTable announcements =  new EnrollmentDataSet.AnnouncementsDataTable();
         private String student_num;
         static FormStudent frms = new FormStudent();
 
@@ -119,15 +119,12 @@ namespace PreEnrollmentSystem
 
         private void updateAnnouncements()
         {
-            FormRegistrar fr = new FormRegistrar();
-            int ctr = 0;
-            for(int b = announcements.Rows.Count; b < announcements.Rows.Count-3; b--)
+            for (int b = (int)announcements.announcement_numColumn.MaxLength; b < (int)announcements.announcement_numColumn.MaxLength - 4; b--)
             {
                 if (b == 1)
                 {
                     announcementTitle1.Text = announcements[b-2]["announcements_title"].ToString();
                     announcementDetails1.Text = announcements[b-2]["announcement_details"].ToString();
-                    ctr++;
                 }
                 if (b == 2)
                 {

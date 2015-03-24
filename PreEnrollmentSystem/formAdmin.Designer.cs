@@ -36,6 +36,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonEnrollment = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelEnrollment = new System.Windows.Forms.Panel();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.programcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outgoingstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numsectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.morningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afternoonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enrollmentReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.buttonGenerate = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelHome = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label75 = new System.Windows.Forms.Label();
@@ -109,21 +124,6 @@
             this.buttonClearData = new System.Windows.Forms.Button();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.panelEnrollment = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.programcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outgoingstudentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numsectionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.morningDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afternoonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enrollmentReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
-            this.buttonGenerate = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.labelStaffPosition = new System.Windows.Forms.Label();
@@ -138,6 +138,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panelEnrollment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.panelHome.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelEditInfo.SuspendLayout();
@@ -151,10 +155,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBoxIdentification.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panelEnrollment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentReportBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
@@ -276,6 +276,170 @@
             this.splitContainer1.Size = new System.Drawing.Size(1064, 488);
             this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 12;
+            // 
+            // panelEnrollment
+            // 
+            this.panelEnrollment.AutoScroll = true;
+            this.panelEnrollment.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.panelEnrollment.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelEnrollment.Controls.Add(this.dataGridView);
+            this.panelEnrollment.Controls.Add(this.buttonGenerate);
+            this.panelEnrollment.Controls.Add(this.buttonSave);
+            this.panelEnrollment.Controls.Add(this.label1);
+            this.panelEnrollment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEnrollment.Location = new System.Drawing.Point(0, 0);
+            this.panelEnrollment.Margin = new System.Windows.Forms.Padding(10);
+            this.panelEnrollment.Name = "panelEnrollment";
+            this.panelEnrollment.Size = new System.Drawing.Size(922, 488);
+            this.panelEnrollment.TabIndex = 7;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.programcodeDataGridViewTextBoxColumn,
+            this.newstudentsDataGridViewTextBoxColumn,
+            this.outgoingstudentsDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.numsectionDataGridViewTextBoxColumn,
+            this.morningDataGridViewTextBoxColumn,
+            this.afternoonDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridView.DataSource = this.enrollmentReportBindingSource;
+            this.dataGridView.Location = new System.Drawing.Point(40, 40);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(840, 360);
+            this.dataGridView.TabIndex = 7;
+            // 
+            // programcodeDataGridViewTextBoxColumn
+            // 
+            this.programcodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.programcodeDataGridViewTextBoxColumn.DataPropertyName = "program_code";
+            this.programcodeDataGridViewTextBoxColumn.HeaderText = "Program Name";
+            this.programcodeDataGridViewTextBoxColumn.Name = "programcodeDataGridViewTextBoxColumn";
+            // 
+            // newstudentsDataGridViewTextBoxColumn
+            // 
+            this.newstudentsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.newstudentsDataGridViewTextBoxColumn.DataPropertyName = "new_students";
+            this.newstudentsDataGridViewTextBoxColumn.HeaderText = "New Students";
+            this.newstudentsDataGridViewTextBoxColumn.Name = "newstudentsDataGridViewTextBoxColumn";
+            this.newstudentsDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // outgoingstudentsDataGridViewTextBoxColumn
+            // 
+            this.outgoingstudentsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.outgoingstudentsDataGridViewTextBoxColumn.DataPropertyName = "outgoing_students";
+            this.outgoingstudentsDataGridViewTextBoxColumn.HeaderText = "Outgoing Students";
+            this.outgoingstudentsDataGridViewTextBoxColumn.Name = "outgoingstudentsDataGridViewTextBoxColumn";
+            this.outgoingstudentsDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "migrated";
+            this.dataGridViewTextBoxColumn1.HeaderText = "NS / 90% Migrated";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 112;
+            // 
+            // numsectionDataGridViewTextBoxColumn
+            // 
+            this.numsectionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.numsectionDataGridViewTextBoxColumn.DataPropertyName = "num_section";
+            this.numsectionDataGridViewTextBoxColumn.HeaderText = "Number of section";
+            this.numsectionDataGridViewTextBoxColumn.Name = "numsectionDataGridViewTextBoxColumn";
+            this.numsectionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numsectionDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // morningDataGridViewTextBoxColumn
+            // 
+            this.morningDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.morningDataGridViewTextBoxColumn.DataPropertyName = "morning";
+            this.morningDataGridViewTextBoxColumn.HeaderText = "Morning";
+            this.morningDataGridViewTextBoxColumn.Name = "morningDataGridViewTextBoxColumn";
+            this.morningDataGridViewTextBoxColumn.ReadOnly = true;
+            this.morningDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // afternoonDataGridViewTextBoxColumn
+            // 
+            this.afternoonDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.afternoonDataGridViewTextBoxColumn.DataPropertyName = "afternoon";
+            this.afternoonDataGridViewTextBoxColumn.HeaderText = "Afternoon";
+            this.afternoonDataGridViewTextBoxColumn.Name = "afternoonDataGridViewTextBoxColumn";
+            this.afternoonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.afternoonDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "evening";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Evening";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 71;
+            // 
+            // enrollmentReportBindingSource
+            // 
+            this.enrollmentReportBindingSource.DataMember = "Enrollment Report";
+            this.enrollmentReportBindingSource.DataSource = this.enrollmentDataSet;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonGenerate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonGenerate.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonGenerate.Image = ((System.Drawing.Image)(resources.GetObject("buttonGenerate.Image")));
+            this.buttonGenerate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenerate.Location = new System.Drawing.Point(40, 421);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(137, 41);
+            this.buttonGenerate.TabIndex = 6;
+            this.buttonGenerate.Text = "Generate Schedule";
+            this.buttonGenerate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonGenerate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonGenerate.UseVisualStyleBackColor = false;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonSave.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(743, 421);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(137, 41);
+            this.buttonSave.TabIndex = 5;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(35, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Summary of Enrollment Reports";
             // 
             // panelHome
             // 
@@ -1103,170 +1267,6 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "Create Faculty Account";
             // 
-            // panelEnrollment
-            // 
-            this.panelEnrollment.AutoScroll = true;
-            this.panelEnrollment.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.panelEnrollment.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelEnrollment.Controls.Add(this.dataGridView);
-            this.panelEnrollment.Controls.Add(this.buttonGenerate);
-            this.panelEnrollment.Controls.Add(this.buttonSave);
-            this.panelEnrollment.Controls.Add(this.label1);
-            this.panelEnrollment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEnrollment.Location = new System.Drawing.Point(0, 0);
-            this.panelEnrollment.Margin = new System.Windows.Forms.Padding(10);
-            this.panelEnrollment.Name = "panelEnrollment";
-            this.panelEnrollment.Size = new System.Drawing.Size(922, 488);
-            this.panelEnrollment.TabIndex = 7;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.AllowUserToResizeColumns = false;
-            this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView.AutoGenerateColumns = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.programcodeDataGridViewTextBoxColumn,
-            this.newstudentsDataGridViewTextBoxColumn,
-            this.outgoingstudentsDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.numsectionDataGridViewTextBoxColumn,
-            this.morningDataGridViewTextBoxColumn,
-            this.afternoonDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridView.DataSource = this.enrollmentReportBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(40, 40);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(840, 360);
-            this.dataGridView.TabIndex = 7;
-            // 
-            // programcodeDataGridViewTextBoxColumn
-            // 
-            this.programcodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.programcodeDataGridViewTextBoxColumn.DataPropertyName = "program_code";
-            this.programcodeDataGridViewTextBoxColumn.HeaderText = "Program Name";
-            this.programcodeDataGridViewTextBoxColumn.Name = "programcodeDataGridViewTextBoxColumn";
-            // 
-            // newstudentsDataGridViewTextBoxColumn
-            // 
-            this.newstudentsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.newstudentsDataGridViewTextBoxColumn.DataPropertyName = "new_students";
-            this.newstudentsDataGridViewTextBoxColumn.HeaderText = "New Students";
-            this.newstudentsDataGridViewTextBoxColumn.Name = "newstudentsDataGridViewTextBoxColumn";
-            this.newstudentsDataGridViewTextBoxColumn.Width = 91;
-            // 
-            // outgoingstudentsDataGridViewTextBoxColumn
-            // 
-            this.outgoingstudentsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.outgoingstudentsDataGridViewTextBoxColumn.DataPropertyName = "outgoing_students";
-            this.outgoingstudentsDataGridViewTextBoxColumn.HeaderText = "Outgoing Students";
-            this.outgoingstudentsDataGridViewTextBoxColumn.Name = "outgoingstudentsDataGridViewTextBoxColumn";
-            this.outgoingstudentsDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "migrated";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NS / 90% Migrated";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 112;
-            // 
-            // numsectionDataGridViewTextBoxColumn
-            // 
-            this.numsectionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.numsectionDataGridViewTextBoxColumn.DataPropertyName = "num_section";
-            this.numsectionDataGridViewTextBoxColumn.HeaderText = "Number of section";
-            this.numsectionDataGridViewTextBoxColumn.Name = "numsectionDataGridViewTextBoxColumn";
-            this.numsectionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numsectionDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // morningDataGridViewTextBoxColumn
-            // 
-            this.morningDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.morningDataGridViewTextBoxColumn.DataPropertyName = "morning";
-            this.morningDataGridViewTextBoxColumn.HeaderText = "Morning";
-            this.morningDataGridViewTextBoxColumn.Name = "morningDataGridViewTextBoxColumn";
-            this.morningDataGridViewTextBoxColumn.ReadOnly = true;
-            this.morningDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // afternoonDataGridViewTextBoxColumn
-            // 
-            this.afternoonDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.afternoonDataGridViewTextBoxColumn.DataPropertyName = "afternoon";
-            this.afternoonDataGridViewTextBoxColumn.HeaderText = "Afternoon";
-            this.afternoonDataGridViewTextBoxColumn.Name = "afternoonDataGridViewTextBoxColumn";
-            this.afternoonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.afternoonDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "evening";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Evening";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 71;
-            // 
-            // enrollmentReportBindingSource
-            // 
-            this.enrollmentReportBindingSource.DataMember = "Enrollment Report";
-            this.enrollmentReportBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonGenerate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonGenerate.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonGenerate.Image = ((System.Drawing.Image)(resources.GetObject("buttonGenerate.Image")));
-            this.buttonGenerate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGenerate.Location = new System.Drawing.Point(40, 421);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(137, 41);
-            this.buttonGenerate.TabIndex = 6;
-            this.buttonGenerate.Text = "Generate Schedule";
-            this.buttonGenerate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonGenerate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonGenerate.UseVisualStyleBackColor = false;
-            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonSave.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonSave.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
-            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(743, 421);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(137, 41);
-            this.buttonSave.TabIndex = 5;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(35, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Summary of Enrollment Reports";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -1362,6 +1362,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panelEnrollment.ResumeLayout(false);
+            this.panelEnrollment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1382,11 +1387,6 @@
             this.groupBoxIdentification.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.panelEnrollment.ResumeLayout(false);
-            this.panelEnrollment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentReportBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
