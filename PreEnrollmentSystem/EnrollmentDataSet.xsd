@@ -791,12 +791,12 @@ SELECT announcement_num, announcement_title, announcement_details FROM Announcem
               <Mapping SourceColumn="announcement_num" DataSetColumn="announcement_num" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Announcements" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="CountRows" Modifier="Public" Name="CountRows" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CountRows">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CountRows" Modifier="Public" Name="CountRows" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CountRows">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT         announcement_num
-FROM           Announcements
-COUNT</CommandText>
+                    <CommandText>SELECT    
+COUNT (announcement_num)
+FROM           Announcements</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -811,7 +811,7 @@ COUNT</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAnnouncements" Modifier="Public" Name="InsertAnnouncements" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertAnnouncements">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAnnouncements" Modifier="Public" Name="InsertAnnouncements" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertAnnouncements">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO Announcements
