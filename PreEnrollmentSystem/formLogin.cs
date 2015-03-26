@@ -9,14 +9,32 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
+    using AccountTable = EnrollmentDataSet.AccountsDataTable;
     public partial class FormLogin : Form
     {
-        Image[] toDisplay;
-        int i = 0;
+        private AccountTable account;
+
+        private Image[] toDisplay;
+        private int i = 0;
 
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            toDisplay = new Image[6];
+
+            toDisplay[0] = PreEnrollmentSystem.Properties.Resources.STI_1;
+            toDisplay[1] = PreEnrollmentSystem.Properties.Resources.STI_2;
+            toDisplay[2] = PreEnrollmentSystem.Properties.Resources.STI_3;
+            toDisplay[3] = PreEnrollmentSystem.Properties.Resources.STI_4;
+            toDisplay[4] = PreEnrollmentSystem.Properties.Resources.STI_5;
+            toDisplay[5] = PreEnrollmentSystem.Properties.Resources.STI_6;
+
+            pictureBox2.Image = toDisplay[0];
+            timer1.Enabled = true;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -24,20 +42,22 @@ namespace PreEnrollmentSystem
             String inputUsername = textBoxUsername.Text;
             String inputPassword = textBoxPassword.Text;
 
-            DataTable account = this.accountsTableAdapter.GetDataBy(inputUsername);
+            account = new AccountTable();
+            this.accountsTableAdapter.FillBy(account, inputUsername);
 
             if (account.Rows.Count > 0)
             {
                 if (inputPassword.Equals(account.Rows[0]["password"]))
                 {
                     String queryAccountType = (String)account.Rows[0]["account_type"];
-
+                    Properties.Settings.Default.username = inputUsername;
+                    Properties.Settings.Default.password = inputPassword;
                     this.Hide();
+
                     switch (queryAccountType)
                     {
                         case "student":
                             FormStudent fs = new FormStudent();
-                            fs.loadData(inputUsername);
                             fs.ShowDialog();
                             break;
                         case "administrator":
@@ -70,26 +90,9 @@ namespace PreEnrollmentSystem
             }
         }
 
-        private void formLogin_Load(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'enrollmentDataSet.Accounts' table. You can move, or remove it, as needed.
-            this.accountsTableAdapter.Fill(this.enrollmentDataSet.Accounts);
-
-            toDisplay = new Image[6];
-
-            toDisplay[0] = PreEnrollmentSystem.Properties.Resources.STI_1;
-            toDisplay[1] = PreEnrollmentSystem.Properties.Resources.STI_2;
-            toDisplay[2] = PreEnrollmentSystem.Properties.Resources.STI_3;
-            toDisplay[3] = PreEnrollmentSystem.Properties.Resources.STI_4;
-            toDisplay[4] = PreEnrollmentSystem.Properties.Resources.STI_5;
-            toDisplay[5] = PreEnrollmentSystem.Properties.Resources.STI_6;
-
-            pictureBox2.Image = toDisplay[0];
-            timer1.Enabled = true;
-
-            this.accountsTableAdapter.Fill(this.enrollmentDataSet.Accounts);
-            textBoxUsername.Text = "";
-            textBoxPassword.Text = "";
+            this.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -134,11 +137,6 @@ namespace PreEnrollmentSystem
             pictureBox2.Image = toDisplay[i];
 
             timer1.Enabled = true;
-        }
-
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

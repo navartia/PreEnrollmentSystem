@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudent));
             this.logoSTI = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelStudNum = new System.Windows.Forms.Label();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.labelStatus = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,11 +58,6 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelSchedule = new System.Windows.Forms.Panel();
             this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
-            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyfirstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultylastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSearchSched = new System.Windows.Forms.Button();
             this.labelSearchSched = new System.Windows.Forms.Label();
             this.textBoxSearchSched = new System.Windows.Forms.TextBox();
@@ -256,15 +248,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.studentsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentsTableAdapter();
-            this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
-            this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
-            this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
-            this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
-            this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.panelHeader.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -273,7 +257,6 @@
             this.splitContainer1.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
             this.panelHome.SuspendLayout();
             this.panelGrades.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -325,23 +308,12 @@
             // labelStudNum
             // 
             this.labelStudNum.AutoSize = true;
-            this.labelStudNum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_num", true));
             this.labelStudNum.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStudNum.Location = new System.Drawing.Point(178, 46);
             this.labelStudNum.Name = "labelStudNum";
             this.labelStudNum.Size = new System.Drawing.Size(129, 20);
             this.labelStudNum.TabIndex = 2;
             this.labelStudNum.Text = "047 - 2013 - 0128";
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelHeader
             // 
@@ -361,7 +333,6 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_status", true));
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.SystemColors.Highlight;
             this.labelStatus.Location = new System.Drawing.Point(921, 9);
@@ -426,7 +397,6 @@
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_religion", true));
             this.label28.Location = new System.Drawing.Point(444, 63);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(227, 13);
@@ -437,7 +407,6 @@
             // 
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_civil", true));
             this.label27.Location = new System.Drawing.Point(444, 35);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(227, 13);
@@ -448,7 +417,6 @@
             // 
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_citizenship", true));
             this.label26.Location = new System.Drawing.Point(444, 8);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(227, 13);
@@ -459,7 +427,6 @@
             // 
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
-            this.label25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_gender", true));
             this.label25.Location = new System.Drawing.Point(107, 8);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(227, 13);
@@ -520,7 +487,6 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_birthday", true));
             this.label13.Location = new System.Drawing.Point(107, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(227, 13);
@@ -531,7 +497,6 @@
             // 
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
-            this.label24.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_birthplace", true));
             this.label24.Location = new System.Drawing.Point(107, 63);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(227, 13);
@@ -719,54 +684,13 @@
             // 
             this.dataGridViewSchedule.AllowUserToAddRows = false;
             this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridViewSchedule.AutoGenerateColumns = false;
             this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.coursedescriptionDataGridViewTextBoxColumn,
-            this.sectioncodeDataGridViewTextBoxColumn,
-            this.facultyfirstnameDataGridViewTextBoxColumn,
-            this.facultylastnameDataGridViewTextBoxColumn});
-            this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
             this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
             this.dataGridViewSchedule.Name = "dataGridViewSchedule";
             this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
             this.dataGridViewSchedule.TabIndex = 3;
-            // 
-            // coursedescriptionDataGridViewTextBoxColumn
-            // 
-            this.coursedescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
-            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
-            // 
-            // sectioncodeDataGridViewTextBoxColumn
-            // 
-            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section";
-            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
-            // 
-            // facultyfirstnameDataGridViewTextBoxColumn
-            // 
-            this.facultyfirstnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.facultyfirstnameDataGridViewTextBoxColumn.DataPropertyName = "faculty_firstname";
-            this.facultyfirstnameDataGridViewTextBoxColumn.HeaderText = "Faculty Firstname";
-            this.facultyfirstnameDataGridViewTextBoxColumn.Name = "facultyfirstnameDataGridViewTextBoxColumn";
-            this.facultyfirstnameDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // facultylastnameDataGridViewTextBoxColumn
-            // 
-            this.facultylastnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.facultylastnameDataGridViewTextBoxColumn.DataPropertyName = "faculty_lastname";
-            this.facultylastnameDataGridViewTextBoxColumn.HeaderText = "Faculty Lastname";
-            this.facultylastnameDataGridViewTextBoxColumn.Name = "facultylastnameDataGridViewTextBoxColumn";
-            this.facultylastnameDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // studentScheduleViewBindingSource
-            // 
-            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
-            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
             // 
             // buttonSearchSched
             // 
@@ -1127,7 +1051,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 345F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 348F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.91681F));
@@ -1174,7 +1098,7 @@
             // 
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label126.Location = new System.Drawing.Point(147, 78);
+            this.label126.Location = new System.Drawing.Point(145, 78);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(53, 13);
             this.label126.TabIndex = 4;
@@ -1184,7 +1108,7 @@
             // 
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label125.Location = new System.Drawing.Point(288, 78);
+            this.label125.Location = new System.Drawing.Point(285, 78);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(94, 32);
             this.label125.TabIndex = 3;
@@ -1195,7 +1119,7 @@
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label124.Location = new System.Drawing.Point(455, 78);
+            this.label124.Location = new System.Drawing.Point(452, 78);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(24, 13);
             this.label124.TabIndex = 2;
@@ -1215,7 +1139,7 @@
             // 
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label128.Location = new System.Drawing.Point(147, 2);
+            this.label128.Location = new System.Drawing.Point(145, 2);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(21, 13);
             this.label128.TabIndex = 6;
@@ -1225,7 +1149,7 @@
             // 
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label129.Location = new System.Drawing.Point(288, 2);
+            this.label129.Location = new System.Drawing.Point(285, 2);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(124, 16);
             this.label129.TabIndex = 7;
@@ -1236,7 +1160,7 @@
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label130.Location = new System.Drawing.Point(455, 2);
+            this.label130.Location = new System.Drawing.Point(452, 2);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(111, 13);
             this.label130.TabIndex = 8;
@@ -1252,7 +1176,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
             this.tableLayoutPanel1.Controls.Add(this.label137, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label135, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label134, 0, 6);
@@ -2965,7 +2889,6 @@
             // 
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_mobile", true));
             this.label29.Location = new System.Drawing.Point(157, 8);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(514, 13);
@@ -2976,7 +2899,6 @@
             // 
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_landline", true));
             this.label30.Location = new System.Drawing.Point(157, 35);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(514, 13);
@@ -2987,7 +2909,6 @@
             // 
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
-            this.label31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentsBindingSource, "student_email", true));
             this.label31.Location = new System.Drawing.Point(157, 63);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(514, 13);
@@ -3006,41 +2927,6 @@
             this.label19.TabIndex = 3;
             this.label19.Text = "Contact Information";
             // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AccountsTableAdapter = null;
-            this.tableAdapterManager.AnnouncementsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CoursesTableAdapter = null;
-            this.tableAdapterManager.Enrollment_ReportTableAdapter = null;
-            this.tableAdapterManager.FacultyTableAdapter = null;
-            this.tableAdapterManager.ProgramsTableAdapter = null;
-            this.tableAdapterManager.RoomsTableAdapter = null;
-            this.tableAdapterManager.SectionsTableAdapter = null;
-            this.tableAdapterManager.StudentsTableAdapter = this.studentsTableAdapter;
-            this.tableAdapterManager.TimeslotsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // programsTableAdapter
-            // 
-            this.programsTableAdapter.ClearBeforeFill = true;
-            // 
-            // accountsTableAdapter
-            // 
-            this.accountsTableAdapter.ClearBeforeFill = true;
-            // 
-            // announcementsTableAdapter
-            // 
-            this.announcementsTableAdapter.ClearBeforeFill = true;
-            // 
-            // studentScheduleViewTableAdapter
-            // 
-            this.studentScheduleViewTableAdapter.ClearBeforeFill = true;
-            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3052,10 +2938,8 @@
             this.Name = "FormStudent";
             this.Text = "formStudent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.formStudent_Load);
+            this.Load += new System.EventHandler(this.FormStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -3067,7 +2951,6 @@
             this.panelSchedule.ResumeLayout(false);
             this.panelSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
             this.panelGrades.ResumeLayout(false);
@@ -3267,19 +3150,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private EnrollmentDataSet enrollmentDataSet;
-        private System.Windows.Forms.BindingSource studentsBindingSource;
-        private EnrollmentDataSetTableAdapters.StudentsTableAdapter studentsTableAdapter;
-        private EnrollmentDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label45;
-        private EnrollmentDataSetTableAdapters.ProgramsTableAdapter programsTableAdapter;
-        private EnrollmentDataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewSchedule;
-        private System.Windows.Forms.BindingSource studentScheduleViewBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultyfirstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facultylastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panelEditInfo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -3345,7 +3217,5 @@
         private System.Windows.Forms.Label announcementDetails3;
         private System.Windows.Forms.Label announcementDetails1;
         private System.Windows.Forms.Label announcementTitle3;
-        private EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter announcementsTableAdapter;
-        private EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter studentScheduleViewTableAdapter;
     }
 }

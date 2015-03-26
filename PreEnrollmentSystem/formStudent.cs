@@ -9,18 +9,39 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
+    using StudentTable = EnrollmentDataSet.StudentsDataTable;
+    using ScheduleTable = EnrollmentDataSet.StudentScheduleViewDataTable;
+
     public partial class FormStudent : Form
     {
-        EnrollmentDataSet.StudentsDataTable student_information;
-        EnrollmentDataSet.AnnouncementsDataTable announcements =  new EnrollmentDataSet.AnnouncementsDataTable();
-        private String student_num;
-        static FormStudent frms = new FormStudent();
+        private StudentTable student_information;
+        private ScheduleTable schedule;
+        private EnrollmentDataSet.AnnouncementsDataTable announcements =  new EnrollmentDataSet.AnnouncementsDataTable();
+        private String username, student_num;
 
         public FormStudent()
         {
             InitializeComponent();
         }
 
+        private void FormStudent_Load(object sender, EventArgs e)
+        {
+            comboBox1.Text = ("2013-2014");
+            comboBox1.Items.Add("2013-2014");
+            comboBox1.Items.Add("2014-2015");
+            comboBox1.Items.Add("2015-2016");
+            comboBox2.Text = ("1st Term");
+            comboBox2.Items.Add("1st Term");
+            comboBox2.Items.Add("2nd Term");
+            panelHome.BringToFront();
+
+            updateAnnouncements();
+
+            username = Properties.Settings.Default.username;
+            loadDatabaseToTable();
+        }
+
+        //GUI Related Methods
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -51,31 +72,18 @@ namespace PreEnrollmentSystem
             panelStudentProfile.BringToFront();
         }
 
-        private void formStudent_Load(object sender, EventArgs e)
+        //Internal Methods
+        private void loadDatabaseToTable()
         {
-            comboBox1.Text=("2013-2014");
-            comboBox1.Items.Add("2013-2014");
-            comboBox1.Items.Add("2014-2015");
-            comboBox1.Items.Add("2015-2016");
-            comboBox2.Text = ("1st Term");
-            comboBox2.Items.Add("1st Term");
-            comboBox2.Items.Add("2nd Term");
-            panelHome.BringToFront();
-
-            updateAnnouncements();
-        }
-
-        public void loadData(String username)
-        {
-            student_information = this.studentsTableAdapter.GetDataBy(username);
+            student_information = new StudentTable();
             this.studentsTableAdapter.FillBy(this.enrollmentDataSet.Students, username);
 
             labelName.Text = (String) this.studentsTableAdapter.GetName(username);
             labelProgramMajor.Text = (String)this.programsTableAdapter.GetCourseDescription((String) student_information.Rows[0]["student_program"]);
-        
-            // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
+
+            schedule = new ScheduleTable();
             student_num = student_information[0]["student_num"].ToString();
-            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            this.studentScheduleViewTableAdapter.FillByStudentNum(schedule, student_num);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

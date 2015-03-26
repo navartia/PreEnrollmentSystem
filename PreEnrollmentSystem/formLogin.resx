@@ -845,29 +845,23 @@
   </metadata>
   <data name="buttonExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
+        sYSZ0AC6zwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="accountsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>355, 6</value>
-  </metadata>
-  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>202, 6</value>
-  </metadata>
   <data name="buttonLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZlJREFUSEvl
@@ -914,12 +908,6 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="accountsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>534, 6</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 45</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>68</value>
   </metadata>
