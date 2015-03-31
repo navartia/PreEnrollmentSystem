@@ -34,7 +34,11 @@
             this.course_sched_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeslot_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeslot_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enrollmentTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter();
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.courseScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.CourseScheduleViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -91,6 +95,19 @@
             this.timeslot_time.HeaderText = "Time";
             this.timeslot_time.Name = "timeslot_time";
             // 
+            // enrollmentTableAdapter
+            // 
+            this.enrollmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseScheduleViewTableAdapter
+            // 
+            this.courseScheduleViewTableAdapter.ClearBeforeFill = true;
+            // 
             // FormSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +120,7 @@
             this.Name = "FormSchedule";
             this.Text = "Add Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,5 +134,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn course_sched_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeslot_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeslot_time;
+        private EnrollmentDataSetTableAdapters.EnrollmentTableAdapter enrollmentTableAdapter;
+        private EnrollmentDataSet enrollmentDataSet;
+        private EnrollmentDataSetTableAdapters.CourseScheduleViewTableAdapter courseScheduleViewTableAdapter;
     }
 }

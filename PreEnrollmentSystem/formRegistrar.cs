@@ -124,12 +124,16 @@ namespace PreEnrollmentSystem
             username = username.Replace(" ", String.Empty) + "." + textBoxStudentLastname.Text;
             username = username.ToLower();
 
+            String course = comboBoxCourse.Text;
+            int programID = (int)this.studentsTableAdapter.GetProgramID(course);
+
             String studNum = textBox3.Text + " - " + textBox1.Text + " - " + textBox2.Text;
             this.accountsTableAdapter.Insert(username, "student", "student");
+            int accountID = (int)this.studentsTableAdapter.GetAccountID(username);
 
-            this.studentsTableAdapter.Insert(username, textBoxStudentLastname.Text,
+            this.studentsTableAdapter.Insert(accountID, programID, textBoxStudentLastname.Text,
                 textBoxStudentFirstname.Text, textBoxStudentMiddlename.Text, studNum,
-                comboBoxStudentStatus.Text, comboBoxCourse.Text, comboBoxStudentGender.Text,
+                comboBoxStudentStatus.Text, comboBoxStudentGender.Text,
                 dateTimePickerBirthdate.Text, textBoxStudentBirthplace.Text, textBoxStudentCitizenship.Text,
                 comboBoxStudentCivilStatus.Text, textBoxStudentReligion.Text, textBoxStudentMobile.Text,
                 textBoxStudentLandline.Text, textBoxStudentEmail.Text);
@@ -162,15 +166,9 @@ namespace PreEnrollmentSystem
             comboBoxStudentStatus.Text = "";
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            panelSearch.BringToFront();
-        }
-
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            String student_num = textBox7.Text;
-            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -192,8 +190,8 @@ namespace PreEnrollmentSystem
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
-                ctr = (int)announcements[(int)this.announcementsTableAdapter.CountRows()]["announcement_num"];
-                MessageBox.Show(ctr.ToString());
+            //ctr = (int)announcements[(int)this.announcementsTableAdapter.CountRows()]["announcement_num"];
+            //MessageBox.Show(ctr.ToString());
 
             /*if (textBoxHeader1.Text != "" && textBoxDetails1.Text != "")
             { 
@@ -231,9 +229,9 @@ namespace PreEnrollmentSystem
 
             for (int b = 0; b < 10; b++)
             {
-                for (int c = 0 ; c < dataGridView1.Columns.Count; c++)
+                for (int c = 0; c < dataGridView1.Columns.Count; c++)
                 {
-                    if (dataGridView1[c,b].Value != null)
+                    if (dataGridView1[c, b].Value != null)
                     {
                         table.AddCell(new Phrase(dataGridView1[c, b].Value.ToString()));
                     }

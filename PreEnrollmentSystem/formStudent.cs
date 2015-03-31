@@ -26,13 +26,10 @@ namespace PreEnrollmentSystem
 
         private void FormStudent_Load(object sender, EventArgs e)
         {
-            comboBox1.Text = ("2013-2014");
-            comboBox1.Items.Add("2013-2014");
-            comboBox1.Items.Add("2014-2015");
-            comboBox1.Items.Add("2015-2016");
-            comboBox2.Text = ("1st Term");
-            comboBox2.Items.Add("1st Term");
-            comboBox2.Items.Add("2nd Term");
+            // TODO: This line of code loads data into the 'enrollmentDataSet.StudentScheduleView' table. You can move, or remove it, as needed.
+            this.studentScheduleViewTableAdapter.Fill(this.enrollmentDataSet.StudentScheduleView);
+            // TODO: This line of code loads data into the 'enrollmentDataSet.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.enrollmentDataSet.Students);
             panelHome.BringToFront();
 
             updateAnnouncements();
@@ -57,11 +54,6 @@ namespace PreEnrollmentSystem
             panelHome.BringToFront();
         }
 
-        private void buttonGrades_Click(object sender, EventArgs e)
-        {
-            panelGrades.BringToFront();
-        }
-
         private void buttonSettings_Click(object sender, EventArgs e)
         {
             panelSettings.BringToFront();
@@ -76,7 +68,7 @@ namespace PreEnrollmentSystem
         private void loadDatabaseToTable()
         {
             student_information = new StudentTable();
-            this.studentsTableAdapter.FillBy(this.enrollmentDataSet.Students, username);
+            this.studentsTableAdapter.FillByUsername(this.enrollmentDataSet.Students, username);
 
             labelName.Text = (String) this.studentsTableAdapter.GetName(username);
             labelProgramMajor.Text = (String)this.programsTableAdapter.GetCourseDescription((String) student_information.Rows[0]["student_program"]);
@@ -98,7 +90,7 @@ namespace PreEnrollmentSystem
             String newPass2 = maskedTextBoxNewPass2.Text;
 
             String username = (String)student_information.Rows[0]["username"];
-            EnrollmentDataSet.AccountsDataTable account = this.accountsTableAdapter.GetDataBy(username);
+            EnrollmentDataSet.AccountsDataTable account = this.accountsTableAdapter.GetDataByUsername(username);
 
             if (oldPass.Equals((String)account.Rows[0]["password"]))
             {

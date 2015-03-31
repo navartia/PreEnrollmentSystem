@@ -12,7 +12,7 @@ namespace PreEnrollmentSystem
     public partial class FormSchedule : Form
     {
         String student_num;
-        PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter eTA= new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter();
+        int student_id, schedule_id;
         public FormSchedule()
         {
             InitializeComponent();
@@ -20,22 +20,18 @@ namespace PreEnrollmentSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-                int row = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString());
-                String course_code = dataGridView1[1, row].Value.ToString();
+            int row = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString());
+            schedule_id =Convert.ToInt32(dataGridView1[0, row]);
+            student_id=(int)this.enrollmentTableAdapter.GetStudentID(student_num);
 
-                eTA.Insert1(false,student_num);
-                this.Dispose();
+            this.enrollmentTableAdapter.Insert(student_id, schedule_id, false);
+            this.Dispose();
         }
 
         public void loadData(String courseName, String student_num)
         {
             this.student_num = student_num;
             this.courseScheduleViewTableAdapter.FillByCourseName(this.enrollmentDataSet.CourseScheduleView, courseName);
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
