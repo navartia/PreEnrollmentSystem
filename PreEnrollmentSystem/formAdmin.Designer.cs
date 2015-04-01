@@ -121,6 +121,9 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.enrollment_ReportTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.Enrollment_ReportTableAdapter();
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.sectionsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.SectionsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
@@ -144,6 +147,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -1234,6 +1238,19 @@
             this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 12;
             // 
+            // enrollment_ReportTableAdapter
+            // 
+            this.enrollment_ReportTableAdapter.ClearBeforeFill = true;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sectionsTableAdapter
+            // 
+            this.sectionsTableAdapter.ClearBeforeFill = true;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1278,6 +1295,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1375,5 +1393,8 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private EnrollmentDataSetTableAdapters.Enrollment_ReportTableAdapter enrollment_ReportTableAdapter;
+        private EnrollmentDataSet enrollmentDataSet;
+        private EnrollmentDataSetTableAdapters.SectionsTableAdapter sectionsTableAdapter;
     }
 }

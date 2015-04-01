@@ -245,10 +245,10 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
             this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateStudentAccount);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateAnnouncements);
+            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
             this.splitContainer1.Size = new System.Drawing.Size(986, 550);
             this.splitContainer1.SplitterDistance = 126;
             this.splitContainer1.TabIndex = 6;

@@ -43,7 +43,7 @@ namespace PreEnrollmentSystem
             String inputPassword = textBoxPassword.Text;
 
             account = new AccountTable();
-            this.accountsTableAdapter.FillBy(account, inputUsername);
+            this.accountsTableAdapter.FillByUsername(account, inputUsername);
 
             if (account.Rows.Count > 0)
             {
@@ -92,7 +92,15 @@ namespace PreEnrollmentSystem
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Closing..", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

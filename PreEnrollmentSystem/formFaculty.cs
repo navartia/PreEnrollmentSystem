@@ -60,7 +60,7 @@ namespace PreEnrollmentSystem
             String newPass2 = maskedTextBoxNewPass2.Text;
 
             String username = (String)faculty_information.Rows[0]["username"];
-            EnrollmentDataSet.AccountsDataTable account = this.accountsTableAdapter.GetDataBy(username);
+            EnrollmentDataSet.AccountsDataTable account = this.accountsTableAdapter.GetDataByUsername(username);
 
             if (oldPass.Equals((String)account.Rows[0]["password"]))
             {

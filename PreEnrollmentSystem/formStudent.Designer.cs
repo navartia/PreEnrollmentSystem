@@ -56,32 +56,6 @@
             this.buttonProfile = new System.Windows.Forms.Button();
             this.buttonSchedule = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
-            this.panelSchedule = new System.Windows.Forms.Panel();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
-            this.buttonSearchSched = new System.Windows.Forms.Button();
-            this.labelSearchSched = new System.Windows.Forms.Label();
-            this.textBoxSearchSched = new System.Windows.Forms.TextBox();
-            this.panelHome = new System.Windows.Forms.Panel();
-            this.announcementDetails3 = new System.Windows.Forms.Label();
-            this.announcementDetails1 = new System.Windows.Forms.Label();
-            this.announcementTitle3 = new System.Windows.Forms.Label();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.announcementDetails2 = new System.Windows.Forms.Label();
-            this.announcementTitle2 = new System.Windows.Forms.Label();
-            this.announcementTitle1 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -194,15 +168,40 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.panelSchedule = new System.Windows.Forms.Panel();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
+            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.buttonSearchSched = new System.Windows.Forms.Button();
+            this.labelSearchSched = new System.Windows.Forms.Label();
+            this.textBoxSearchSched = new System.Windows.Forms.TextBox();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.announcementDetails3 = new System.Windows.Forms.Label();
+            this.announcementDetails1 = new System.Windows.Forms.Label();
+            this.announcementTitle3 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.announcementDetails2 = new System.Windows.Forms.Label();
+            this.announcementTitle2 = new System.Windows.Forms.Label();
+            this.announcementTitle1 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             this.studentsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentsTableAdapter();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -215,9 +214,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panelSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
-            this.panelHome.SuspendLayout();
             this.panelSettings.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -238,9 +234,12 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            this.panelSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
+            this.panelHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // logoSTI
@@ -493,10 +492,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Panel2.Controls.Add(this.panelSettings);
             this.splitContainer1.Panel2.Controls.Add(this.panelStudentProfile);
             this.splitContainer1.Panel2.Controls.Add(this.panelSchedule);
-            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Size = new System.Drawing.Size(1354, 632);
             this.splitContainer1.SplitterDistance = 166;
             this.splitContainer1.TabIndex = 0;
@@ -601,318 +600,6 @@
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // panelSchedule
-            // 
-            this.panelSchedule.AutoScroll = true;
-            this.panelSchedule.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.panelSchedule.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelSchedule.Controls.Add(this.dataGridViewSchedule);
-            this.panelSchedule.Controls.Add(this.buttonSearchSched);
-            this.panelSchedule.Controls.Add(this.labelSearchSched);
-            this.panelSchedule.Controls.Add(this.textBoxSearchSched);
-            this.panelSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSchedule.Location = new System.Drawing.Point(0, 0);
-            this.panelSchedule.Name = "panelSchedule";
-            this.panelSchedule.Size = new System.Drawing.Size(1184, 632);
-            this.panelSchedule.TabIndex = 0;
-            // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.AllowUserToAddRows = false;
-            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridViewSchedule.AutoGenerateColumns = false;
-            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentnumDataGridViewTextBoxColumn,
-            this.scheduleIDDataGridViewTextBoxColumn,
-            this.coursedescriptionDataGridViewTextBoxColumn,
-            this.sectioncodeDataGridViewTextBoxColumn,
-            this.timeslotDataGridViewTextBoxColumn,
-            this.facultynameDataGridViewTextBoxColumn});
-            this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
-            this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
-            this.dataGridViewSchedule.TabIndex = 3;
-            // 
-            // buttonSearchSched
-            // 
-            this.buttonSearchSched.Location = new System.Drawing.Point(258, 7);
-            this.buttonSearchSched.Name = "buttonSearchSched";
-            this.buttonSearchSched.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearchSched.TabIndex = 2;
-            this.buttonSearchSched.Text = "Search";
-            this.buttonSearchSched.UseVisualStyleBackColor = true;
-            this.buttonSearchSched.Click += new System.EventHandler(this.buttonSearchSched_Click);
-            // 
-            // labelSearchSched
-            // 
-            this.labelSearchSched.AutoSize = true;
-            this.labelSearchSched.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSearchSched.Location = new System.Drawing.Point(7, 12);
-            this.labelSearchSched.Name = "labelSearchSched";
-            this.labelSearchSched.Size = new System.Drawing.Size(92, 13);
-            this.labelSearchSched.TabIndex = 1;
-            this.labelSearchSched.Text = "Search Schedule:";
-            // 
-            // textBoxSearchSched
-            // 
-            this.textBoxSearchSched.Location = new System.Drawing.Point(102, 9);
-            this.textBoxSearchSched.Name = "textBoxSearchSched";
-            this.textBoxSearchSched.Size = new System.Drawing.Size(150, 20);
-            this.textBoxSearchSched.TabIndex = 0;
-            // 
-            // panelHome
-            // 
-            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelHome.Controls.Add(this.announcementDetails3);
-            this.panelHome.Controls.Add(this.announcementDetails1);
-            this.panelHome.Controls.Add(this.announcementTitle3);
-            this.panelHome.Controls.Add(this.linkLabel4);
-            this.panelHome.Controls.Add(this.label89);
-            this.panelHome.Controls.Add(this.label88);
-            this.panelHome.Controls.Add(this.announcementDetails2);
-            this.panelHome.Controls.Add(this.announcementTitle2);
-            this.panelHome.Controls.Add(this.announcementTitle1);
-            this.panelHome.Controls.Add(this.label84);
-            this.panelHome.Controls.Add(this.label83);
-            this.panelHome.Controls.Add(this.label82);
-            this.panelHome.Controls.Add(this.label81);
-            this.panelHome.Controls.Add(this.label80);
-            this.panelHome.Controls.Add(this.linkLabel1);
-            this.panelHome.Controls.Add(this.label79);
-            this.panelHome.Controls.Add(this.label78);
-            this.panelHome.Controls.Add(this.label77);
-            this.panelHome.Controls.Add(this.label76);
-            this.panelHome.Controls.Add(this.label10);
-            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHome.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(1184, 632);
-            this.panelHome.TabIndex = 4;
-            // 
-            // announcementDetails3
-            // 
-            this.announcementDetails3.AutoSize = true;
-            this.announcementDetails3.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails3.Location = new System.Drawing.Point(49, 345);
-            this.announcementDetails3.Name = "announcementDetails3";
-            this.announcementDetails3.Size = new System.Drawing.Size(182, 13);
-            this.announcementDetails3.TabIndex = 21;
-            this.announcementDetails3.Text = "*Details for Announcement Number 3";
-            // 
-            // announcementDetails1
-            // 
-            this.announcementDetails1.AutoSize = true;
-            this.announcementDetails1.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails1.Location = new System.Drawing.Point(49, 258);
-            this.announcementDetails1.Name = "announcementDetails1";
-            this.announcementDetails1.Size = new System.Drawing.Size(293, 13);
-            this.announcementDetails1.TabIndex = 20;
-            this.announcementDetails1.Text = "*For more inquiries, visit http://sti.edu/scope_scheduling.asp";
-            // 
-            // announcementTitle3
-            // 
-            this.announcementTitle3.AutoSize = true;
-            this.announcementTitle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle3.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle3.Location = new System.Drawing.Point(20, 321);
-            this.announcementTitle3.Name = "announcementTitle3";
-            this.announcementTitle3.Size = new System.Drawing.Size(264, 13);
-            this.announcementTitle3.TabIndex = 19;
-            this.announcementTitle3.Text = "*Placeholder for Announcement Header no. 3";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(479, 409);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(31, 13);
-            this.linkLabel4.TabIndex = 18;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "here.";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.ForeColor = System.Drawing.SystemColors.Control;
-            this.label89.Location = new System.Drawing.Point(27, 409);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(457, 13);
-            this.label89.TabIndex = 17;
-            this.label89.Text = "*You are required to evaluate your instructors for this semester, online. To star" +
-    "t evaluating, click ";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label88.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label88.Location = new System.Drawing.Point(17, 384);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(81, 18);
-            this.label88.TabIndex = 16;
-            this.label88.Text = "Remarks:";
-            // 
-            // announcementDetails2
-            // 
-            this.announcementDetails2.AutoSize = true;
-            this.announcementDetails2.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails2.Location = new System.Drawing.Point(49, 299);
-            this.announcementDetails2.Name = "announcementDetails2";
-            this.announcementDetails2.Size = new System.Drawing.Size(182, 13);
-            this.announcementDetails2.TabIndex = 14;
-            this.announcementDetails2.Text = "*Details for Announcement Number 2";
-            // 
-            // announcementTitle2
-            // 
-            this.announcementTitle2.AutoSize = true;
-            this.announcementTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle2.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle2.Location = new System.Drawing.Point(20, 278);
-            this.announcementTitle2.Name = "announcementTitle2";
-            this.announcementTitle2.Size = new System.Drawing.Size(264, 13);
-            this.announcementTitle2.TabIndex = 13;
-            this.announcementTitle2.Text = "*Placeholder for Announcement Header no. 2";
-            // 
-            // announcementTitle1
-            // 
-            this.announcementTitle1.AutoSize = true;
-            this.announcementTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle1.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle1.Location = new System.Drawing.Point(17, 239);
-            this.announcementTitle1.Name = "announcementTitle1";
-            this.announcementTitle1.Size = new System.Drawing.Size(542, 13);
-            this.announcementTitle1.TabIndex = 11;
-            this.announcementTitle1.Text = "*Schedule of Online Pre-Enrollment and Actual Enrollment for 2nd Semester is avai" +
-    "lable. Click ";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label84.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label84.Location = new System.Drawing.Point(9, 210);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(124, 18);
-            this.label84.TabIndex = 10;
-            this.label84.Text = "Announcement:";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.ForeColor = System.Drawing.SystemColors.Control;
-            this.label83.Location = new System.Drawing.Point(46, 168);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(394, 13);
-            this.label83.TabIndex = 9;
-            this.label83.Text = "3. You should have completed the necessary prerequisites before taking a course.";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.ForeColor = System.Drawing.SystemColors.Control;
-            this.label82.Location = new System.Drawing.Point(46, 147);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(228, 13);
-            this.label82.TabIndex = 8;
-            this.label82.Text = "2. Paired courses should have the same block.";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.ForeColor = System.Drawing.SystemColors.Control;
-            this.label81.Location = new System.Drawing.Point(46, 128);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(237, 13);
-            this.label81.TabIndex = 7;
-            this.label81.Text = "1. Your courses with co-requisites have sections.";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.SystemColors.Control;
-            this.label80.Location = new System.Drawing.Point(17, 113);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(126, 13);
-            this.label80.TabIndex = 6;
-            this.label80.Text = "* Please ensure that:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(205, 94);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(31, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "here.";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.ForeColor = System.Drawing.SystemColors.Control;
-            this.label79.Location = new System.Drawing.Point(46, 94);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(162, 13);
-            this.label79.TabIndex = 4;
-            this.label79.Text = "*To change your password, click";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.SystemColors.Control;
-            this.label78.Location = new System.Drawing.Point(17, 75);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(491, 13);
-            this.label78.TabIndex = 3;
-            this.label78.Text = "* New students using this system should change their passwords as soon as possibl" +
-    "e.";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label77.Location = new System.Drawing.Point(7, 49);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(176, 18);
-            this.label77.TabIndex = 2;
-            this.label77.Text = "Notes and Reminders:";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(4, 31);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(0, 13);
-            this.label76.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label10.Location = new System.Drawing.Point(3, 2);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Announcements";
             // 
             // panelSettings
             // 
@@ -2232,10 +1919,326 @@
             this.label19.TabIndex = 3;
             this.label19.Text = "Contact Information";
             // 
+            // panelSchedule
+            // 
+            this.panelSchedule.AutoScroll = true;
+            this.panelSchedule.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.panelSchedule.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelSchedule.Controls.Add(this.dataGridViewSchedule);
+            this.panelSchedule.Controls.Add(this.buttonSearchSched);
+            this.panelSchedule.Controls.Add(this.labelSearchSched);
+            this.panelSchedule.Controls.Add(this.textBoxSearchSched);
+            this.panelSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSchedule.Location = new System.Drawing.Point(0, 0);
+            this.panelSchedule.Name = "panelSchedule";
+            this.panelSchedule.Size = new System.Drawing.Size(1184, 632);
+            this.panelSchedule.TabIndex = 0;
+            // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.AllowUserToAddRows = false;
+            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridViewSchedule.AutoGenerateColumns = false;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.scheduleIDDataGridViewTextBoxColumn,
+            this.coursedescriptionDataGridViewTextBoxColumn,
+            this.sectioncodeDataGridViewTextBoxColumn,
+            this.timeslotDataGridViewTextBoxColumn,
+            this.facultynameDataGridViewTextBoxColumn});
+            this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
+            this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
+            this.dataGridViewSchedule.TabIndex = 3;
+            // 
+            // studentScheduleViewBindingSource
+            // 
+            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
+            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
+            // 
             // enrollmentDataSet
             // 
             this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
             this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonSearchSched
+            // 
+            this.buttonSearchSched.Location = new System.Drawing.Point(258, 7);
+            this.buttonSearchSched.Name = "buttonSearchSched";
+            this.buttonSearchSched.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchSched.TabIndex = 2;
+            this.buttonSearchSched.Text = "Search";
+            this.buttonSearchSched.UseVisualStyleBackColor = true;
+            this.buttonSearchSched.Click += new System.EventHandler(this.buttonSearchSched_Click);
+            // 
+            // labelSearchSched
+            // 
+            this.labelSearchSched.AutoSize = true;
+            this.labelSearchSched.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelSearchSched.Location = new System.Drawing.Point(7, 12);
+            this.labelSearchSched.Name = "labelSearchSched";
+            this.labelSearchSched.Size = new System.Drawing.Size(92, 13);
+            this.labelSearchSched.TabIndex = 1;
+            this.labelSearchSched.Text = "Search Schedule:";
+            // 
+            // textBoxSearchSched
+            // 
+            this.textBoxSearchSched.Location = new System.Drawing.Point(102, 9);
+            this.textBoxSearchSched.Name = "textBoxSearchSched";
+            this.textBoxSearchSched.Size = new System.Drawing.Size(150, 20);
+            this.textBoxSearchSched.TabIndex = 0;
+            // 
+            // panelHome
+            // 
+            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelHome.Controls.Add(this.announcementDetails3);
+            this.panelHome.Controls.Add(this.announcementDetails1);
+            this.panelHome.Controls.Add(this.announcementTitle3);
+            this.panelHome.Controls.Add(this.linkLabel4);
+            this.panelHome.Controls.Add(this.label89);
+            this.panelHome.Controls.Add(this.label88);
+            this.panelHome.Controls.Add(this.announcementDetails2);
+            this.panelHome.Controls.Add(this.announcementTitle2);
+            this.panelHome.Controls.Add(this.announcementTitle1);
+            this.panelHome.Controls.Add(this.label84);
+            this.panelHome.Controls.Add(this.label83);
+            this.panelHome.Controls.Add(this.label82);
+            this.panelHome.Controls.Add(this.label81);
+            this.panelHome.Controls.Add(this.label80);
+            this.panelHome.Controls.Add(this.linkLabel1);
+            this.panelHome.Controls.Add(this.label79);
+            this.panelHome.Controls.Add(this.label78);
+            this.panelHome.Controls.Add(this.label77);
+            this.panelHome.Controls.Add(this.label76);
+            this.panelHome.Controls.Add(this.label10);
+            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(1184, 632);
+            this.panelHome.TabIndex = 4;
+            // 
+            // announcementDetails3
+            // 
+            this.announcementDetails3.AutoSize = true;
+            this.announcementDetails3.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails3.Location = new System.Drawing.Point(49, 345);
+            this.announcementDetails3.Name = "announcementDetails3";
+            this.announcementDetails3.Size = new System.Drawing.Size(182, 13);
+            this.announcementDetails3.TabIndex = 21;
+            this.announcementDetails3.Text = "*Details for Announcement Number 3";
+            // 
+            // announcementDetails1
+            // 
+            this.announcementDetails1.AutoSize = true;
+            this.announcementDetails1.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails1.Location = new System.Drawing.Point(49, 258);
+            this.announcementDetails1.Name = "announcementDetails1";
+            this.announcementDetails1.Size = new System.Drawing.Size(293, 13);
+            this.announcementDetails1.TabIndex = 20;
+            this.announcementDetails1.Text = "*For more inquiries, visit http://sti.edu/scope_scheduling.asp";
+            // 
+            // announcementTitle3
+            // 
+            this.announcementTitle3.AutoSize = true;
+            this.announcementTitle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle3.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle3.Location = new System.Drawing.Point(20, 321);
+            this.announcementTitle3.Name = "announcementTitle3";
+            this.announcementTitle3.Size = new System.Drawing.Size(264, 13);
+            this.announcementTitle3.TabIndex = 19;
+            this.announcementTitle3.Text = "*Placeholder for Announcement Header no. 3";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(479, 409);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(31, 13);
+            this.linkLabel4.TabIndex = 18;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "here.";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.ForeColor = System.Drawing.SystemColors.Control;
+            this.label89.Location = new System.Drawing.Point(27, 409);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(457, 13);
+            this.label89.TabIndex = 17;
+            this.label89.Text = "*You are required to evaluate your instructors for this semester, online. To star" +
+    "t evaluating, click ";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label88.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label88.Location = new System.Drawing.Point(17, 384);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(81, 18);
+            this.label88.TabIndex = 16;
+            this.label88.Text = "Remarks:";
+            // 
+            // announcementDetails2
+            // 
+            this.announcementDetails2.AutoSize = true;
+            this.announcementDetails2.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails2.Location = new System.Drawing.Point(49, 299);
+            this.announcementDetails2.Name = "announcementDetails2";
+            this.announcementDetails2.Size = new System.Drawing.Size(182, 13);
+            this.announcementDetails2.TabIndex = 14;
+            this.announcementDetails2.Text = "*Details for Announcement Number 2";
+            // 
+            // announcementTitle2
+            // 
+            this.announcementTitle2.AutoSize = true;
+            this.announcementTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle2.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle2.Location = new System.Drawing.Point(20, 278);
+            this.announcementTitle2.Name = "announcementTitle2";
+            this.announcementTitle2.Size = new System.Drawing.Size(264, 13);
+            this.announcementTitle2.TabIndex = 13;
+            this.announcementTitle2.Text = "*Placeholder for Announcement Header no. 2";
+            // 
+            // announcementTitle1
+            // 
+            this.announcementTitle1.AutoSize = true;
+            this.announcementTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle1.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle1.Location = new System.Drawing.Point(17, 239);
+            this.announcementTitle1.Name = "announcementTitle1";
+            this.announcementTitle1.Size = new System.Drawing.Size(542, 13);
+            this.announcementTitle1.TabIndex = 11;
+            this.announcementTitle1.Text = "*Schedule of Online Pre-Enrollment and Actual Enrollment for 2nd Semester is avai" +
+    "lable. Click ";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label84.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label84.Location = new System.Drawing.Point(9, 210);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(124, 18);
+            this.label84.TabIndex = 10;
+            this.label84.Text = "Announcement:";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.ForeColor = System.Drawing.SystemColors.Control;
+            this.label83.Location = new System.Drawing.Point(46, 168);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(394, 13);
+            this.label83.TabIndex = 9;
+            this.label83.Text = "3. You should have completed the necessary prerequisites before taking a course.";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.ForeColor = System.Drawing.SystemColors.Control;
+            this.label82.Location = new System.Drawing.Point(46, 147);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(228, 13);
+            this.label82.TabIndex = 8;
+            this.label82.Text = "2. Paired courses should have the same block.";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.ForeColor = System.Drawing.SystemColors.Control;
+            this.label81.Location = new System.Drawing.Point(46, 128);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(237, 13);
+            this.label81.TabIndex = 7;
+            this.label81.Text = "1. Your courses with co-requisites have sections.";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.ForeColor = System.Drawing.SystemColors.Control;
+            this.label80.Location = new System.Drawing.Point(17, 113);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(126, 13);
+            this.label80.TabIndex = 6;
+            this.label80.Text = "* Please ensure that:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(205, 94);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(31, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "here.";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.ForeColor = System.Drawing.SystemColors.Control;
+            this.label79.Location = new System.Drawing.Point(46, 94);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(162, 13);
+            this.label79.TabIndex = 4;
+            this.label79.Text = "*To change your password, click";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.SystemColors.Control;
+            this.label78.Location = new System.Drawing.Point(17, 75);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(491, 13);
+            this.label78.TabIndex = 3;
+            this.label78.Text = "* New students using this system should change their passwords as soon as possibl" +
+    "e.";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label77.Location = new System.Drawing.Point(7, 49);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(176, 18);
+            this.label77.TabIndex = 2;
+            this.label77.Text = "Notes and Reminders:";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(4, 31);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(0, 13);
+            this.label76.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label10.Location = new System.Drawing.Point(3, 2);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Announcements";
             // 
             // studentScheduleViewTableAdapter
             // 
@@ -2262,46 +2265,35 @@
             this.studentBindingSource.DataMember = "Students";
             this.studentBindingSource.DataSource = this.enrollmentDataSet;
             // 
-            // studentScheduleViewBindingSource
-            // 
-            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
-            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // studentnumDataGridViewTextBoxColumn
-            // 
-            this.studentnumDataGridViewTextBoxColumn.DataPropertyName = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.HeaderText = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.Name = "studentnumDataGridViewTextBoxColumn";
-            // 
             // scheduleIDDataGridViewTextBoxColumn
             // 
             this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "Schedule ID";
             this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
             // 
             // coursedescriptionDataGridViewTextBoxColumn
             // 
             this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
             this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
             // 
             // sectioncodeDataGridViewTextBoxColumn
             // 
             this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section Code";
             this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
             // 
             // timeslotDataGridViewTextBoxColumn
             // 
             this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.HeaderText = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.HeaderText = "Timeslot";
             this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
             this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // facultynameDataGridViewTextBoxColumn
             // 
             this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.HeaderText = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.HeaderText = "Faculty Name";
             this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
             this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -2326,11 +2318,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panelSchedule.ResumeLayout(false);
-            this.panelSchedule.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
-            this.panelHome.ResumeLayout(false);
-            this.panelHome.PerformLayout();
             this.panelSettings.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -2362,9 +2349,14 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            this.panelSchedule.ResumeLayout(false);
+            this.panelSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
+            this.panelHome.ResumeLayout(false);
+            this.panelHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2543,7 +2535,6 @@
         private EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter announcementsTableAdapter;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private System.Windows.Forms.BindingSource studentScheduleViewBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentnumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn scheduleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;

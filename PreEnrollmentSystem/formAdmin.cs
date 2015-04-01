@@ -108,9 +108,9 @@ namespace PreEnrollmentSystem
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 this.enrollment_ReportTableAdapter.UpdateRow(row.Cells[0].Value.ToString(),
-                    row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(),
-                    row.Cells[4].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString(),
-                    row.Cells[7].Value.ToString(), row.Cells[0].Value.ToString());
+                    Convert.ToInt32(row.Cells[1].Value.ToString()), Convert.ToInt32(row.Cells[2].Value.ToString()), Convert.ToInt32(row.Cells[3].Value.ToString()),
+                    Convert.ToInt32(row.Cells[4].Value.ToString()), Convert.ToInt32(row.Cells[5].Value.ToString()), Convert.ToInt32(row.Cells[6].Value.ToString()),
+                    Convert.ToInt32(row.Cells[7].Value.ToString()), row.Cells[8].Value.ToString());
             }
         }
 
@@ -187,12 +187,37 @@ namespace PreEnrollmentSystem
                 row.Cells[6].Value = afternoon;
                 row.Cells[7].Value = evening;
             }
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            /*Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
             PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Test.pdf", FileMode.Create));
             doc.Open();
-            Paragraph paragraph = new Paragraph("This is a test paragraph for the PDF File! :)");
+
+            Paragraph paragraph = new Paragraph("Data Grid View Contents");
+
+            PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+
+            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            {
+                table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
+            }
+
+            table.HeaderRows = 1;
+
+            for (int b = 0; b < 10; b++)
+            {
+                for (int c = 0; c < dataGridView1.Columns.Count; c++)
+                {
+                    if (dataGridView1[c, b].Value != null)
+                    {
+                        table.AddCell(new Phrase(dataGridView1[c, b].Value.ToString()));
+                    }
+                }
+            }
+
             doc.Add(paragraph);
+            doc.Add(table);
             doc.Close();
+
+            MessageBox.Show("PDF successfully created!");*/
         }
 
         private void generateSectionTable()
@@ -210,7 +235,7 @@ namespace PreEnrollmentSystem
                 {
                     section_count++;
                     String section_code = program_code + (counter + 1) + "0" + section_count;
-                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), program_code, (counter % 2) + 1, "morning");
+                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), (counter % 2) + 1);
                     MessageBox.Show(section_code);
                 }
 
@@ -219,7 +244,7 @@ namespace PreEnrollmentSystem
                     section_count++;
                     String section_code = program_code + (counter + 1) + "0" + section_count;
                     MessageBox.Show(section_code);
-                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), program_code, (counter % 2) + 1, "afternoon");
+                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), (counter % 2) + 1);
                 }
 
                 for (int i = 0; i < evening; i++)
@@ -227,7 +252,7 @@ namespace PreEnrollmentSystem
                     section_count++;
                     String section_code = program_code + (counter + 1) + "0" + section_count;
                     MessageBox.Show(section_code);
-                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), "BSCS", (counter % 2) + 1, "evening");
+                    this.sectionsTableAdapter.Insert(section_code, (counter / 2 + 1), (counter % 2) + 1);
                 }
 
                 counter++;

@@ -119,22 +119,25 @@ namespace PreEnrollmentSystem
 
         private void updateAnnouncements()
         {
-            for (int b = (int)announcements.announcement_numColumn.MaxLength; b < (int)announcements.announcement_numColumn.MaxLength - 4; b--)
+            int counter = 1;
+            for (int ctr = announcements.Count()-2; ctr < announcements.Count() ;ctr++)
             {
-                if (b == 1)
+                if (counter == 1)
                 {
-                    announcementTitle1.Text = announcements[b-2]["announcements_title"].ToString();
-                    announcementDetails1.Text = announcements[b-2]["announcement_details"].ToString();
+                    announcementTitle1.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails1.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    counter++;
                 }
-                if (b == 2)
+                else if (counter == 2)
                 {
-                    announcementTitle2.Text = announcements[b-1]["announcements_title"].ToString();
-                    announcementDetails2.Text = announcements[b-1]["announcement_details"].ToString();
+                    announcementTitle2.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails2.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    counter++;
                 }
-                if (b == 3)
+                else if (counter == 3)
                 {
-                    announcementTitle3.Text = announcements[b]["announcements_title"].ToString();
-                    announcementDetails3.Text = announcements[b]["announcement_details"].ToString();
+                    announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
                 }
             }
         }

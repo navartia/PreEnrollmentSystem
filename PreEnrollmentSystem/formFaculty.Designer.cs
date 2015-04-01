@@ -195,6 +195,7 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelStudNum = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -2188,6 +2189,10 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // accountsTableAdapter
+            // 
+            this.accountsTableAdapter.ClearBeforeFill = true;
+            // 
             // FormFaculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2419,5 +2424,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelStudNum;
         private System.Windows.Forms.DataGridView dataGridViewSchedule;
+        private EnrollmentDataSetTableAdapters.AccountsTableAdapter accountsTableAdapter;
     }
 }
