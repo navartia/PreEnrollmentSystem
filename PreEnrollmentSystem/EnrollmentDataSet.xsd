@@ -145,7 +145,7 @@ SELECT announcement_num, announcement_title, announcement_details FROM Announcem
               <Mapping SourceColumn="announcement_details" DataSetColumn="announcement_details" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Announcements" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetAnnouncementDetails" Modifier="Public" Name="GetAnnouncementDetails" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetAnnouncementDetails">
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Announcements" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetAnnouncementDetails" Modifier="Public" Name="GetAnnouncementDetails" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetAnnouncementDetails">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT announcement_details
@@ -157,7 +157,7 @@ WHERE (announcement_num = @announcement_num)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Announcements" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetAnnouncementTitle" Modifier="Public" Name="GetAnnouncementTitle" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetAnnouncementTitle">
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Announcements" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetAnnouncementTitle" Modifier="Public" Name="GetAnnouncementTitle" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetAnnouncementTitle">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT announcement_title
@@ -379,7 +379,7 @@ WHERE (scheduleID = @scheduleID)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStudentID" Modifier="Public" Name="GetStudentID" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetStudentID">
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStudentID" Modifier="Public" Name="GetStudentID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetStudentID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT studentID
@@ -1058,12 +1058,12 @@ SELECT studentID, accountID, programID, student_lastname, student_firstname, stu
               <Mapping SourceColumn="student_email" DataSetColumn="student_email" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUsername" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUsername" GeneratorSourceName="FillByUsername" GetMethodModifier="Public" GetMethodName="GetDataByUsername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUsername" UserSourceName="FillByUsername">
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUsername" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUsername" GeneratorSourceName="FillByUsername" GetMethodModifier="Public" GetMethodName="GetDataByUsername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUsername" UserSourceName="FillByUsername">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Students.studentID, Students.accountID, Students.programID, Students.student_lastname, Students.student_firstname, Students.student_middlename, 
                          Students.student_num, Students.student_status, Students.student_gender, Students.student_birthday, Students.student_birthplace, Students.student_citizenship, 
-                         Students.student_civil, Students.student_religion, Students.student_mobile, Students.student_landline, Students.student_email, Accounts.username
+                         Students.student_civil, Students.student_religion, Students.student_mobile, Students.student_landline, Students.student_email
 FROM            Students INNER JOIN
                          Accounts ON Students.accountID = Accounts.accountID
 WHERE        (Accounts.username = @username)</CommandText>
@@ -1101,6 +1101,19 @@ WHERE (Accounts.username = @username)</CommandText>
                     <CommandText>SELECT programID FROM Programs WHERE (program_code = @program_code)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="program_code" ColumnName="program_code" DataSourceName="[E:\PREENROLLMENTSYSTEM\PREENROLLMENTSYSTEM\ENROLLMENT.MDF].dbo.Programs" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@program_code" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="program_code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="EnrollmentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStudentID" Modifier="Public" Name="GetStudentID" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetStudentID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT studentID
+FROM Students INNER JOIN
+                         Accounts ON Students.accountID = Accounts.accountID
+WHERE (Accounts.username = @username)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="username" ColumnName="username" DataSourceName="[E:\PREENROLLMENTSYSTEM\PREENROLLMENTSYSTEM\ENROLLMENT.MDF].dbo.Accounts" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@username" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>

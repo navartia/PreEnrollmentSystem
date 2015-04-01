@@ -52,6 +52,7 @@ namespace PreEnrollmentSystem
                     String queryAccountType = (String)account.Rows[0]["account_type"];
                     Properties.Settings.Default.username = inputUsername;
                     Properties.Settings.Default.password = inputPassword;
+                    Properties.Settings.Default.Save();
                     this.Hide();
 
                     switch (queryAccountType)

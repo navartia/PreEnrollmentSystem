@@ -11085,7 +11085,7 @@ SELECT enrollmentID, studentID, scheduleID, isValidated FROM Enrollment WHERE (e
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> GetStudentID(string student_num) {
+        public virtual object GetStudentID(string student_num) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((student_num == null)) {
                 throw new global::System.ArgumentNullException("student_num");
@@ -11109,10 +11109,10 @@ SELECT enrollmentID, studentID, scheduleID, isValidated FROM Enrollment WHERE (e
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }
@@ -14645,7 +14645,7 @@ SELECT studentID, accountID, programID, student_lastname, student_firstname, stu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Students.studentID, Students.accountID, Students.programID, Students.student_lastname, Students.student_firstname, Students.student_middlename, 
@@ -14657,7 +14657,7 @@ FROM            Students";
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"SELECT        Students.studentID, Students.accountID, Students.programID, Students.student_lastname, Students.student_firstname, Students.student_middlename, 
                          Students.student_num, Students.student_status, Students.student_gender, Students.student_birthday, Students.student_birthplace, Students.student_citizenship, 
-                         Students.student_civil, Students.student_religion, Students.student_mobile, Students.student_landline, Students.student_email, Accounts.username
+                         Students.student_civil, Students.student_religion, Students.student_mobile, Students.student_landline, Students.student_email
 FROM            Students INNER JOIN
                          Accounts ON Students.accountID = Accounts.accountID
 WHERE        (Accounts.username = @username)";
@@ -14680,6 +14680,12 @@ WHERE        (Accounts.username = @username)";
             this._commandCollection[4].CommandText = "SELECT programID FROM Programs WHERE (program_code = @program_code)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@program_code", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "program_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT studentID\r\nFROM Students INNER JOIN\r\n                         Accounts ON " +
+                "Students.accountID = Accounts.accountID\r\nWHERE (Accounts.username = @username)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15371,6 +15377,40 @@ WHERE        (Accounts.username = @username)";
             }
             else {
                 command.Parameters[0].Value = ((string)(program_code));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> GetStudentID(string username) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            if ((username == null)) {
+                throw new global::System.ArgumentNullException("username");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(username));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

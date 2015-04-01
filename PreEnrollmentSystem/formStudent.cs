@@ -74,7 +74,8 @@ namespace PreEnrollmentSystem
             labelProgramMajor.Text = (String)this.programsTableAdapter.GetCourseDescription((String) student_information.Rows[0]["student_program"]);
 
             schedule = new ScheduleTable();
-            student_num = student_information[0]["student_num"].ToString();
+            student_num = student_information[Convert.ToInt32(this.studentsTableAdapter.GetStudentID(username))]["student_num"].ToString();
+            labelStudNum.Text = student_num;
             this.studentScheduleViewTableAdapter.FillByStudentNum(schedule, student_num);
         }
 
@@ -120,24 +121,25 @@ namespace PreEnrollmentSystem
         private void updateAnnouncements()
         {
             int counter = 1;
-            for (int ctr = announcements.Count()-2; ctr < announcements.Count() ;ctr++)
+            for (int ctr = announcements.Rows.Count-3; ctr < announcements.Rows.Count ;ctr++)
             {
                 if (counter == 1)
                 {
-                    announcementTitle1.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
-                    announcementDetails1.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    announcementTitle1.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
+                    announcementDetails1.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
                     counter++;
                 }
                 else if (counter == 2)
                 {
-                    announcementTitle2.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
-                    announcementDetails2.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    announcementTitle2.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
+                    announcementDetails2.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
                     counter++;
                 }
                 else if (counter == 3)
                 {
-                    announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
-                    announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
+                    announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
+                    counter = 1;
                 }
             }
         }

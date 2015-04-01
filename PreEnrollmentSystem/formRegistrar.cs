@@ -118,25 +118,37 @@ namespace PreEnrollmentSystem
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            String username = textBoxStudentFirstname.Text;
-            username = username.Replace(" ", String.Empty) + "." + textBoxStudentLastname.Text;
-            username = username.ToLower();
+            if (textBoxStudentFirstname.Text == "" || textBoxStudentLastname.Text == "" || comboBoxCourse.Text == "" || comboBoxStudentGender.Text == "" || dateTimePickerBirthdate.Text == ""
+                || textBoxStudentBirthplace.Text == "" || textBoxStudentCitizenship.Text == "" || comboBoxStudentCivilStatus.Text == "" || textBoxStudentReligion.Text == ""
+                || textBoxStudNum1.Text == "" || textBoxStudNum2.Text == "" || textBoxStudNum3.Text == "" || comboBoxStudentStatus.Text == "")
+            {
+                DialogResult dialogResult = MessageBox.Show("Fields marked with an asterisk require info!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
-            String course = comboBoxCourse.Text;
-            int programID = (int)this.studentsTableAdapter.GetProgramID(course);
+            else if (textBoxStudentFirstname.Text != "" || textBoxStudentLastname.Text != "" || comboBoxCourse.Text != "" || comboBoxStudentGender.Text != "" || dateTimePickerBirthdate.Text != ""
+                || textBoxStudentBirthplace.Text != "" || textBoxStudentCitizenship.Text != "" || comboBoxStudentCivilStatus.Text != "" || textBoxStudentReligion.Text != ""
+                || textBoxStudNum1.Text != "" || textBoxStudNum2.Text != "" || textBoxStudNum3.Text != "" || comboBoxStudentStatus.Text != "")
+            {
+                String username = textBoxStudentFirstname.Text;
+                username = username.Replace(" ", String.Empty) + "." + textBoxStudentLastname.Text;
+                username = username.ToLower();
 
-            String studNum = textBox3.Text + " - " + textBox1.Text + " - " + textBox2.Text;
-            this.accountsTableAdapter.Insert(username, "student", "student");
-            int accountID = (int)this.studentsTableAdapter.GetAccountID(username);
+                String course = comboBoxCourse.Text;
+                int programID = (int)this.studentsTableAdapter.GetProgramID(course);
 
-            this.studentsTableAdapter.Insert(accountID, programID, textBoxStudentLastname.Text,
-                textBoxStudentFirstname.Text, textBoxStudentMiddlename.Text, studNum,
-                comboBoxStudentStatus.Text, comboBoxStudentGender.Text,
-                dateTimePickerBirthdate.Text, textBoxStudentBirthplace.Text, textBoxStudentCitizenship.Text,
-                comboBoxStudentCivilStatus.Text, textBoxStudentReligion.Text, textBoxStudentMobile.Text,
-                textBoxStudentLandline.Text, textBoxStudentEmail.Text);
+                String studNum = textBoxStudNum1.Text + " - " + textBoxStudNum2.Text + " - " + textBoxStudNum3.Text;
+                this.accountsTableAdapter.Insert(username, "student", "student");
+                int accountID = (int)this.studentsTableAdapter.GetAccountID(username);
 
-            MessageBox.Show("Created an account successfully!\n Username: " + username);
+                this.studentsTableAdapter.Insert(accountID, programID, textBoxStudentLastname.Text,
+                    textBoxStudentFirstname.Text, textBoxStudentMiddlename.Text, studNum,
+                    comboBoxStudentStatus.Text, comboBoxStudentGender.Text,
+                    dateTimePickerBirthdate.Text, textBoxStudentBirthplace.Text, textBoxStudentCitizenship.Text,
+                    comboBoxStudentCivilStatus.Text, textBoxStudentReligion.Text, textBoxStudentMobile.Text,
+                    textBoxStudentLandline.Text, textBoxStudentEmail.Text);
+
+                MessageBox.Show("Created an account successfully!\n Username: " + username);
+            }
 
         }
 
@@ -158,9 +170,9 @@ namespace PreEnrollmentSystem
             textBoxStudentLandline.Text = "";
             textBoxStudentEmail.Text = "";
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
+            textBoxStudNum2.Text = "";
+            textBoxStudNum3.Text = "";
+            textBoxStudNum1.Text = "";
             comboBoxStudentStatus.Text = "";
         }
 

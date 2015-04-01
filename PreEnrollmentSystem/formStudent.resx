@@ -339,6 +339,37 @@
         9jn+RTkG3mbEMWP4LgmNWC73G65YiUKu9wz/AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="student_mobile.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="student_landline.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="student_email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1145, 17</value>
+  </metadata>
+  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1317, 17</value>
+  </metadata>
+  <data name="buttonUpdatePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbdJREFUSEvt
+        VctqwkAUdeIriaJgEhE3vhYafPxFu/cz/AK3/YlC6S/4JRVcCP6EdKGbglgtPadcYYpJHCvtqgcOjuSe
+        c+feuZOkTOA4jur3+5PRaPRKDgaDSaFQUPL4NmQyGdXr9cbD4fAd5h/gkeswDMfZbPb2JO12O4TpRsx1
+        bjqdTqjUDTlqtVoJu12J4VEzZxX8v6rX6yUJvw7lctmCyQw8aMY6mYCJZpVKxRKZGWzb5qFOxSTKXOcR
+        hz7lIIg8GZZlqW63ew/hnmLNKI6sYo9BuEun05eTNBqNJgTrCKNYIp4bWbdarabYRKNarToInOviKznH
+        YDhi9x3sIXbyBPJQTVpzRmrp4brueas8z+Pud6CewOgMhFwzwc73/fMqePUxOQ8IeAEXCF7i92ICxoBL
+        rBfUYqIeisVi9GFzgnK5HGmhlwFERhXgsgXUUEsPsUsGyvSxo9P7J5aMwXD4IjMHE8Ag7hbrPPw4wa9X
+        8N+iRPxFAg8Gpi3yRGYOfERs7O4NBomXjTFBENgiM0c+n1cQP4OnKvREXH+RMfxAiew6oE0uDB5htBVj
+        nVs+Q3tcCY9AKvUJP7yReuI/rAMAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="buttonClearData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAdFJREFUSEu1
@@ -369,31 +400,6 @@
         2GWmCBdXER1zNpFIBBlQts0ITfsDczjbY0NZjJoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonUpdatePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbdJREFUSEvt
-        VctqwkAUdeIriaJgEhE3vhYafPxFu/cz/AK3/YlC6S/4JRVcCP6EdKGbglgtPadcYYpJHCvtqgcOjuSe
-        c+feuZOkTOA4jur3+5PRaPRKDgaDSaFQUPL4NmQyGdXr9cbD4fAd5h/gkeswDMfZbPb2JO12O4TpRsx1
-        bjqdTqjUDTlqtVoJu12J4VEzZxX8v6rX6yUJvw7lctmCyQw8aMY6mYCJZpVKxRKZGWzb5qFOxSTKXOcR
-        hz7lIIg8GZZlqW63ew/hnmLNKI6sYo9BuEun05eTNBqNJgTrCKNYIp4bWbdarabYRKNarToInOviKznH
-        YDhi9x3sIXbyBPJQTVpzRmrp4brueas8z+Pud6CewOgMhFwzwc73/fMqePUxOQ8IeAEXCF7i92ICxoBL
-        rBfUYqIeisVi9GFzgnK5HGmhlwFERhXgsgXUUEsPsUsGyvSxo9P7J5aMwXD4IjMHE8Ag7hbrPPw4wa9X
-        8N+iRPxFAg8Gpi3yRGYOfERs7O4NBomXjTFBENgiM0c+n1cQP4OnKvREXH+RMfxAiew6oE0uDB5htBVj
-        nVs+Q3tcCY9AKvUJP7yReuI/rAMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1317, 17</value>
-  </metadata>
-  <metadata name="studentScheduleViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1317, 17</value>
-  </metadata>
-  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="enrollmentDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="studentScheduleViewTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 17</value>
   </metadata>
@@ -409,8 +415,8 @@
   <metadata name="announcementsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>933, 17</value>
   </metadata>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1145, 17</value>
+  <metadata name="enrollmentTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>92</value>

@@ -42,34 +42,14 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.buttonStudentAssessment = new System.Windows.Forms.Button();
-            this.panelStudentAssessment = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timeslotdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeslottimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
-            this.buttonPrintSchedule = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panelHome = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panelCreateStudentAccount = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label175 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxStudNum3 = new System.Windows.Forms.TextBox();
             this.label174 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxStudNum2 = new System.Windows.Forms.TextBox();
             this.comboBoxStudentStatus = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxStudNum1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonClearData = new System.Windows.Forms.Button();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
@@ -145,6 +125,27 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.panelStudentAssessment = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.timeslotdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslottimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.buttonPrintSchedule = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableAdapterManager = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
@@ -159,12 +160,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelStudentAssessment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
-            this.panelHome.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panelCreateStudentAccount.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -177,6 +172,12 @@
             this.groupBoxIdentification.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelCreateAnnouncements.SuspendLayout();
+            this.panelStudentAssessment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
+            this.panelHome.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -245,10 +246,10 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateStudentAccount);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateAnnouncements);
             this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
+            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Size = new System.Drawing.Size(986, 550);
             this.splitContainer1.SplitterDistance = 126;
             this.splitContainer1.TabIndex = 6;
@@ -374,221 +375,18 @@
             this.buttonStudentAssessment.UseVisualStyleBackColor = false;
             this.buttonStudentAssessment.Click += new System.EventHandler(this.buttonStudentAssessment_Click);
             // 
-            // panelStudentAssessment
-            // 
-            this.panelStudentAssessment.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelStudentAssessment.Controls.Add(this.textBox7);
-            this.panelStudentAssessment.Controls.Add(this.dataGridView1);
-            this.panelStudentAssessment.Controls.Add(this.buttonPrintSchedule);
-            this.panelStudentAssessment.Controls.Add(this.button12);
-            this.panelStudentAssessment.Controls.Add(this.label35);
-            this.panelStudentAssessment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStudentAssessment.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelStudentAssessment.Location = new System.Drawing.Point(0, 0);
-            this.panelStudentAssessment.Name = "panelStudentAssessment";
-            this.panelStudentAssessment.Size = new System.Drawing.Size(856, 550);
-            this.panelStudentAssessment.TabIndex = 51;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(663, 16);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 20);
-            this.textBox7.TabIndex = 21;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.timeslotdayDataGridViewTextBoxColumn,
-            this.timeslottimeDataGridViewTextBoxColumn,
-            this.studentnumDataGridViewTextBoxColumn,
-            this.scheduleIDDataGridViewTextBoxColumn,
-            this.coursedescriptionDataGridViewTextBoxColumn,
-            this.sectioncodeDataGridViewTextBoxColumn,
-            this.timeslotDataGridViewTextBoxColumn,
-            this.facultynameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentScheduleViewBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(844, 298);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // timeslotdayDataGridViewTextBoxColumn
-            // 
-            this.timeslotdayDataGridViewTextBoxColumn.DataPropertyName = "timeslot_day";
-            this.timeslotdayDataGridViewTextBoxColumn.HeaderText = "Day";
-            this.timeslotdayDataGridViewTextBoxColumn.Name = "timeslotdayDataGridViewTextBoxColumn";
-            // 
-            // timeslottimeDataGridViewTextBoxColumn
-            // 
-            this.timeslottimeDataGridViewTextBoxColumn.DataPropertyName = "timeslot_time";
-            this.timeslottimeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeslottimeDataGridViewTextBoxColumn.Name = "timeslottimeDataGridViewTextBoxColumn";
-            // 
-            // studentnumDataGridViewTextBoxColumn
-            // 
-            this.studentnumDataGridViewTextBoxColumn.DataPropertyName = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.HeaderText = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.Name = "studentnumDataGridViewTextBoxColumn";
-            // 
-            // scheduleIDDataGridViewTextBoxColumn
-            // 
-            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
-            // 
-            // coursedescriptionDataGridViewTextBoxColumn
-            // 
-            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
-            // 
-            // sectioncodeDataGridViewTextBoxColumn
-            // 
-            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
-            // 
-            // timeslotDataGridViewTextBoxColumn
-            // 
-            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.HeaderText = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
-            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // facultynameDataGridViewTextBoxColumn
-            // 
-            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.HeaderText = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
-            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentScheduleViewBindingSource
-            // 
-            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
-            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonPrintSchedule
-            // 
-            this.buttonPrintSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrintSchedule.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonPrintSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrintSchedule.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonPrintSchedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintSchedule.Image")));
-            this.buttonPrintSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPrintSchedule.Location = new System.Drawing.Point(540, 450);
-            this.buttonPrintSchedule.Name = "buttonPrintSchedule";
-            this.buttonPrintSchedule.Size = new System.Drawing.Size(172, 44);
-            this.buttonPrintSchedule.TabIndex = 3;
-            this.buttonPrintSchedule.Text = "Print Schedule";
-            this.buttonPrintSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrintSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonPrintSchedule.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(100, 450);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(172, 44);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Validate Schedule";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.Control;
-            this.label35.Location = new System.Drawing.Point(603, 17);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(54, 16);
-            this.label35.TabIndex = 20;
-            this.label35.Text = "Search:";
-            // 
-            // panelHome
-            // 
-            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelHome.Controls.Add(this.groupBox1);
-            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(856, 550);
-            this.panelHome.TabIndex = 34;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Controls.Add(this.label75);
-            this.groupBox1.Controls.Add(this.textBox26);
-            this.groupBox1.Controls.Add(this.monthCalendar1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 550);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // label75
-            // 
-            this.label75.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label75.Location = new System.Drawing.Point(90, 512);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(57, 24);
-            this.label75.TabIndex = 2;
-            this.label75.Text = "Time";
-            // 
-            // textBox26
-            // 
-            this.textBox26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox26.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox26.Location = new System.Drawing.Point(38, 468);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(165, 44);
-            this.textBox26.TabIndex = 1;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(8, 17);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
-            // 
             // panelCreateStudentAccount
             // 
             this.panelCreateStudentAccount.AutoScroll = true;
             this.panelCreateStudentAccount.AutoScrollMargin = new System.Drawing.Size(20, 20);
             this.panelCreateStudentAccount.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelCreateStudentAccount.Controls.Add(this.label6);
             this.panelCreateStudentAccount.Controls.Add(this.label175);
-            this.panelCreateStudentAccount.Controls.Add(this.textBox2);
+            this.panelCreateStudentAccount.Controls.Add(this.textBoxStudNum3);
             this.panelCreateStudentAccount.Controls.Add(this.label174);
-            this.panelCreateStudentAccount.Controls.Add(this.textBox1);
+            this.panelCreateStudentAccount.Controls.Add(this.textBoxStudNum2);
             this.panelCreateStudentAccount.Controls.Add(this.comboBoxStudentStatus);
-            this.panelCreateStudentAccount.Controls.Add(this.textBox3);
+            this.panelCreateStudentAccount.Controls.Add(this.textBoxStudNum1);
             this.panelCreateStudentAccount.Controls.Add(this.label8);
             this.panelCreateStudentAccount.Controls.Add(this.buttonClearData);
             this.panelCreateStudentAccount.Controls.Add(this.buttonCreateAccount);
@@ -608,6 +406,15 @@
             this.panelCreateStudentAccount.Size = new System.Drawing.Size(856, 550);
             this.panelCreateStudentAccount.TabIndex = 56;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(598, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(232, 13);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "*all fields marked with asterisks are to be filled-in";
+            // 
             // label175
             // 
             this.label175.AutoSize = true;
@@ -618,12 +425,12 @@
             this.label175.TabIndex = 82;
             this.label175.Text = "-";
             // 
-            // textBox2
+            // textBoxStudNum3
             // 
-            this.textBox2.Location = new System.Drawing.Point(602, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(33, 20);
-            this.textBox2.TabIndex = 81;
+            this.textBoxStudNum3.Location = new System.Drawing.Point(602, 175);
+            this.textBoxStudNum3.Name = "textBoxStudNum3";
+            this.textBoxStudNum3.Size = new System.Drawing.Size(33, 20);
+            this.textBoxStudNum3.TabIndex = 81;
             // 
             // label174
             // 
@@ -635,12 +442,12 @@
             this.label174.TabIndex = 80;
             this.label174.Text = "-";
             // 
-            // textBox1
+            // textBoxStudNum2
             // 
-            this.textBox1.Location = new System.Drawing.Point(544, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 79;
+            this.textBoxStudNum2.Location = new System.Drawing.Point(544, 175);
+            this.textBoxStudNum2.Name = "textBoxStudNum2";
+            this.textBoxStudNum2.Size = new System.Drawing.Size(33, 20);
+            this.textBoxStudNum2.TabIndex = 79;
             // 
             // comboBoxStudentStatus
             // 
@@ -651,12 +458,12 @@
             this.comboBoxStudentStatus.Size = new System.Drawing.Size(128, 21);
             this.comboBoxStudentStatus.TabIndex = 77;
             // 
-            // textBox3
+            // textBoxStudNum1
             // 
-            this.textBox3.Location = new System.Drawing.Point(488, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(33, 20);
-            this.textBox3.TabIndex = 74;
+            this.textBoxStudNum1.Location = new System.Drawing.Point(488, 175);
+            this.textBoxStudNum1.Name = "textBoxStudNum1";
+            this.textBoxStudNum1.Size = new System.Drawing.Size(33, 20);
+            this.textBoxStudNum1.TabIndex = 74;
             // 
             // label8
             // 
@@ -709,9 +516,9 @@
             this.label173.ForeColor = System.Drawing.SystemColors.Control;
             this.label173.Location = new System.Drawing.Point(487, 217);
             this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(44, 15);
+            this.label173.Size = new System.Drawing.Size(49, 15);
             this.label173.TabIndex = 78;
-            this.label173.Text = "Status:";
+            this.label173.Text = "Status*:";
             // 
             // label172
             // 
@@ -721,9 +528,9 @@
             this.label172.ForeColor = System.Drawing.SystemColors.Control;
             this.label172.Location = new System.Drawing.Point(487, 157);
             this.label172.Name = "label172";
-            this.label172.Size = new System.Drawing.Size(100, 15);
+            this.label172.Size = new System.Drawing.Size(105, 15);
             this.label172.TabIndex = 76;
-            this.label172.Text = "Student Number:";
+            this.label172.Text = "Student Number*:";
             // 
             // groupBox6
             // 
@@ -1071,11 +878,11 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 77);
+            this.label3.Location = new System.Drawing.Point(11, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 15);
+            this.label3.Size = new System.Drawing.Size(98, 15);
             this.label3.TabIndex = 54;
-            this.label3.Text = "E-mail Address";
+            this.label3.Text = "E-mail Address*:";
             // 
             // label1
             // 
@@ -1136,11 +943,11 @@
             this.label146.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label146.AutoSize = true;
             this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label146.Location = new System.Drawing.Point(46, 157);
+            this.label146.Location = new System.Drawing.Point(41, 157);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(56, 15);
+            this.label146.Size = new System.Drawing.Size(61, 15);
             this.label146.TabIndex = 19;
-            this.label146.Text = "Religion:";
+            this.label146.Text = "Religion*:";
             // 
             // textBoxStudentBirthplace
             // 
@@ -1155,11 +962,11 @@
             this.label141.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label141.AutoSize = true;
             this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label141.Location = new System.Drawing.Point(43, 37);
+            this.label141.Location = new System.Drawing.Point(38, 37);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(59, 15);
+            this.label141.Size = new System.Drawing.Size(64, 15);
             this.label141.TabIndex = 8;
-            this.label141.Text = "Birthdate:";
+            this.label141.Text = "Birthdate*:";
             // 
             // textBoxStudentReligion
             // 
@@ -1174,22 +981,22 @@
             this.label142.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label142.AutoSize = true;
             this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label142.Location = new System.Drawing.Point(51, 7);
+            this.label142.Location = new System.Drawing.Point(46, 7);
             this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(51, 15);
+            this.label142.Size = new System.Drawing.Size(56, 15);
             this.label142.TabIndex = 0;
-            this.label142.Text = "Gender:";
+            this.label142.Text = "Gender*:";
             // 
             // label143
             // 
             this.label143.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label143.AutoSize = true;
             this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label143.Location = new System.Drawing.Point(37, 67);
+            this.label143.Location = new System.Drawing.Point(32, 67);
             this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(65, 15);
+            this.label143.Size = new System.Drawing.Size(70, 15);
             this.label143.TabIndex = 10;
-            this.label143.Text = "Birthplace:";
+            this.label143.Text = "Birthplace*:";
             // 
             // dateTimePickerBirthdate
             // 
@@ -1205,11 +1012,11 @@
             this.label144.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label144.AutoSize = true;
             this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label144.Location = new System.Drawing.Point(32, 97);
+            this.label144.Location = new System.Drawing.Point(27, 97);
             this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(70, 15);
+            this.label144.Size = new System.Drawing.Size(75, 15);
             this.label144.TabIndex = 12;
-            this.label144.Text = "Citizenship:";
+            this.label144.Text = "Citizenship*:";
             // 
             // comboBoxStudentCivilStatus
             // 
@@ -1225,11 +1032,11 @@
             this.label145.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label145.AutoSize = true;
             this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label145.Location = new System.Drawing.Point(33, 127);
+            this.label145.Location = new System.Drawing.Point(28, 127);
             this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(69, 15);
+            this.label145.Size = new System.Drawing.Size(74, 15);
             this.label145.TabIndex = 18;
-            this.label145.Text = "Civil Status:";
+            this.label145.Text = "Civil Status*:";
             // 
             // comboBoxStudentGender
             // 
@@ -1320,33 +1127,33 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(37, 7);
+            this.label10.Location = new System.Drawing.Point(32, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 15);
+            this.label10.Size = new System.Drawing.Size(70, 15);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Firstname:";
+            this.label10.Text = "Firstname*:";
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(37, 67);
+            this.label12.Location = new System.Drawing.Point(32, 67);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 15);
+            this.label12.Size = new System.Drawing.Size(70, 15);
             this.label12.TabIndex = 10;
-            this.label12.Text = "Lastname:";
+            this.label12.Text = "Lastname*:";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(53, 97);
+            this.label13.Location = new System.Drawing.Point(48, 97);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 15);
+            this.label13.Size = new System.Drawing.Size(54, 15);
             this.label13.TabIndex = 12;
-            this.label13.Text = "Course:";
+            this.label13.Text = "Course*:";
             // 
             // textBoxStudentFirstname
             // 
@@ -1520,6 +1327,210 @@
             this.label26.TabIndex = 78;
             this.label26.Text = "Student Announcements";
             // 
+            // panelStudentAssessment
+            // 
+            this.panelStudentAssessment.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelStudentAssessment.Controls.Add(this.textBox7);
+            this.panelStudentAssessment.Controls.Add(this.dataGridView1);
+            this.panelStudentAssessment.Controls.Add(this.buttonPrintSchedule);
+            this.panelStudentAssessment.Controls.Add(this.button12);
+            this.panelStudentAssessment.Controls.Add(this.label35);
+            this.panelStudentAssessment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStudentAssessment.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelStudentAssessment.Location = new System.Drawing.Point(0, 0);
+            this.panelStudentAssessment.Name = "panelStudentAssessment";
+            this.panelStudentAssessment.Size = new System.Drawing.Size(856, 550);
+            this.panelStudentAssessment.TabIndex = 51;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Location = new System.Drawing.Point(663, 16);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(178, 20);
+            this.textBox7.TabIndex = 21;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.timeslotdayDataGridViewTextBoxColumn,
+            this.timeslottimeDataGridViewTextBoxColumn,
+            this.studentnumDataGridViewTextBoxColumn,
+            this.scheduleIDDataGridViewTextBoxColumn,
+            this.coursedescriptionDataGridViewTextBoxColumn,
+            this.sectioncodeDataGridViewTextBoxColumn,
+            this.timeslotDataGridViewTextBoxColumn,
+            this.facultynameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentScheduleViewBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(844, 298);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // timeslotdayDataGridViewTextBoxColumn
+            // 
+            this.timeslotdayDataGridViewTextBoxColumn.DataPropertyName = "timeslot_day";
+            this.timeslotdayDataGridViewTextBoxColumn.HeaderText = "Day";
+            this.timeslotdayDataGridViewTextBoxColumn.Name = "timeslotdayDataGridViewTextBoxColumn";
+            // 
+            // timeslottimeDataGridViewTextBoxColumn
+            // 
+            this.timeslottimeDataGridViewTextBoxColumn.DataPropertyName = "timeslot_time";
+            this.timeslottimeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeslottimeDataGridViewTextBoxColumn.Name = "timeslottimeDataGridViewTextBoxColumn";
+            // 
+            // studentnumDataGridViewTextBoxColumn
+            // 
+            this.studentnumDataGridViewTextBoxColumn.DataPropertyName = "student_num";
+            this.studentnumDataGridViewTextBoxColumn.HeaderText = "student_num";
+            this.studentnumDataGridViewTextBoxColumn.Name = "studentnumDataGridViewTextBoxColumn";
+            // 
+            // scheduleIDDataGridViewTextBoxColumn
+            // 
+            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
+            // 
+            // coursedescriptionDataGridViewTextBoxColumn
+            // 
+            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
+            // 
+            // sectioncodeDataGridViewTextBoxColumn
+            // 
+            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
+            // 
+            // timeslotDataGridViewTextBoxColumn
+            // 
+            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.HeaderText = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
+            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // facultynameDataGridViewTextBoxColumn
+            // 
+            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.HeaderText = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
+            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentScheduleViewBindingSource
+            // 
+            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
+            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonPrintSchedule
+            // 
+            this.buttonPrintSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrintSchedule.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonPrintSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintSchedule.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonPrintSchedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintSchedule.Image")));
+            this.buttonPrintSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPrintSchedule.Location = new System.Drawing.Point(540, 450);
+            this.buttonPrintSchedule.Name = "buttonPrintSchedule";
+            this.buttonPrintSchedule.Size = new System.Drawing.Size(172, 44);
+            this.buttonPrintSchedule.TabIndex = 3;
+            this.buttonPrintSchedule.Text = "Print Schedule";
+            this.buttonPrintSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPrintSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPrintSchedule.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(100, 450);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(172, 44);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "Validate Schedule";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.Control;
+            this.label35.Location = new System.Drawing.Point(603, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(54, 16);
+            this.label35.TabIndex = 20;
+            this.label35.Text = "Search:";
+            // 
+            // panelHome
+            // 
+            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelHome.Controls.Add(this.groupBox1);
+            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(856, 550);
+            this.panelHome.TabIndex = 34;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.Controls.Add(this.label75);
+            this.groupBox1.Controls.Add(this.textBox26);
+            this.groupBox1.Controls.Add(this.monthCalendar1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(246, 550);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // label75
+            // 
+            this.label75.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label75.Location = new System.Drawing.Point(90, 512);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(57, 24);
+            this.label75.TabIndex = 2;
+            this.label75.Text = "Time";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBox26.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox26.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox26.Location = new System.Drawing.Point(38, 468);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(165, 44);
+            this.textBox26.TabIndex = 1;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(8, 17);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -1541,6 +1552,7 @@
             this.tableAdapterManager.ScheduleTableAdapter = null;
             this.tableAdapterManager.School_YearTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
+            this.tableAdapterManager.StudentsTableAdapter = null;
             this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -1585,14 +1597,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelStudentAssessment.ResumeLayout(false);
-            this.panelStudentAssessment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
-            this.panelHome.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panelCreateStudentAccount.ResumeLayout(false);
             this.panelCreateStudentAccount.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1612,6 +1616,14 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panelCreateAnnouncements.ResumeLayout(false);
             this.panelCreateAnnouncements.PerformLayout();
+            this.panelStudentAssessment.ResumeLayout(false);
+            this.panelStudentAssessment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
+            this.panelHome.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1701,16 +1713,16 @@
         private System.Windows.Forms.TextBox textBoxStudentMobile;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxStudNum1;
         private System.Windows.Forms.ComboBox comboBoxProvinceRegion;
         private System.Windows.Forms.ComboBox comboBoxPresentRegion;
         private System.Windows.Forms.Label label172;
         private System.Windows.Forms.Label label173;
         private System.Windows.Forms.ComboBox comboBoxStudentStatus;
         private System.Windows.Forms.Label label175;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxStudNum3;
         private System.Windows.Forms.Label label174;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxStudNum2;
         private System.Windows.Forms.TextBox textBoxHeader1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBoxDetails1;
@@ -1741,5 +1753,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeslotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
     }
 }

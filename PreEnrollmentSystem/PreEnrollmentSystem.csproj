@@ -73,7 +73,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnrollmentDataSet.Designer.cs">
+    <Compile Include="EnrollmentDataSet.cs">
+      <DependentUpon>EnrollmentDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnrollmentDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnrollmentDataSet.xsd</DependentUpon>
@@ -150,8 +154,8 @@
     </None>
     <None Include="EnrollmentDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EnrollmentDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>EnrollmentDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="EnrollmentDataSet.xss">
       <DependentUpon>EnrollmentDataSet.xsd</DependentUpon>

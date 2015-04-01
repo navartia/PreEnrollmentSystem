@@ -30,32 +30,83 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudent));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.logoSTI = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.labelStudNum = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.labelStatus = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelProgramMajor = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.buttonSchedule = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.panelStudentProfile = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panelSchedule = new System.Windows.Forms.Panel();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
+            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.buttonSearchSched = new System.Windows.Forms.Button();
+            this.labelSearchSched = new System.Windows.Forms.Label();
+            this.textBoxSearchSched = new System.Windows.Forms.TextBox();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.announcementDetails3 = new System.Windows.Forms.Label();
+            this.announcementDetails1 = new System.Windows.Forms.Label();
+            this.announcementTitle3 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.announcementDetails2 = new System.Windows.Forms.Label();
+            this.announcementTitle2 = new System.Windows.Forms.Label();
+            this.announcementTitle1 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -131,89 +182,39 @@
             this.buttonClearData = new System.Windows.Forms.Button();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.label67 = new System.Windows.Forms.Label();
-            this.panelStudentProfile = new System.Windows.Forms.Panel();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panelSchedule = new System.Windows.Forms.Panel();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
-            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
-            this.buttonSearchSched = new System.Windows.Forms.Button();
-            this.labelSearchSched = new System.Windows.Forms.Label();
-            this.textBoxSearchSched = new System.Windows.Forms.TextBox();
-            this.panelHome = new System.Windows.Forms.Panel();
-            this.announcementDetails3 = new System.Windows.Forms.Label();
-            this.announcementDetails1 = new System.Windows.Forms.Label();
-            this.announcementTitle3 = new System.Windows.Forms.Label();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.announcementDetails2 = new System.Windows.Forms.Label();
-            this.announcementTitle2 = new System.Windows.Forms.Label();
-            this.announcementTitle1 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.studentScheduleViewTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentScheduleViewTableAdapter();
             this.studentsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.StudentsTableAdapter();
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enrollmentTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter();
+            this.dataGridViewPersonalData = new System.Windows.Forms.DataGridView();
+            this.studentgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentbirthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentbirthplaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentcitizenshipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentcivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentreligionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewContactInformation = new System.Windows.Forms.DataGridView();
+            this.labelStudNum = new System.Windows.Forms.Label();
+            this.student_mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_landline = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).BeginInit();
             this.panelHeader.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panelStudentProfile.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panelSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
+            this.panelHome.SuspendLayout();
             this.panelSettings.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -230,16 +231,9 @@
             this.tableLayoutPanel11.SuspendLayout();
             this.groupBoxIdentification.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.panelStudentProfile.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panelSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
-            this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactInformation)).BeginInit();
             this.SuspendLayout();
             // 
             // logoSTI
@@ -262,16 +256,6 @@
             this.labelName.Size = new System.Drawing.Size(394, 46);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Ronald Louie R. Sadiz";
-            // 
-            // labelStudNum
-            // 
-            this.labelStudNum.AutoSize = true;
-            this.labelStudNum.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStudNum.Location = new System.Drawing.Point(178, 46);
-            this.labelStudNum.Name = "labelStudNum";
-            this.labelStudNum.Size = new System.Drawing.Size(129, 20);
-            this.labelStudNum.TabIndex = 2;
-            this.labelStudNum.Text = "047 - 2013 - 0128";
             // 
             // panelHeader
             // 
@@ -319,158 +303,6 @@
             this.labelProgramMajor.TabIndex = 4;
             this.labelProgramMajor.Text = "BS Computer Science";
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label28, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label27, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label26, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label25, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label18, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label24, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label23, 0, 2);
-            this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(33, 44);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(676, 86);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(444, 63);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(227, 13);
-            this.label28.TabIndex = 10;
-            this.label28.Text = "ROMAN CATHOLIC";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(444, 35);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(227, 13);
-            this.label27.TabIndex = 9;
-            this.label27.Text = "SINGLE";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(444, 8);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(227, 13);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "FILIPINO";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(107, 8);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(227, 13);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "MALE";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(51, 35);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Birthday:";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(54, 8);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Gender:";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(388, 63);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 13);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Religion:";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(374, 35);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Civil Status:";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(376, 8);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Citizenship:";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(107, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(227, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "DECEMBER 30, 1990";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(107, 63);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(227, 13);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "PASAY CITY";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(42, 63);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(57, 13);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Birthplace:";
-            // 
             // splitContainer1
             // 
             this.splitContainer1.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -492,10 +324,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
-            this.splitContainer1.Panel2.Controls.Add(this.panelSettings);
             this.splitContainer1.Panel2.Controls.Add(this.panelStudentProfile);
             this.splitContainer1.Panel2.Controls.Add(this.panelSchedule);
+            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
+            this.splitContainer1.Panel2.Controls.Add(this.panelSettings);
             this.splitContainer1.Size = new System.Drawing.Size(1354, 632);
             this.splitContainer1.SplitterDistance = 166;
             this.splitContainer1.TabIndex = 0;
@@ -600,6 +432,724 @@
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // panelStudentProfile
+            // 
+            this.panelStudentProfile.AutoScroll = true;
+            this.panelStudentProfile.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.panelStudentProfile.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelStudentProfile.Controls.Add(this.dataGridViewContactInformation);
+            this.panelStudentProfile.Controls.Add(this.dataGridViewPersonalData);
+            this.panelStudentProfile.Controls.Add(this.label45);
+            this.panelStudentProfile.Controls.Add(this.label12);
+            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel5);
+            this.panelStudentProfile.Controls.Add(this.label46);
+            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel4);
+            this.panelStudentProfile.Controls.Add(this.label32);
+            this.panelStudentProfile.Controls.Add(this.label19);
+            this.panelStudentProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStudentProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelStudentProfile.Location = new System.Drawing.Point(0, 0);
+            this.panelStudentProfile.Name = "panelStudentProfile";
+            this.panelStudentProfile.Size = new System.Drawing.Size(1184, 632);
+            this.panelStudentProfile.TabIndex = 4;
+            // 
+            // label45
+            // 
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.SystemColors.Control;
+            this.label45.Location = new System.Drawing.Point(31, 314);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(113, 17);
+            this.label45.TabIndex = 11;
+            this.label45.Text = "Present Address";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(28, 18);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Personal Data";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.label39, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label40, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label41, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label42, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label43, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label44, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label51, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.label55, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.label50, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.label52, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.label57, 1, 4);
+            this.tableLayoutPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(33, 511);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 6;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(676, 136);
+            this.tableLayoutPanel5.TabIndex = 10;
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(26, 62);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(123, 13);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Province/Chartered City:";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(105, 35);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(44, 13);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Region:";
+            // 
+            // label41
+            // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(73, 8);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(76, 13);
+            this.label41.TabIndex = 3;
+            this.label41.Text = "Housing Type:";
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(157, 8);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(514, 13);
+            this.label42.TabIndex = 4;
+            this.label42.Text = "Own House";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(157, 35);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(514, 13);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "CENTRAL LUZON";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(157, 62);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(514, 13);
+            this.label44.TabIndex = 6;
+            this.label44.Text = "BULACAN";
+            // 
+            // label51
+            // 
+            this.label51.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(28, 89);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(121, 13);
+            this.label51.TabIndex = 8;
+            this.label51.Text = "Municipality/Baranggay:";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(157, 89);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(514, 13);
+            this.label55.TabIndex = 10;
+            this.label55.Text = "BULACAN";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(149, 140);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(0, 13);
+            this.label50.TabIndex = 7;
+            this.label50.Tag = "Municipality/Baranggay";
+            // 
+            // label52
+            // 
+            this.label52.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(70, 116);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(79, 13);
+            this.label52.TabIndex = 9;
+            this.label52.Text = "Street Address:";
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(157, 116);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(514, 13);
+            this.label57.TabIndex = 12;
+            this.label57.Text = "328-A BUKID ST., MATUNGAO";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.SystemColors.Control;
+            this.label46.Location = new System.Drawing.Point(28, 489);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(198, 17);
+            this.label46.TabIndex = 9;
+            this.label46.Text = "Provincial/Permanent Address";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.label33, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label34, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label35, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label36, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label37, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label38, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label48, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label54, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label49, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.label47, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.label53, 1, 4);
+            this.tableLayoutPanel4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(33, 337);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(676, 136);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(26, 62);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(123, 13);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Province/Chartered City:";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(105, 35);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(44, 13);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Region:";
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(73, 8);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(76, 13);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "Housing Type:";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(157, 8);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(514, 13);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Boarding House (Off Campus)";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(157, 35);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(514, 13);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "NATIONAL CAPITAL REGION";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(157, 62);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(514, 13);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "MAKATI CITY";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(28, 89);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(121, 13);
+            this.label48.TabIndex = 8;
+            this.label48.Text = "Municipality/Baranggay:";
+            // 
+            // label54
+            // 
+            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(157, 89);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(514, 13);
+            this.label54.TabIndex = 11;
+            this.label54.Text = "SOUTH CEMBO";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(70, 116);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(79, 13);
+            this.label49.TabIndex = 9;
+            this.label49.Text = "Street Address:";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(149, 140);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 13);
+            this.label47.TabIndex = 7;
+            this.label47.Tag = "Municipality/Baranggay";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(157, 116);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(514, 13);
+            this.label53.TabIndex = 10;
+            this.label53.Text = "4033 GEN LUNA ST.";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.Control;
+            this.label32.Location = new System.Drawing.Point(25, 286);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(157, 25);
+            this.label32.TabIndex = 5;
+            this.label32.Text = "Student Housing";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.Control;
+            this.label19.Location = new System.Drawing.Point(28, 147);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(181, 25);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Contact Information";
+            // 
+            // panelSchedule
+            // 
+            this.panelSchedule.AutoScroll = true;
+            this.panelSchedule.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.panelSchedule.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelSchedule.Controls.Add(this.dataGridViewSchedule);
+            this.panelSchedule.Controls.Add(this.buttonSearchSched);
+            this.panelSchedule.Controls.Add(this.labelSearchSched);
+            this.panelSchedule.Controls.Add(this.textBoxSearchSched);
+            this.panelSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSchedule.Location = new System.Drawing.Point(0, 0);
+            this.panelSchedule.Name = "panelSchedule";
+            this.panelSchedule.Size = new System.Drawing.Size(1184, 632);
+            this.panelSchedule.TabIndex = 0;
+            // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.AllowUserToAddRows = false;
+            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridViewSchedule.AutoGenerateColumns = false;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.scheduleIDDataGridViewTextBoxColumn,
+            this.coursedescriptionDataGridViewTextBoxColumn,
+            this.sectioncodeDataGridViewTextBoxColumn,
+            this.timeslotDataGridViewTextBoxColumn,
+            this.facultynameDataGridViewTextBoxColumn});
+            this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
+            this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
+            this.dataGridViewSchedule.TabIndex = 3;
+            // 
+            // scheduleIDDataGridViewTextBoxColumn
+            // 
+            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "Schedule ID";
+            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
+            // 
+            // coursedescriptionDataGridViewTextBoxColumn
+            // 
+            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
+            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
+            // 
+            // sectioncodeDataGridViewTextBoxColumn
+            // 
+            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section Code";
+            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
+            // 
+            // timeslotDataGridViewTextBoxColumn
+            // 
+            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.HeaderText = "Timeslot";
+            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
+            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // facultynameDataGridViewTextBoxColumn
+            // 
+            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.HeaderText = "Faculty Name";
+            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
+            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentScheduleViewBindingSource
+            // 
+            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
+            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonSearchSched
+            // 
+            this.buttonSearchSched.Location = new System.Drawing.Point(258, 7);
+            this.buttonSearchSched.Name = "buttonSearchSched";
+            this.buttonSearchSched.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchSched.TabIndex = 2;
+            this.buttonSearchSched.Text = "Search";
+            this.buttonSearchSched.UseVisualStyleBackColor = true;
+            this.buttonSearchSched.Click += new System.EventHandler(this.buttonSearchSched_Click);
+            // 
+            // labelSearchSched
+            // 
+            this.labelSearchSched.AutoSize = true;
+            this.labelSearchSched.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelSearchSched.Location = new System.Drawing.Point(7, 12);
+            this.labelSearchSched.Name = "labelSearchSched";
+            this.labelSearchSched.Size = new System.Drawing.Size(92, 13);
+            this.labelSearchSched.TabIndex = 1;
+            this.labelSearchSched.Text = "Search Schedule:";
+            // 
+            // textBoxSearchSched
+            // 
+            this.textBoxSearchSched.Location = new System.Drawing.Point(102, 9);
+            this.textBoxSearchSched.Name = "textBoxSearchSched";
+            this.textBoxSearchSched.Size = new System.Drawing.Size(150, 20);
+            this.textBoxSearchSched.TabIndex = 0;
+            // 
+            // panelHome
+            // 
+            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelHome.Controls.Add(this.announcementDetails3);
+            this.panelHome.Controls.Add(this.announcementDetails1);
+            this.panelHome.Controls.Add(this.announcementTitle3);
+            this.panelHome.Controls.Add(this.linkLabel4);
+            this.panelHome.Controls.Add(this.label89);
+            this.panelHome.Controls.Add(this.label88);
+            this.panelHome.Controls.Add(this.announcementDetails2);
+            this.panelHome.Controls.Add(this.announcementTitle2);
+            this.panelHome.Controls.Add(this.announcementTitle1);
+            this.panelHome.Controls.Add(this.label84);
+            this.panelHome.Controls.Add(this.label83);
+            this.panelHome.Controls.Add(this.label82);
+            this.panelHome.Controls.Add(this.label81);
+            this.panelHome.Controls.Add(this.label80);
+            this.panelHome.Controls.Add(this.linkLabel1);
+            this.panelHome.Controls.Add(this.label79);
+            this.panelHome.Controls.Add(this.label78);
+            this.panelHome.Controls.Add(this.label77);
+            this.panelHome.Controls.Add(this.label76);
+            this.panelHome.Controls.Add(this.label10);
+            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(1184, 632);
+            this.panelHome.TabIndex = 4;
+            // 
+            // announcementDetails3
+            // 
+            this.announcementDetails3.AutoSize = true;
+            this.announcementDetails3.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails3.Location = new System.Drawing.Point(49, 345);
+            this.announcementDetails3.Name = "announcementDetails3";
+            this.announcementDetails3.Size = new System.Drawing.Size(182, 13);
+            this.announcementDetails3.TabIndex = 21;
+            this.announcementDetails3.Text = "*Details for Announcement Number 3";
+            // 
+            // announcementDetails1
+            // 
+            this.announcementDetails1.AutoSize = true;
+            this.announcementDetails1.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails1.Location = new System.Drawing.Point(49, 258);
+            this.announcementDetails1.Name = "announcementDetails1";
+            this.announcementDetails1.Size = new System.Drawing.Size(293, 13);
+            this.announcementDetails1.TabIndex = 20;
+            this.announcementDetails1.Text = "*For more inquiries, visit http://sti.edu/scope_scheduling.asp";
+            // 
+            // announcementTitle3
+            // 
+            this.announcementTitle3.AutoSize = true;
+            this.announcementTitle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle3.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle3.Location = new System.Drawing.Point(20, 321);
+            this.announcementTitle3.Name = "announcementTitle3";
+            this.announcementTitle3.Size = new System.Drawing.Size(264, 13);
+            this.announcementTitle3.TabIndex = 19;
+            this.announcementTitle3.Text = "*Placeholder for Announcement Header no. 3";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(479, 409);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(31, 13);
+            this.linkLabel4.TabIndex = 18;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "here.";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.ForeColor = System.Drawing.SystemColors.Control;
+            this.label89.Location = new System.Drawing.Point(27, 409);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(457, 13);
+            this.label89.TabIndex = 17;
+            this.label89.Text = "*You are required to evaluate your instructors for this semester, online. To star" +
+    "t evaluating, click ";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label88.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label88.Location = new System.Drawing.Point(17, 384);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(81, 18);
+            this.label88.TabIndex = 16;
+            this.label88.Text = "Remarks:";
+            // 
+            // announcementDetails2
+            // 
+            this.announcementDetails2.AutoSize = true;
+            this.announcementDetails2.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementDetails2.Location = new System.Drawing.Point(49, 299);
+            this.announcementDetails2.Name = "announcementDetails2";
+            this.announcementDetails2.Size = new System.Drawing.Size(182, 13);
+            this.announcementDetails2.TabIndex = 14;
+            this.announcementDetails2.Text = "*Details for Announcement Number 2";
+            // 
+            // announcementTitle2
+            // 
+            this.announcementTitle2.AutoSize = true;
+            this.announcementTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle2.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle2.Location = new System.Drawing.Point(20, 278);
+            this.announcementTitle2.Name = "announcementTitle2";
+            this.announcementTitle2.Size = new System.Drawing.Size(264, 13);
+            this.announcementTitle2.TabIndex = 13;
+            this.announcementTitle2.Text = "*Placeholder for Announcement Header no. 2";
+            // 
+            // announcementTitle1
+            // 
+            this.announcementTitle1.AutoSize = true;
+            this.announcementTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.announcementTitle1.ForeColor = System.Drawing.SystemColors.Control;
+            this.announcementTitle1.Location = new System.Drawing.Point(17, 239);
+            this.announcementTitle1.Name = "announcementTitle1";
+            this.announcementTitle1.Size = new System.Drawing.Size(542, 13);
+            this.announcementTitle1.TabIndex = 11;
+            this.announcementTitle1.Text = "*Schedule of Online Pre-Enrollment and Actual Enrollment for 2nd Semester is avai" +
+    "lable. Click ";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label84.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label84.Location = new System.Drawing.Point(9, 210);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(124, 18);
+            this.label84.TabIndex = 10;
+            this.label84.Text = "Announcement:";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.ForeColor = System.Drawing.SystemColors.Control;
+            this.label83.Location = new System.Drawing.Point(46, 168);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(394, 13);
+            this.label83.TabIndex = 9;
+            this.label83.Text = "3. You should have completed the necessary prerequisites before taking a course.";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.ForeColor = System.Drawing.SystemColors.Control;
+            this.label82.Location = new System.Drawing.Point(46, 147);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(228, 13);
+            this.label82.TabIndex = 8;
+            this.label82.Text = "2. Paired courses should have the same block.";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.ForeColor = System.Drawing.SystemColors.Control;
+            this.label81.Location = new System.Drawing.Point(46, 128);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(237, 13);
+            this.label81.TabIndex = 7;
+            this.label81.Text = "1. Your courses with co-requisites have sections.";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.ForeColor = System.Drawing.SystemColors.Control;
+            this.label80.Location = new System.Drawing.Point(17, 113);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(126, 13);
+            this.label80.TabIndex = 6;
+            this.label80.Text = "* Please ensure that:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(205, 94);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(31, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "here.";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.ForeColor = System.Drawing.SystemColors.Control;
+            this.label79.Location = new System.Drawing.Point(46, 94);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(162, 13);
+            this.label79.TabIndex = 4;
+            this.label79.Text = "*To change your password, click";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.SystemColors.Control;
+            this.label78.Location = new System.Drawing.Point(17, 75);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(491, 13);
+            this.label78.TabIndex = 3;
+            this.label78.Text = "* New students using this system should change their passwords as soon as possibl" +
+    "e.";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label77.Location = new System.Drawing.Point(7, 49);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(176, 18);
+            this.label77.TabIndex = 2;
+            this.label77.Text = "Notes and Reminders:";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(4, 31);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(0, 13);
+            this.label76.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label10.Location = new System.Drawing.Point(3, 2);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Announcements";
             // 
             // panelSettings
             // 
@@ -1471,775 +2021,6 @@
             this.label67.TabIndex = 28;
             this.label67.Text = "Edit Student Info";
             // 
-            // panelStudentProfile
-            // 
-            this.panelStudentProfile.AutoScroll = true;
-            this.panelStudentProfile.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.panelStudentProfile.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelStudentProfile.Controls.Add(this.label45);
-            this.panelStudentProfile.Controls.Add(this.label12);
-            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel5);
-            this.panelStudentProfile.Controls.Add(this.label46);
-            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel4);
-            this.panelStudentProfile.Controls.Add(this.label32);
-            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel3);
-            this.panelStudentProfile.Controls.Add(this.label19);
-            this.panelStudentProfile.Controls.Add(this.tableLayoutPanel2);
-            this.panelStudentProfile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStudentProfile.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelStudentProfile.Location = new System.Drawing.Point(0, 0);
-            this.panelStudentProfile.Name = "panelStudentProfile";
-            this.panelStudentProfile.Size = new System.Drawing.Size(1184, 632);
-            this.panelStudentProfile.TabIndex = 4;
-            // 
-            // label45
-            // 
-            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.Control;
-            this.label45.Location = new System.Drawing.Point(31, 314);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(113, 17);
-            this.label45.TabIndex = 11;
-            this.label45.Text = "Present Address";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(28, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Personal Data";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.label39, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label40, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label41, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label42, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label43, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label44, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label51, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label55, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.label50, 0, 5);
-            this.tableLayoutPanel5.Controls.Add(this.label52, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.label57, 1, 4);
-            this.tableLayoutPanel5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(33, 511);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 6;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(676, 136);
-            this.tableLayoutPanel5.TabIndex = 10;
-            // 
-            // label39
-            // 
-            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(26, 62);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(123, 13);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Province/Chartered City:";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(105, 35);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(44, 13);
-            this.label40.TabIndex = 2;
-            this.label40.Text = "Region:";
-            // 
-            // label41
-            // 
-            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(73, 8);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(76, 13);
-            this.label41.TabIndex = 3;
-            this.label41.Text = "Housing Type:";
-            // 
-            // label42
-            // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(157, 8);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(514, 13);
-            this.label42.TabIndex = 4;
-            this.label42.Text = "Own House";
-            // 
-            // label43
-            // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(157, 35);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(514, 13);
-            this.label43.TabIndex = 5;
-            this.label43.Text = "CENTRAL LUZON";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(157, 62);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(514, 13);
-            this.label44.TabIndex = 6;
-            this.label44.Text = "BULACAN";
-            // 
-            // label51
-            // 
-            this.label51.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(28, 89);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(121, 13);
-            this.label51.TabIndex = 8;
-            this.label51.Text = "Municipality/Baranggay:";
-            // 
-            // label55
-            // 
-            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(157, 89);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(514, 13);
-            this.label55.TabIndex = 10;
-            this.label55.Text = "BULACAN";
-            // 
-            // label50
-            // 
-            this.label50.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(149, 140);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(0, 13);
-            this.label50.TabIndex = 7;
-            this.label50.Tag = "Municipality/Baranggay";
-            // 
-            // label52
-            // 
-            this.label52.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(70, 116);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(79, 13);
-            this.label52.TabIndex = 9;
-            this.label52.Text = "Street Address:";
-            // 
-            // label57
-            // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(157, 116);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(514, 13);
-            this.label57.TabIndex = 12;
-            this.label57.Text = "328-A BUKID ST., MATUNGAO";
-            // 
-            // label46
-            // 
-            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.SystemColors.Control;
-            this.label46.Location = new System.Drawing.Point(28, 489);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(198, 17);
-            this.label46.TabIndex = 9;
-            this.label46.Text = "Provincial/Permanent Address";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.label33, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label34, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label35, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label36, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label37, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label38, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label48, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label54, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label49, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label47, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.label53, 1, 4);
-            this.tableLayoutPanel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(33, 337);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 6;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(676, 136);
-            this.tableLayoutPanel4.TabIndex = 6;
-            // 
-            // label33
-            // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(26, 62);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(123, 13);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Province/Chartered City:";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(105, 35);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(44, 13);
-            this.label34.TabIndex = 2;
-            this.label34.Text = "Region:";
-            // 
-            // label35
-            // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(73, 8);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(76, 13);
-            this.label35.TabIndex = 3;
-            this.label35.Text = "Housing Type:";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(157, 8);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(514, 13);
-            this.label36.TabIndex = 4;
-            this.label36.Text = "Boarding House (Off Campus)";
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(157, 35);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(514, 13);
-            this.label37.TabIndex = 5;
-            this.label37.Text = "NATIONAL CAPITAL REGION";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(157, 62);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(514, 13);
-            this.label38.TabIndex = 6;
-            this.label38.Text = "MAKATI CITY";
-            // 
-            // label48
-            // 
-            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(28, 89);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(121, 13);
-            this.label48.TabIndex = 8;
-            this.label48.Text = "Municipality/Baranggay:";
-            // 
-            // label54
-            // 
-            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(157, 89);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(514, 13);
-            this.label54.TabIndex = 11;
-            this.label54.Text = "SOUTH CEMBO";
-            // 
-            // label49
-            // 
-            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(70, 116);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(79, 13);
-            this.label49.TabIndex = 9;
-            this.label49.Text = "Street Address:";
-            // 
-            // label47
-            // 
-            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(149, 140);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(0, 13);
-            this.label47.TabIndex = 7;
-            this.label47.Tag = "Municipality/Baranggay";
-            // 
-            // label53
-            // 
-            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(157, 116);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(514, 13);
-            this.label53.TabIndex = 10;
-            this.label53.Text = "4033 GEN LUNA ST.";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.SystemColors.Control;
-            this.label32.Location = new System.Drawing.Point(25, 286);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(157, 25);
-            this.label32.TabIndex = 5;
-            this.label32.Text = "Student Housing";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label21, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label22, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label29, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label30, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label31, 1, 2);
-            this.tableLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(33, 175);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(676, 86);
-            this.tableLayoutPanel3.TabIndex = 4;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(73, 63);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Email Address:";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(59, 35);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(90, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Landline Number:";
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(68, 8);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(81, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Mobile Number:";
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(157, 8);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(514, 13);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "+639051234567";
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(157, 35);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(514, 13);
-            this.label30.TabIndex = 5;
-            this.label30.Text = "0447920558";
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(157, 63);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(514, 13);
-            this.label31.TabIndex = 6;
-            this.label31.Text = "ronald.louie.sadiz@gmail.com";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(28, 147);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(181, 25);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Contact Information";
-            // 
-            // panelSchedule
-            // 
-            this.panelSchedule.AutoScroll = true;
-            this.panelSchedule.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.panelSchedule.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelSchedule.Controls.Add(this.dataGridViewSchedule);
-            this.panelSchedule.Controls.Add(this.buttonSearchSched);
-            this.panelSchedule.Controls.Add(this.labelSearchSched);
-            this.panelSchedule.Controls.Add(this.textBoxSearchSched);
-            this.panelSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSchedule.Location = new System.Drawing.Point(0, 0);
-            this.panelSchedule.Name = "panelSchedule";
-            this.panelSchedule.Size = new System.Drawing.Size(1184, 632);
-            this.panelSchedule.TabIndex = 0;
-            // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.AllowUserToAddRows = false;
-            this.dataGridViewSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridViewSchedule.AutoGenerateColumns = false;
-            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.scheduleIDDataGridViewTextBoxColumn,
-            this.coursedescriptionDataGridViewTextBoxColumn,
-            this.sectioncodeDataGridViewTextBoxColumn,
-            this.timeslotDataGridViewTextBoxColumn,
-            this.facultynameDataGridViewTextBoxColumn});
-            this.dataGridViewSchedule.DataSource = this.studentScheduleViewBindingSource;
-            this.dataGridViewSchedule.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(18, 41);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(1100, 500);
-            this.dataGridViewSchedule.TabIndex = 3;
-            // 
-            // studentScheduleViewBindingSource
-            // 
-            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
-            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonSearchSched
-            // 
-            this.buttonSearchSched.Location = new System.Drawing.Point(258, 7);
-            this.buttonSearchSched.Name = "buttonSearchSched";
-            this.buttonSearchSched.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearchSched.TabIndex = 2;
-            this.buttonSearchSched.Text = "Search";
-            this.buttonSearchSched.UseVisualStyleBackColor = true;
-            this.buttonSearchSched.Click += new System.EventHandler(this.buttonSearchSched_Click);
-            // 
-            // labelSearchSched
-            // 
-            this.labelSearchSched.AutoSize = true;
-            this.labelSearchSched.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSearchSched.Location = new System.Drawing.Point(7, 12);
-            this.labelSearchSched.Name = "labelSearchSched";
-            this.labelSearchSched.Size = new System.Drawing.Size(92, 13);
-            this.labelSearchSched.TabIndex = 1;
-            this.labelSearchSched.Text = "Search Schedule:";
-            // 
-            // textBoxSearchSched
-            // 
-            this.textBoxSearchSched.Location = new System.Drawing.Point(102, 9);
-            this.textBoxSearchSched.Name = "textBoxSearchSched";
-            this.textBoxSearchSched.Size = new System.Drawing.Size(150, 20);
-            this.textBoxSearchSched.TabIndex = 0;
-            // 
-            // panelHome
-            // 
-            this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelHome.Controls.Add(this.announcementDetails3);
-            this.panelHome.Controls.Add(this.announcementDetails1);
-            this.panelHome.Controls.Add(this.announcementTitle3);
-            this.panelHome.Controls.Add(this.linkLabel4);
-            this.panelHome.Controls.Add(this.label89);
-            this.panelHome.Controls.Add(this.label88);
-            this.panelHome.Controls.Add(this.announcementDetails2);
-            this.panelHome.Controls.Add(this.announcementTitle2);
-            this.panelHome.Controls.Add(this.announcementTitle1);
-            this.panelHome.Controls.Add(this.label84);
-            this.panelHome.Controls.Add(this.label83);
-            this.panelHome.Controls.Add(this.label82);
-            this.panelHome.Controls.Add(this.label81);
-            this.panelHome.Controls.Add(this.label80);
-            this.panelHome.Controls.Add(this.linkLabel1);
-            this.panelHome.Controls.Add(this.label79);
-            this.panelHome.Controls.Add(this.label78);
-            this.panelHome.Controls.Add(this.label77);
-            this.panelHome.Controls.Add(this.label76);
-            this.panelHome.Controls.Add(this.label10);
-            this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHome.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(1184, 632);
-            this.panelHome.TabIndex = 4;
-            // 
-            // announcementDetails3
-            // 
-            this.announcementDetails3.AutoSize = true;
-            this.announcementDetails3.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails3.Location = new System.Drawing.Point(49, 345);
-            this.announcementDetails3.Name = "announcementDetails3";
-            this.announcementDetails3.Size = new System.Drawing.Size(182, 13);
-            this.announcementDetails3.TabIndex = 21;
-            this.announcementDetails3.Text = "*Details for Announcement Number 3";
-            // 
-            // announcementDetails1
-            // 
-            this.announcementDetails1.AutoSize = true;
-            this.announcementDetails1.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails1.Location = new System.Drawing.Point(49, 258);
-            this.announcementDetails1.Name = "announcementDetails1";
-            this.announcementDetails1.Size = new System.Drawing.Size(293, 13);
-            this.announcementDetails1.TabIndex = 20;
-            this.announcementDetails1.Text = "*For more inquiries, visit http://sti.edu/scope_scheduling.asp";
-            // 
-            // announcementTitle3
-            // 
-            this.announcementTitle3.AutoSize = true;
-            this.announcementTitle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle3.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle3.Location = new System.Drawing.Point(20, 321);
-            this.announcementTitle3.Name = "announcementTitle3";
-            this.announcementTitle3.Size = new System.Drawing.Size(264, 13);
-            this.announcementTitle3.TabIndex = 19;
-            this.announcementTitle3.Text = "*Placeholder for Announcement Header no. 3";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(479, 409);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(31, 13);
-            this.linkLabel4.TabIndex = 18;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "here.";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.ForeColor = System.Drawing.SystemColors.Control;
-            this.label89.Location = new System.Drawing.Point(27, 409);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(457, 13);
-            this.label89.TabIndex = 17;
-            this.label89.Text = "*You are required to evaluate your instructors for this semester, online. To star" +
-    "t evaluating, click ";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label88.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label88.Location = new System.Drawing.Point(17, 384);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(81, 18);
-            this.label88.TabIndex = 16;
-            this.label88.Text = "Remarks:";
-            // 
-            // announcementDetails2
-            // 
-            this.announcementDetails2.AutoSize = true;
-            this.announcementDetails2.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementDetails2.Location = new System.Drawing.Point(49, 299);
-            this.announcementDetails2.Name = "announcementDetails2";
-            this.announcementDetails2.Size = new System.Drawing.Size(182, 13);
-            this.announcementDetails2.TabIndex = 14;
-            this.announcementDetails2.Text = "*Details for Announcement Number 2";
-            // 
-            // announcementTitle2
-            // 
-            this.announcementTitle2.AutoSize = true;
-            this.announcementTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle2.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle2.Location = new System.Drawing.Point(20, 278);
-            this.announcementTitle2.Name = "announcementTitle2";
-            this.announcementTitle2.Size = new System.Drawing.Size(264, 13);
-            this.announcementTitle2.TabIndex = 13;
-            this.announcementTitle2.Text = "*Placeholder for Announcement Header no. 2";
-            // 
-            // announcementTitle1
-            // 
-            this.announcementTitle1.AutoSize = true;
-            this.announcementTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.announcementTitle1.ForeColor = System.Drawing.SystemColors.Control;
-            this.announcementTitle1.Location = new System.Drawing.Point(17, 239);
-            this.announcementTitle1.Name = "announcementTitle1";
-            this.announcementTitle1.Size = new System.Drawing.Size(542, 13);
-            this.announcementTitle1.TabIndex = 11;
-            this.announcementTitle1.Text = "*Schedule of Online Pre-Enrollment and Actual Enrollment for 2nd Semester is avai" +
-    "lable. Click ";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label84.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label84.Location = new System.Drawing.Point(9, 210);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(124, 18);
-            this.label84.TabIndex = 10;
-            this.label84.Text = "Announcement:";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.ForeColor = System.Drawing.SystemColors.Control;
-            this.label83.Location = new System.Drawing.Point(46, 168);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(394, 13);
-            this.label83.TabIndex = 9;
-            this.label83.Text = "3. You should have completed the necessary prerequisites before taking a course.";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.ForeColor = System.Drawing.SystemColors.Control;
-            this.label82.Location = new System.Drawing.Point(46, 147);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(228, 13);
-            this.label82.TabIndex = 8;
-            this.label82.Text = "2. Paired courses should have the same block.";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.ForeColor = System.Drawing.SystemColors.Control;
-            this.label81.Location = new System.Drawing.Point(46, 128);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(237, 13);
-            this.label81.TabIndex = 7;
-            this.label81.Text = "1. Your courses with co-requisites have sections.";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.SystemColors.Control;
-            this.label80.Location = new System.Drawing.Point(17, 113);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(126, 13);
-            this.label80.TabIndex = 6;
-            this.label80.Text = "* Please ensure that:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(205, 94);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(31, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "here.";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.ForeColor = System.Drawing.SystemColors.Control;
-            this.label79.Location = new System.Drawing.Point(46, 94);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(162, 13);
-            this.label79.TabIndex = 4;
-            this.label79.Text = "*To change your password, click";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.SystemColors.Control;
-            this.label78.Location = new System.Drawing.Point(17, 75);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(491, 13);
-            this.label78.TabIndex = 3;
-            this.label78.Text = "* New students using this system should change their passwords as soon as possibl" +
-    "e.";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label77.Location = new System.Drawing.Point(7, 49);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(176, 18);
-            this.label77.TabIndex = 2;
-            this.label77.Text = "Notes and Reminders:";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(4, 31);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(0, 13);
-            this.label76.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label10.Location = new System.Drawing.Point(3, 2);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Announcements";
-            // 
             // studentScheduleViewTableAdapter
             // 
             this.studentScheduleViewTableAdapter.ClearBeforeFill = true;
@@ -2265,37 +2046,141 @@
             this.studentBindingSource.DataMember = "Students";
             this.studentBindingSource.DataSource = this.enrollmentDataSet;
             // 
-            // scheduleIDDataGridViewTextBoxColumn
+            // enrollmentTableAdapter
             // 
-            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "Schedule ID";
-            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
+            this.enrollmentTableAdapter.ClearBeforeFill = true;
             // 
-            // coursedescriptionDataGridViewTextBoxColumn
+            // dataGridViewPersonalData
             // 
-            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "Course Name";
-            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
+            this.dataGridViewPersonalData.AllowUserToAddRows = false;
+            this.dataGridViewPersonalData.AllowUserToDeleteRows = false;
+            this.dataGridViewPersonalData.AutoGenerateColumns = false;
+            this.dataGridViewPersonalData.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridViewPersonalData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewPersonalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPersonalData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentgenderDataGridViewTextBoxColumn,
+            this.studentbirthdayDataGridViewTextBoxColumn,
+            this.studentbirthplaceDataGridViewTextBoxColumn,
+            this.studentcitizenshipDataGridViewTextBoxColumn,
+            this.studentcivilDataGridViewTextBoxColumn,
+            this.studentreligionDataGridViewTextBoxColumn});
+            this.dataGridViewPersonalData.DataSource = this.studentBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPersonalData.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewPersonalData.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewPersonalData.Location = new System.Drawing.Point(33, 46);
+            this.dataGridViewPersonalData.Name = "dataGridViewPersonalData";
+            this.dataGridViewPersonalData.ReadOnly = true;
+            this.dataGridViewPersonalData.Size = new System.Drawing.Size(644, 45);
+            this.dataGridViewPersonalData.TabIndex = 12;
             // 
-            // sectioncodeDataGridViewTextBoxColumn
+            // studentgenderDataGridViewTextBoxColumn
             // 
-            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "Section Code";
-            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
+            this.studentgenderDataGridViewTextBoxColumn.DataPropertyName = "student_gender";
+            this.studentgenderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.studentgenderDataGridViewTextBoxColumn.Name = "studentgenderDataGridViewTextBoxColumn";
+            this.studentgenderDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // timeslotDataGridViewTextBoxColumn
+            // studentbirthdayDataGridViewTextBoxColumn
             // 
-            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.HeaderText = "Timeslot";
-            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
-            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentbirthdayDataGridViewTextBoxColumn.DataPropertyName = "student_birthday";
+            this.studentbirthdayDataGridViewTextBoxColumn.HeaderText = "Birthday";
+            this.studentbirthdayDataGridViewTextBoxColumn.Name = "studentbirthdayDataGridViewTextBoxColumn";
+            this.studentbirthdayDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // facultynameDataGridViewTextBoxColumn
+            // studentbirthplaceDataGridViewTextBoxColumn
             // 
-            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.HeaderText = "Faculty Name";
-            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
-            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentbirthplaceDataGridViewTextBoxColumn.DataPropertyName = "student_birthplace";
+            this.studentbirthplaceDataGridViewTextBoxColumn.HeaderText = "Birthplace";
+            this.studentbirthplaceDataGridViewTextBoxColumn.Name = "studentbirthplaceDataGridViewTextBoxColumn";
+            this.studentbirthplaceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentcitizenshipDataGridViewTextBoxColumn
+            // 
+            this.studentcitizenshipDataGridViewTextBoxColumn.DataPropertyName = "student_citizenship";
+            this.studentcitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship";
+            this.studentcitizenshipDataGridViewTextBoxColumn.Name = "studentcitizenshipDataGridViewTextBoxColumn";
+            this.studentcitizenshipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentcivilDataGridViewTextBoxColumn
+            // 
+            this.studentcivilDataGridViewTextBoxColumn.DataPropertyName = "student_civil";
+            this.studentcivilDataGridViewTextBoxColumn.HeaderText = "Civil Status";
+            this.studentcivilDataGridViewTextBoxColumn.Name = "studentcivilDataGridViewTextBoxColumn";
+            this.studentcivilDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentreligionDataGridViewTextBoxColumn
+            // 
+            this.studentreligionDataGridViewTextBoxColumn.DataPropertyName = "student_religion";
+            this.studentreligionDataGridViewTextBoxColumn.HeaderText = "Religion";
+            this.studentreligionDataGridViewTextBoxColumn.Name = "studentreligionDataGridViewTextBoxColumn";
+            this.studentreligionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewContactInformation
+            // 
+            this.dataGridViewContactInformation.AllowUserToAddRows = false;
+            this.dataGridViewContactInformation.AllowUserToDeleteRows = false;
+            this.dataGridViewContactInformation.AutoGenerateColumns = false;
+            this.dataGridViewContactInformation.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridViewContactInformation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewContactInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContactInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.student_mobile,
+            this.student_landline,
+            this.student_email});
+            this.dataGridViewContactInformation.DataSource = this.studentBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewContactInformation.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewContactInformation.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewContactInformation.Location = new System.Drawing.Point(33, 175);
+            this.dataGridViewContactInformation.Name = "dataGridViewContactInformation";
+            this.dataGridViewContactInformation.ReadOnly = true;
+            this.dataGridViewContactInformation.Size = new System.Drawing.Size(380, 61);
+            this.dataGridViewContactInformation.TabIndex = 13;
+            // 
+            // labelStudNum
+            // 
+            this.labelStudNum.AutoSize = true;
+            this.labelStudNum.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStudNum.Location = new System.Drawing.Point(178, 46);
+            this.labelStudNum.Name = "labelStudNum";
+            this.labelStudNum.Size = new System.Drawing.Size(129, 20);
+            this.labelStudNum.TabIndex = 2;
+            this.labelStudNum.Text = "047 - 2013 - 0128";
+            // 
+            // student_mobile
+            // 
+            this.student_mobile.DataPropertyName = "student_mobile";
+            this.student_mobile.HeaderText = "MobileNumber";
+            this.student_mobile.Name = "student_mobile";
+            this.student_mobile.ReadOnly = true;
+            // 
+            // student_landline
+            // 
+            this.student_landline.DataPropertyName = "student_landline";
+            this.student_landline.HeaderText = "Landline Number";
+            this.student_landline.Name = "student_landline";
+            this.student_landline.ReadOnly = true;
+            // 
+            // student_email
+            // 
+            this.student_email.DataPropertyName = "student_email";
+            this.student_email.HeaderText = "Email";
+            this.student_email.Name = "student_email";
+            this.student_email.ReadOnly = true;
             // 
             // FormStudent
             // 
@@ -2312,12 +2197,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoSTI)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panelStudentProfile.ResumeLayout(false);
+            this.panelStudentProfile.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.panelSchedule.ResumeLayout(false);
+            this.panelSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
+            this.panelHome.ResumeLayout(false);
+            this.panelHome.PerformLayout();
             this.panelSettings.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -2341,22 +2237,9 @@
             this.groupBoxIdentification.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
-            this.panelStudentProfile.ResumeLayout(false);
-            this.panelStudentProfile.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.panelSchedule.ResumeLayout(false);
-            this.panelSchedule.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
-            this.panelHome.ResumeLayout(false);
-            this.panelHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactInformation)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2365,7 +2248,6 @@
 
         private System.Windows.Forms.PictureBox logoSTI;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelStudNum;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button buttonHome;
@@ -2389,27 +2271,7 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
@@ -2540,5 +2402,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sectioncodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeslotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn facultynameDataGridViewTextBoxColumn;
+        private EnrollmentDataSetTableAdapters.EnrollmentTableAdapter enrollmentTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridViewPersonalData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentgenderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentbirthdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentbirthplaceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentcitizenshipDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentcivilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentreligionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridViewContactInformation;
+        private System.Windows.Forms.Label labelStudNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_landline;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_email;
     }
 }
