@@ -9,9 +9,10 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
+    using FacultyTable = EnrollmentDataSet.FacultyDataTable;
     public partial class FormFaculty : Form
     {
-        EnrollmentDataSet.FacultyDataTable faculty_information;
+        private FacultyTable faculty_information;
 
         public FormFaculty()
         {

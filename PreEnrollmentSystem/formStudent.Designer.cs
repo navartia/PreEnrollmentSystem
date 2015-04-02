@@ -38,6 +38,7 @@
             this.labelStatus = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelProgramMajor = new System.Windows.Forms.Label();
+            this.labelStudNum = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
@@ -45,6 +46,15 @@
             this.buttonSchedule = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelStudentProfile = new System.Windows.Forms.Panel();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.dataGridViewPersonalData = new System.Windows.Forms.DataGridView();
+            this.studentgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentbirthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentbirthplaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentcitizenshipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentcivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentreligionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label45 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -82,7 +92,6 @@
             this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
             this.buttonSearchSched = new System.Windows.Forms.Button();
             this.labelSearchSched = new System.Windows.Forms.Label();
             this.textBoxSearchSched = new System.Windows.Forms.TextBox();
@@ -187,17 +196,8 @@
             this.accountsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AccountsTableAdapter();
             this.programsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.ProgramsTableAdapter();
             this.announcementsTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.AnnouncementsTableAdapter();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentTableAdapter = new PreEnrollmentSystem.EnrollmentDataSetTableAdapters.EnrollmentTableAdapter();
-            this.dataGridViewPersonalData = new System.Windows.Forms.DataGridView();
-            this.studentgenderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentbirthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentbirthplaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentcitizenshipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentcivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentreligionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewContactInformation = new System.Windows.Forms.DataGridView();
-            this.labelStudNum = new System.Windows.Forms.Label();
             this.student_mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.student_landline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.student_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -208,12 +208,14 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelStudentProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panelSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.panelHome.SuspendLayout();
             this.panelSettings.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -231,8 +233,6 @@
             this.tableLayoutPanel11.SuspendLayout();
             this.groupBoxIdentification.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactInformation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -302,6 +302,16 @@
             this.labelProgramMajor.Size = new System.Drawing.Size(139, 16);
             this.labelProgramMajor.TabIndex = 4;
             this.labelProgramMajor.Text = "BS Computer Science";
+            // 
+            // labelStudNum
+            // 
+            this.labelStudNum.AutoSize = true;
+            this.labelStudNum.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStudNum.Location = new System.Drawing.Point(178, 46);
+            this.labelStudNum.Name = "labelStudNum";
+            this.labelStudNum.Size = new System.Drawing.Size(129, 20);
+            this.labelStudNum.TabIndex = 2;
+            this.labelStudNum.Text = "047 - 2013 - 0128";
             // 
             // splitContainer1
             // 
@@ -454,6 +464,93 @@
             this.panelStudentProfile.Size = new System.Drawing.Size(1184, 632);
             this.panelStudentProfile.TabIndex = 4;
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Students";
+            this.studentBindingSource.DataSource = this.enrollmentDataSet;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewPersonalData
+            // 
+            this.dataGridViewPersonalData.AllowUserToAddRows = false;
+            this.dataGridViewPersonalData.AllowUserToDeleteRows = false;
+            this.dataGridViewPersonalData.AutoGenerateColumns = false;
+            this.dataGridViewPersonalData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPersonalData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewPersonalData.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewPersonalData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPersonalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPersonalData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentgenderDataGridViewTextBoxColumn,
+            this.studentbirthdayDataGridViewTextBoxColumn,
+            this.studentbirthplaceDataGridViewTextBoxColumn,
+            this.studentcitizenshipDataGridViewTextBoxColumn,
+            this.studentcivilDataGridViewTextBoxColumn,
+            this.studentreligionDataGridViewTextBoxColumn});
+            this.dataGridViewPersonalData.DataSource = this.studentBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPersonalData.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewPersonalData.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewPersonalData.Location = new System.Drawing.Point(33, 46);
+            this.dataGridViewPersonalData.Name = "dataGridViewPersonalData";
+            this.dataGridViewPersonalData.ReadOnly = true;
+            this.dataGridViewPersonalData.RowHeadersWidth = 50;
+            this.dataGridViewPersonalData.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridViewPersonalData.Size = new System.Drawing.Size(733, 45);
+            this.dataGridViewPersonalData.TabIndex = 12;
+            // 
+            // studentgenderDataGridViewTextBoxColumn
+            // 
+            this.studentgenderDataGridViewTextBoxColumn.DataPropertyName = "student_gender";
+            this.studentgenderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.studentgenderDataGridViewTextBoxColumn.Name = "studentgenderDataGridViewTextBoxColumn";
+            this.studentgenderDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentbirthdayDataGridViewTextBoxColumn
+            // 
+            this.studentbirthdayDataGridViewTextBoxColumn.DataPropertyName = "student_birthday";
+            this.studentbirthdayDataGridViewTextBoxColumn.HeaderText = "Birthday";
+            this.studentbirthdayDataGridViewTextBoxColumn.Name = "studentbirthdayDataGridViewTextBoxColumn";
+            this.studentbirthdayDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentbirthplaceDataGridViewTextBoxColumn
+            // 
+            this.studentbirthplaceDataGridViewTextBoxColumn.DataPropertyName = "student_birthplace";
+            this.studentbirthplaceDataGridViewTextBoxColumn.HeaderText = "Birthplace";
+            this.studentbirthplaceDataGridViewTextBoxColumn.Name = "studentbirthplaceDataGridViewTextBoxColumn";
+            this.studentbirthplaceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentcitizenshipDataGridViewTextBoxColumn
+            // 
+            this.studentcitizenshipDataGridViewTextBoxColumn.DataPropertyName = "student_citizenship";
+            this.studentcitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship";
+            this.studentcitizenshipDataGridViewTextBoxColumn.Name = "studentcitizenshipDataGridViewTextBoxColumn";
+            this.studentcitizenshipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentcivilDataGridViewTextBoxColumn
+            // 
+            this.studentcivilDataGridViewTextBoxColumn.DataPropertyName = "student_civil";
+            this.studentcivilDataGridViewTextBoxColumn.HeaderText = "Civil Status";
+            this.studentcivilDataGridViewTextBoxColumn.Name = "studentcivilDataGridViewTextBoxColumn";
+            this.studentcivilDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentreligionDataGridViewTextBoxColumn
+            // 
+            this.studentreligionDataGridViewTextBoxColumn.DataPropertyName = "student_religion";
+            this.studentreligionDataGridViewTextBoxColumn.HeaderText = "Religion";
+            this.studentreligionDataGridViewTextBoxColumn.Name = "studentreligionDataGridViewTextBoxColumn";
+            this.studentreligionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // label45
             // 
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -461,7 +558,7 @@
             this.label45.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.SystemColors.Control;
-            this.label45.Location = new System.Drawing.Point(31, 314);
+            this.label45.Location = new System.Drawing.Point(-130, 314);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(113, 17);
             this.label45.TabIndex = 11;
@@ -627,7 +724,7 @@
             this.label46.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.Control;
-            this.label46.Location = new System.Drawing.Point(28, 489);
+            this.label46.Location = new System.Drawing.Point(-133, 489);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(198, 17);
             this.label46.TabIndex = 9;
@@ -869,11 +966,6 @@
             // 
             this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
             this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonSearchSched
             // 
@@ -2041,95 +2133,15 @@
             // 
             this.announcementsTableAdapter.ClearBeforeFill = true;
             // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Students";
-            this.studentBindingSource.DataSource = this.enrollmentDataSet;
-            // 
             // enrollmentTableAdapter
             // 
             this.enrollmentTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewPersonalData
-            // 
-            this.dataGridViewPersonalData.AllowUserToAddRows = false;
-            this.dataGridViewPersonalData.AllowUserToDeleteRows = false;
-            this.dataGridViewPersonalData.AutoGenerateColumns = false;
-            this.dataGridViewPersonalData.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridViewPersonalData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewPersonalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonalData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentgenderDataGridViewTextBoxColumn,
-            this.studentbirthdayDataGridViewTextBoxColumn,
-            this.studentbirthplaceDataGridViewTextBoxColumn,
-            this.studentcitizenshipDataGridViewTextBoxColumn,
-            this.studentcivilDataGridViewTextBoxColumn,
-            this.studentreligionDataGridViewTextBoxColumn});
-            this.dataGridViewPersonalData.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPersonalData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewPersonalData.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewPersonalData.Location = new System.Drawing.Point(33, 46);
-            this.dataGridViewPersonalData.Name = "dataGridViewPersonalData";
-            this.dataGridViewPersonalData.ReadOnly = true;
-            this.dataGridViewPersonalData.Size = new System.Drawing.Size(644, 45);
-            this.dataGridViewPersonalData.TabIndex = 12;
-            // 
-            // studentgenderDataGridViewTextBoxColumn
-            // 
-            this.studentgenderDataGridViewTextBoxColumn.DataPropertyName = "student_gender";
-            this.studentgenderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.studentgenderDataGridViewTextBoxColumn.Name = "studentgenderDataGridViewTextBoxColumn";
-            this.studentgenderDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentbirthdayDataGridViewTextBoxColumn
-            // 
-            this.studentbirthdayDataGridViewTextBoxColumn.DataPropertyName = "student_birthday";
-            this.studentbirthdayDataGridViewTextBoxColumn.HeaderText = "Birthday";
-            this.studentbirthdayDataGridViewTextBoxColumn.Name = "studentbirthdayDataGridViewTextBoxColumn";
-            this.studentbirthdayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentbirthplaceDataGridViewTextBoxColumn
-            // 
-            this.studentbirthplaceDataGridViewTextBoxColumn.DataPropertyName = "student_birthplace";
-            this.studentbirthplaceDataGridViewTextBoxColumn.HeaderText = "Birthplace";
-            this.studentbirthplaceDataGridViewTextBoxColumn.Name = "studentbirthplaceDataGridViewTextBoxColumn";
-            this.studentbirthplaceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentcitizenshipDataGridViewTextBoxColumn
-            // 
-            this.studentcitizenshipDataGridViewTextBoxColumn.DataPropertyName = "student_citizenship";
-            this.studentcitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship";
-            this.studentcitizenshipDataGridViewTextBoxColumn.Name = "studentcitizenshipDataGridViewTextBoxColumn";
-            this.studentcitizenshipDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentcivilDataGridViewTextBoxColumn
-            // 
-            this.studentcivilDataGridViewTextBoxColumn.DataPropertyName = "student_civil";
-            this.studentcivilDataGridViewTextBoxColumn.HeaderText = "Civil Status";
-            this.studentcivilDataGridViewTextBoxColumn.Name = "studentcivilDataGridViewTextBoxColumn";
-            this.studentcivilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentreligionDataGridViewTextBoxColumn
-            // 
-            this.studentreligionDataGridViewTextBoxColumn.DataPropertyName = "student_religion";
-            this.studentreligionDataGridViewTextBoxColumn.HeaderText = "Religion";
-            this.studentreligionDataGridViewTextBoxColumn.Name = "studentreligionDataGridViewTextBoxColumn";
-            this.studentreligionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // dataGridViewContactInformation
             // 
-            this.dataGridViewContactInformation.AllowUserToAddRows = false;
-            this.dataGridViewContactInformation.AllowUserToDeleteRows = false;
             this.dataGridViewContactInformation.AutoGenerateColumns = false;
-            this.dataGridViewContactInformation.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridViewContactInformation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewContactInformation.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewContactInformation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewContactInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContactInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.student_mobile,
@@ -2137,50 +2149,36 @@
             this.student_email});
             this.dataGridViewContactInformation.DataSource = this.studentBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewContactInformation.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewContactInformation.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewContactInformation.Location = new System.Drawing.Point(33, 175);
+            this.dataGridViewContactInformation.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewContactInformation.Location = new System.Drawing.Point(34, 184);
             this.dataGridViewContactInformation.Name = "dataGridViewContactInformation";
-            this.dataGridViewContactInformation.ReadOnly = true;
-            this.dataGridViewContactInformation.Size = new System.Drawing.Size(380, 61);
+            this.dataGridViewContactInformation.Size = new System.Drawing.Size(732, 66);
             this.dataGridViewContactInformation.TabIndex = 13;
-            // 
-            // labelStudNum
-            // 
-            this.labelStudNum.AutoSize = true;
-            this.labelStudNum.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStudNum.Location = new System.Drawing.Point(178, 46);
-            this.labelStudNum.Name = "labelStudNum";
-            this.labelStudNum.Size = new System.Drawing.Size(129, 20);
-            this.labelStudNum.TabIndex = 2;
-            this.labelStudNum.Text = "047 - 2013 - 0128";
             // 
             // student_mobile
             // 
             this.student_mobile.DataPropertyName = "student_mobile";
-            this.student_mobile.HeaderText = "MobileNumber";
+            this.student_mobile.HeaderText = "Mobile Number";
             this.student_mobile.Name = "student_mobile";
-            this.student_mobile.ReadOnly = true;
             // 
             // student_landline
             // 
             this.student_landline.DataPropertyName = "student_landline";
             this.student_landline.HeaderText = "Landline Number";
             this.student_landline.Name = "student_landline";
-            this.student_landline.ReadOnly = true;
             // 
             // student_email
             // 
             this.student_email.DataPropertyName = "student_email";
-            this.student_email.HeaderText = "Email";
+            this.student_email.HeaderText = "Email Address";
             this.student_email.Name = "student_email";
-            this.student_email.ReadOnly = true;
             // 
             // FormStudent
             // 
@@ -2203,6 +2201,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.panelStudentProfile.ResumeLayout(false);
             this.panelStudentProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -2211,7 +2212,6 @@
             this.panelSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
             this.panelSettings.ResumeLayout(false);
@@ -2237,8 +2237,6 @@
             this.groupBoxIdentification.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonalData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContactInformation)).EndInit();
             this.ResumeLayout(false);
 
@@ -2410,8 +2408,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studentcitizenshipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentcivilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentreligionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridViewContactInformation;
         private System.Windows.Forms.Label labelStudNum;
+        private System.Windows.Forms.DataGridView dataGridViewContactInformation;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_landline;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_email;

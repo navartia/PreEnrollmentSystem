@@ -16,7 +16,6 @@ namespace PreEnrollmentSystem
     {
         private StudentTable student_information;
         private ScheduleTable schedule;
-        private EnrollmentDataSet.AnnouncementsDataTable announcements =  new EnrollmentDataSet.AnnouncementsDataTable();
         private String username, student_num;
 
         public FormStudent()
@@ -90,7 +89,6 @@ namespace PreEnrollmentSystem
             String newPass1 = maskedTextBoxNewPass1.Text;
             String newPass2 = maskedTextBoxNewPass2.Text;
 
-            String username = (String)student_information.Rows[0]["username"];
             EnrollmentDataSet.AccountsDataTable account = this.accountsTableAdapter.GetDataByUsername(username);
 
             if (oldPass.Equals((String)account.Rows[0]["password"]))
@@ -120,27 +118,37 @@ namespace PreEnrollmentSystem
 
         private void updateAnnouncements()
         {
-            int counter = 1;
-            for (int ctr = announcements.Rows.Count-3; ctr < announcements.Rows.Count ;ctr++)
+            int ctr = Convert.ToInt32(this.announcementsTableAdapter.Count());
+            MessageBox.Show(ctr.ToString());
+
+            int b = 1;
+            for (int a = ctr; a > ctr-3; a--)
             {
-                if (counter == 1)
+                if (b == 1)
                 {
-                    announcementTitle1.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
-                    announcementDetails1.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
-                    counter++;
+                    announcementTitle1.Text = (String)this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails1.Text = (String)this.announcementsTableAdapter.GetAnnouncementDetails(ctr); 
+                    MessageBox.Show(a.ToString());
+                    MessageBox.Show(announcementTitle1.Text+announcementDetails1.Text);
+                    b++;
                 }
-                else if (counter == 2)
+                if (b == 2)
                 {
-                    announcementTitle2.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
-                    announcementDetails2.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
-                    counter++;
+                    announcementTitle2.Text = (String)this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails2.Text = (String)this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    MessageBox.Show(a.ToString());
+                    MessageBox.Show(announcementTitle2.Text + announcementDetails2.Text);
+                    b++;
                 }
-                else if (counter == 3)
+                if (b == 3)
                 {
-                    announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr-counter);
-                    announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr-counter);
-                    counter = 1;
+                    announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
+                    announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
+                    MessageBox.Show(a.ToString());
+                    MessageBox.Show(announcementTitle3.Text + announcementDetails3.Text);
+                    break;
                 }
+
             }
         }
 
