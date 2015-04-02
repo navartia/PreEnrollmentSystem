@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStudent));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.logoSTI = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
@@ -417,7 +417,7 @@
             this.buttonSchedule.Name = "buttonSchedule";
             this.buttonSchedule.Size = new System.Drawing.Size(112, 41);
             this.buttonSchedule.TabIndex = 2;
-            this.buttonSchedule.Text = "View Schedule";
+            this.buttonSchedule.Text = "Create Schedule";
             this.buttonSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSchedule.UseVisualStyleBackColor = false;
@@ -492,14 +492,14 @@
             this.studentcivilDataGridViewTextBoxColumn,
             this.studentreligionDataGridViewTextBoxColumn});
             this.dataGridViewPersonalData.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPersonalData.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPersonalData.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewPersonalData.GridColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridViewPersonalData.Location = new System.Drawing.Point(33, 46);
             this.dataGridViewPersonalData.Name = "dataGridViewPersonalData";
@@ -2140,6 +2140,8 @@
             // dataGridViewContactInformation
             // 
             this.dataGridViewContactInformation.AutoGenerateColumns = false;
+            this.dataGridViewContactInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewContactInformation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewContactInformation.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridViewContactInformation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewContactInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -2148,14 +2150,14 @@
             this.student_landline,
             this.student_email});
             this.dataGridViewContactInformation.DataSource = this.studentBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewContactInformation.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewContactInformation.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewContactInformation.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridViewContactInformation.Location = new System.Drawing.Point(34, 184);
             this.dataGridViewContactInformation.Name = "dataGridViewContactInformation";
@@ -2167,18 +2169,21 @@
             this.student_mobile.DataPropertyName = "student_mobile";
             this.student_mobile.HeaderText = "Mobile Number";
             this.student_mobile.Name = "student_mobile";
+            this.student_mobile.Width = 95;
             // 
             // student_landline
             // 
             this.student_landline.DataPropertyName = "student_landline";
             this.student_landline.HeaderText = "Landline Number";
             this.student_landline.Name = "student_landline";
+            this.student_landline.Width = 103;
             // 
             // student_email
             // 
             this.student_email.DataPropertyName = "student_email";
             this.student_email.HeaderText = "Email Address";
             this.student_email.Name = "student_email";
+            this.student_email.Width = 90;
             // 
             // FormStudent
             // 

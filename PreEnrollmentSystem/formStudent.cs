@@ -16,7 +16,7 @@ namespace PreEnrollmentSystem
     {
         private StudentTable student_information;
         private ScheduleTable schedule;
-        private String username, student_num;
+        private String username, studentNum, courseName;
 
         public FormStudent()
         {
@@ -34,7 +34,10 @@ namespace PreEnrollmentSystem
             updateAnnouncements();
 
             username = Properties.Settings.Default.username;
+            courseName = Properties.Settings.Default.courseName;
+            studentNum = Properties.Settings.Default.studentNum;
             loadDatabaseToTable();
+            labelStudNum.Text = studentNum;
         }
 
         //GUI Related Methods
@@ -73,9 +76,8 @@ namespace PreEnrollmentSystem
             labelProgramMajor.Text = (String)this.programsTableAdapter.GetCourseDescription((String) student_information.Rows[0]["student_program"]);
 
             schedule = new ScheduleTable();
-            student_num = student_information[Convert.ToInt32(this.studentsTableAdapter.GetStudentID(username))]["student_num"].ToString();
-            labelStudNum.Text = student_num;
-            this.studentScheduleViewTableAdapter.FillByStudentNum(schedule, student_num);
+            Properties.Settings.Default.studentNum = student_information[Convert.ToInt32(this.studentsTableAdapter.GetStudentID(username))]["student_num"].ToString();
+            this.studentScheduleViewTableAdapter.FillByStudentNum(schedule, studentNum);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -119,7 +121,6 @@ namespace PreEnrollmentSystem
         private void updateAnnouncements()
         {
             int ctr = Convert.ToInt32(this.announcementsTableAdapter.Count());
-            MessageBox.Show(ctr.ToString());
 
             int b = 1;
             for (int a = ctr; a > ctr-3; a--)
@@ -128,24 +129,18 @@ namespace PreEnrollmentSystem
                 {
                     announcementTitle1.Text = (String)this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
                     announcementDetails1.Text = (String)this.announcementsTableAdapter.GetAnnouncementDetails(ctr); 
-                    MessageBox.Show(a.ToString());
-                    MessageBox.Show(announcementTitle1.Text+announcementDetails1.Text);
                     b++;
                 }
                 if (b == 2)
                 {
                     announcementTitle2.Text = (String)this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
                     announcementDetails2.Text = (String)this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
-                    MessageBox.Show(a.ToString());
-                    MessageBox.Show(announcementTitle2.Text + announcementDetails2.Text);
                     b++;
                 }
                 if (b == 3)
                 {
                     announcementTitle3.Text = this.announcementsTableAdapter.GetAnnouncementTitle(ctr);
                     announcementDetails3.Text = this.announcementsTableAdapter.GetAnnouncementDetails(ctr);
-                    MessageBox.Show(a.ToString());
-                    MessageBox.Show(announcementTitle3.Text + announcementDetails3.Text);
                     break;
                 }
 
@@ -155,10 +150,13 @@ namespace PreEnrollmentSystem
         private void buttonSearchSched_Click(object sender, EventArgs e)
         {
             FormSchedule fs = new FormSchedule();
-            fs.loadData(textBoxSearchSched.Text, student_num);
-            fs.ShowDialog();
+            schedule = new ScheduleTable();
+            Properties.Settings.Default.courseName = textBoxSearchSched.Text;
 
-            this.studentScheduleViewTableAdapter.FillByStudentNum(this.enrollmentDataSet.StudentScheduleView, student_num);
+            fs.ShowDialog();
+            fs.viewData();
+
+            this.studentScheduleViewTableAdapter.FillByStudentNum(schedule, studentNum);
         }
     }
 }

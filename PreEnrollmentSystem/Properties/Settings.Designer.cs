@@ -57,5 +57,51 @@ namespace PreEnrollmentSystem.Properties {
                 this["password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string courseName {
+            get {
+                return ((string)(this["courseName"]));
+            }
+            set {
+                this["courseName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string studentNum {
+            get {
+                return ((string)(this["studentNum"]));
+            }
+            set {
+                this["studentNum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int studentID {
+            get {
+                return ((int)(this["studentID"]));
+            }
+            set {
+                this["studentID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int scheduleID {
+            get {
+                return ((int)(this["scheduleID"]));
+            }
+            set {
+                this["scheduleID"] = value;
+            }
+        }
     }
 }

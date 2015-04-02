@@ -310,6 +310,7 @@
             this.tableAdapterManager.ScheduleTableAdapter = null;
             this.tableAdapterManager.School_YearTableAdapter = null;
             this.tableAdapterManager.SectionsTableAdapter = null;
+            this.tableAdapterManager.StudentsTableAdapter = null;
             this.tableAdapterManager.TimeslotsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

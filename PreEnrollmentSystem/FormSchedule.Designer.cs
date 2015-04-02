@@ -118,6 +118,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormSchedule";
             this.Text = "Add Schedule";
+            this.Load += new System.EventHandler(this.FormSchedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.ResumeLayout(false);

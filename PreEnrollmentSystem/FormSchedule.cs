@@ -9,29 +9,40 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
+    using CourseScheduleViewTable = EnrollmentDataSet.CourseScheduleViewDataTable;
     public partial class FormSchedule : Form
     {
-        String student_num;
-        int student_id, schedule_id;
+        private CourseScheduleViewTable courseSchedView;
+        private int student_id, schedule_id;
+        private String courseName, studentNum;
+
         public FormSchedule()
         {
             InitializeComponent();
+        }
+        private void FormSchedule_Load(object sender, EventArgs e)
+        {
+            courseName = Properties.Settings.Default.courseName;
+            studentNum = Properties.Settings.Default.studentNum;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int row = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString());
-            schedule_id =Convert.ToInt32(dataGridView1[0, row]);
-            student_id=(int)this.enrollmentTableAdapter.GetStudentID(student_num);
+            Properties.Settings.Default.scheduleID =Convert.ToInt32(dataGridView1[0, row]);
+            Properties.Settings.Default.studentID = (int)this.enrollmentTableAdapter.GetStudentID(studentNum);
+
+            schedule_id = Properties.Settings.Default.scheduleID;
+            student_id = Properties.Settings.Default.studentID;
 
             this.enrollmentTableAdapter.Insert(student_id, schedule_id, false);
             this.Dispose();
         }
 
-        public void loadData(String courseName, String student_num)
+        public void viewData()
         {
-            this.student_num = student_num;
-            this.courseScheduleViewTableAdapter.FillByCourseName(this.enrollmentDataSet.CourseScheduleView, courseName);
+            courseSchedView = new CourseScheduleViewTable();
+            this.courseScheduleViewTableAdapter.FillByCourseName(courseSchedView, courseName);
         }
     }
 }
