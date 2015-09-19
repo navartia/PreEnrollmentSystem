@@ -42,6 +42,22 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.buttonStudentAssessment = new System.Windows.Forms.Button();
+            this.panelStudentAssessment = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.timeslotdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslottimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
+            this.buttonPrintSchedule = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
             this.panelCreateStudentAccount = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label175 = new System.Windows.Forms.Label();
@@ -125,22 +141,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.panelStudentAssessment = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timeslotdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeslottimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scheduleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sectioncodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeslotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentScheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
-            this.buttonPrintSchedule = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
             this.panelHome = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label75 = new System.Windows.Forms.Label();
@@ -160,6 +160,10 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelStudentAssessment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.panelCreateStudentAccount.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -172,10 +176,6 @@
             this.groupBoxIdentification.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelCreateAnnouncements.SuspendLayout();
-            this.panelStudentAssessment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).BeginInit();
             this.panelHome.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -246,10 +246,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
+            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateStudentAccount);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateAnnouncements);
-            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
-            this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Size = new System.Drawing.Size(986, 550);
             this.splitContainer1.SplitterDistance = 126;
             this.splitContainer1.TabIndex = 6;
@@ -374,6 +374,159 @@
             this.buttonStudentAssessment.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonStudentAssessment.UseVisualStyleBackColor = false;
             this.buttonStudentAssessment.Click += new System.EventHandler(this.buttonStudentAssessment_Click);
+            // 
+            // panelStudentAssessment
+            // 
+            this.panelStudentAssessment.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelStudentAssessment.Controls.Add(this.textBox7);
+            this.panelStudentAssessment.Controls.Add(this.dataGridView1);
+            this.panelStudentAssessment.Controls.Add(this.buttonPrintSchedule);
+            this.panelStudentAssessment.Controls.Add(this.button12);
+            this.panelStudentAssessment.Controls.Add(this.label35);
+            this.panelStudentAssessment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStudentAssessment.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelStudentAssessment.Location = new System.Drawing.Point(0, 0);
+            this.panelStudentAssessment.Name = "panelStudentAssessment";
+            this.panelStudentAssessment.Size = new System.Drawing.Size(856, 550);
+            this.panelStudentAssessment.TabIndex = 51;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Location = new System.Drawing.Point(663, 16);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(178, 20);
+            this.textBox7.TabIndex = 21;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.timeslotdayDataGridViewTextBoxColumn,
+            this.timeslottimeDataGridViewTextBoxColumn,
+            this.studentnumDataGridViewTextBoxColumn,
+            this.scheduleIDDataGridViewTextBoxColumn,
+            this.coursedescriptionDataGridViewTextBoxColumn,
+            this.sectioncodeDataGridViewTextBoxColumn,
+            this.timeslotDataGridViewTextBoxColumn,
+            this.facultynameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentScheduleViewBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(844, 298);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // timeslotdayDataGridViewTextBoxColumn
+            // 
+            this.timeslotdayDataGridViewTextBoxColumn.DataPropertyName = "timeslot_day";
+            this.timeslotdayDataGridViewTextBoxColumn.HeaderText = "Day";
+            this.timeslotdayDataGridViewTextBoxColumn.Name = "timeslotdayDataGridViewTextBoxColumn";
+            // 
+            // timeslottimeDataGridViewTextBoxColumn
+            // 
+            this.timeslottimeDataGridViewTextBoxColumn.DataPropertyName = "timeslot_time";
+            this.timeslottimeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeslottimeDataGridViewTextBoxColumn.Name = "timeslottimeDataGridViewTextBoxColumn";
+            // 
+            // studentnumDataGridViewTextBoxColumn
+            // 
+            this.studentnumDataGridViewTextBoxColumn.DataPropertyName = "student_num";
+            this.studentnumDataGridViewTextBoxColumn.HeaderText = "student_num";
+            this.studentnumDataGridViewTextBoxColumn.Name = "studentnumDataGridViewTextBoxColumn";
+            // 
+            // scheduleIDDataGridViewTextBoxColumn
+            // 
+            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "scheduleID";
+            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
+            // 
+            // coursedescriptionDataGridViewTextBoxColumn
+            // 
+            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "course_description";
+            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
+            // 
+            // sectioncodeDataGridViewTextBoxColumn
+            // 
+            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "section_code";
+            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
+            // 
+            // timeslotDataGridViewTextBoxColumn
+            // 
+            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.HeaderText = "timeslot";
+            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
+            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // facultynameDataGridViewTextBoxColumn
+            // 
+            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.HeaderText = "faculty_name";
+            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
+            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // studentScheduleViewBindingSource
+            // 
+            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
+            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
+            // 
+            // enrollmentDataSet
+            // 
+            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
+            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonPrintSchedule
+            // 
+            this.buttonPrintSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrintSchedule.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonPrintSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintSchedule.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonPrintSchedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintSchedule.Image")));
+            this.buttonPrintSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPrintSchedule.Location = new System.Drawing.Point(540, 450);
+            this.buttonPrintSchedule.Name = "buttonPrintSchedule";
+            this.buttonPrintSchedule.Size = new System.Drawing.Size(172, 44);
+            this.buttonPrintSchedule.TabIndex = 3;
+            this.buttonPrintSchedule.Text = "Print Schedule";
+            this.buttonPrintSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPrintSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPrintSchedule.UseVisualStyleBackColor = false;
+            this.buttonPrintSchedule.Click += new System.EventHandler(this.buttonPrintSchedule_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(100, 450);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(172, 44);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "Validate Schedule";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.Control;
+            this.label35.Location = new System.Drawing.Point(603, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(54, 16);
+            this.label35.TabIndex = 20;
+            this.label35.Text = "Search:";
             // 
             // panelCreateStudentAccount
             // 
@@ -1327,158 +1480,6 @@
             this.label26.TabIndex = 78;
             this.label26.Text = "Student Announcements";
             // 
-            // panelStudentAssessment
-            // 
-            this.panelStudentAssessment.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelStudentAssessment.Controls.Add(this.textBox7);
-            this.panelStudentAssessment.Controls.Add(this.dataGridView1);
-            this.panelStudentAssessment.Controls.Add(this.buttonPrintSchedule);
-            this.panelStudentAssessment.Controls.Add(this.button12);
-            this.panelStudentAssessment.Controls.Add(this.label35);
-            this.panelStudentAssessment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStudentAssessment.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelStudentAssessment.Location = new System.Drawing.Point(0, 0);
-            this.panelStudentAssessment.Name = "panelStudentAssessment";
-            this.panelStudentAssessment.Size = new System.Drawing.Size(856, 550);
-            this.panelStudentAssessment.TabIndex = 51;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(663, 16);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 20);
-            this.textBox7.TabIndex = 21;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.timeslotdayDataGridViewTextBoxColumn,
-            this.timeslottimeDataGridViewTextBoxColumn,
-            this.studentnumDataGridViewTextBoxColumn,
-            this.scheduleIDDataGridViewTextBoxColumn,
-            this.coursedescriptionDataGridViewTextBoxColumn,
-            this.sectioncodeDataGridViewTextBoxColumn,
-            this.timeslotDataGridViewTextBoxColumn,
-            this.facultynameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentScheduleViewBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(844, 298);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // timeslotdayDataGridViewTextBoxColumn
-            // 
-            this.timeslotdayDataGridViewTextBoxColumn.DataPropertyName = "timeslot_day";
-            this.timeslotdayDataGridViewTextBoxColumn.HeaderText = "Day";
-            this.timeslotdayDataGridViewTextBoxColumn.Name = "timeslotdayDataGridViewTextBoxColumn";
-            // 
-            // timeslottimeDataGridViewTextBoxColumn
-            // 
-            this.timeslottimeDataGridViewTextBoxColumn.DataPropertyName = "timeslot_time";
-            this.timeslottimeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeslottimeDataGridViewTextBoxColumn.Name = "timeslottimeDataGridViewTextBoxColumn";
-            // 
-            // studentnumDataGridViewTextBoxColumn
-            // 
-            this.studentnumDataGridViewTextBoxColumn.DataPropertyName = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.HeaderText = "student_num";
-            this.studentnumDataGridViewTextBoxColumn.Name = "studentnumDataGridViewTextBoxColumn";
-            // 
-            // scheduleIDDataGridViewTextBoxColumn
-            // 
-            this.scheduleIDDataGridViewTextBoxColumn.DataPropertyName = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.HeaderText = "scheduleID";
-            this.scheduleIDDataGridViewTextBoxColumn.Name = "scheduleIDDataGridViewTextBoxColumn";
-            // 
-            // coursedescriptionDataGridViewTextBoxColumn
-            // 
-            this.coursedescriptionDataGridViewTextBoxColumn.DataPropertyName = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.HeaderText = "course_description";
-            this.coursedescriptionDataGridViewTextBoxColumn.Name = "coursedescriptionDataGridViewTextBoxColumn";
-            // 
-            // sectioncodeDataGridViewTextBoxColumn
-            // 
-            this.sectioncodeDataGridViewTextBoxColumn.DataPropertyName = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.HeaderText = "section_code";
-            this.sectioncodeDataGridViewTextBoxColumn.Name = "sectioncodeDataGridViewTextBoxColumn";
-            // 
-            // timeslotDataGridViewTextBoxColumn
-            // 
-            this.timeslotDataGridViewTextBoxColumn.DataPropertyName = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.HeaderText = "timeslot";
-            this.timeslotDataGridViewTextBoxColumn.Name = "timeslotDataGridViewTextBoxColumn";
-            this.timeslotDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // facultynameDataGridViewTextBoxColumn
-            // 
-            this.facultynameDataGridViewTextBoxColumn.DataPropertyName = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.HeaderText = "faculty_name";
-            this.facultynameDataGridViewTextBoxColumn.Name = "facultynameDataGridViewTextBoxColumn";
-            this.facultynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentScheduleViewBindingSource
-            // 
-            this.studentScheduleViewBindingSource.DataMember = "StudentScheduleView";
-            this.studentScheduleViewBindingSource.DataSource = this.enrollmentDataSet;
-            // 
-            // enrollmentDataSet
-            // 
-            this.enrollmentDataSet.DataSetName = "EnrollmentDataSet";
-            this.enrollmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonPrintSchedule
-            // 
-            this.buttonPrintSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrintSchedule.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonPrintSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrintSchedule.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonPrintSchedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrintSchedule.Image")));
-            this.buttonPrintSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPrintSchedule.Location = new System.Drawing.Point(540, 450);
-            this.buttonPrintSchedule.Name = "buttonPrintSchedule";
-            this.buttonPrintSchedule.Size = new System.Drawing.Size(172, 44);
-            this.buttonPrintSchedule.TabIndex = 3;
-            this.buttonPrintSchedule.Text = "Print Schedule";
-            this.buttonPrintSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrintSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonPrintSchedule.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(100, 450);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(172, 44);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Validate Schedule";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.Control;
-            this.label35.Location = new System.Drawing.Point(603, 17);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(54, 16);
-            this.label35.TabIndex = 20;
-            this.label35.Text = "Search:";
-            // 
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -1597,6 +1598,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panelStudentAssessment.ResumeLayout(false);
+            this.panelStudentAssessment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.panelCreateStudentAccount.ResumeLayout(false);
             this.panelCreateStudentAccount.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1616,11 +1622,6 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panelCreateAnnouncements.ResumeLayout(false);
             this.panelCreateAnnouncements.PerformLayout();
-            this.panelStudentAssessment.ResumeLayout(false);
-            this.panelStudentAssessment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentScheduleViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollmentDataSet)).EndInit();
             this.panelHome.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
